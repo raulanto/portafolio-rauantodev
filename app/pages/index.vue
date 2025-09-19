@@ -1,19 +1,17 @@
 <script setup lang="ts">
 
 
-import Navar from "~/components/global/Navar.vue";
-import Tecologia from "~/components/ui/tecologia.vue";
-import Inf from "~/components/ui/inf.vue";
 </script>
 
 <template>
     <Navar></Navar>
-    <lazy-ui-header/>
-    <tecologia/>
+    <LazyHeader/>
+    <Tecologia/>
 
-    <inf/>
-    <lazy-ui-contacto/>
-    <lazy-ui-footer/>
+
+    <LazyContacto/>
+    <LazyInfo/>
+    <LazyFooter/>
 </template>
 
 <style scoped>

@@ -22,13 +22,11 @@ import Particulas from "~/components/ui/animate/particulas.vue";
                     <div
                         class="py-8 px-4 mx-auto min-h-screen text-center lg:py-16 lg:px-12 flex flex-col flex-grow justify-center items-center">
                         <a href="#proyectos"
-                           class="inline-flex justify-between dark:border-white dark:bg-neutral-50 bg-neutral-700 items-center py-1 px-1 pr-4 mb-7 text-sm  rounded-full  text-white dark:text-neutral-950 "
+                           class="animated-gradient-border inline-flex justify-between dark:border-white bg-neutral-50  items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full text-white dark:text-neutral-950"
                            role="alert">
-                            <span
-                                class="text-xs bg-primary dark:text-neutral-950 rounded-full text-white  px-4 py-1.5 mr-3">Nuevo</span>
-                            <span class="text-sm font-medium">Creando Proyectos y Soluciones.</span>
-                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                 xmlns="http://www.w3.org/2000/svg">
+                            <span class="text-xs bg-primary dark:text-neutral-950 rounded-full text-white px-4 py-1.5 mr-3">Nuevo</span>
+                            <span class="text-sm text-neutral-950 font-medium">Creando Proyectos y Soluciones.</span>
+                            <svg class="ml-2 w-5 h-5 fill-neutral-950" fill="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                       d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                       clip-rule="evenodd"></path>
@@ -72,9 +70,54 @@ import Particulas from "~/components/ui/animate/particulas.vue";
 
 <style scoped>
 .fondo {
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(62, 146, 250, 0.69), transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(62, 146, 250, 0.59), transparent 70%);
+}
+/* Clase para el borde gradiente animado */
+.animated-gradient-border {
+    position: relative;
+    overflow: hidden;
 }
 
+.animated-gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(90deg,
+    #1e3a8a 0%,
+    #3b82f6 25%,
+    #60a5fa 50%,
+    #93c5fd 75%,
+    #1e3a8a 100%
+    );
+    background-size: 200% 100%;
+    border-radius: inherit;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: gradient-border-move 2s linear infinite;
+    z-index: -1;
+}
+
+@keyframes gradient-border-move {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Efecto hover opcional */
+.animated-gradient-border {
+    animation-duration: 1s;
+}
+
+.animated-gradient-border {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
 </style>
 
 

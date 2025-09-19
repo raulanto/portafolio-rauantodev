@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import {computed} from 'vue';
 import {useRoute} from 'vue-router';
 
 const route = useRoute();
@@ -15,20 +14,18 @@ const route = useRoute();
             <div class="flex items-center justify-between">
                 <div class="flex shrink-0">
                     <NuxtLink class="flex items-center" to="/">
-                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">  rauanto</span>
-                        <spam class="self-center text-xl font-semibold whitespace-nowrap bg-gradient-to-br from-violet-200 via-blue-700 to-blue-50 bg-clip-text text-transparent">
+                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">rauanto</span>
+                        <p class="self-center text-xl font-semibold whitespace-nowrap bg-gradient-to-br from-violet-200 via-blue-700 to-blue-50 bg-clip-text text-transparent">
                             dev
-                        </spam>
+                        </p>
                     </NuxtLink>
                 </div>
-                <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
-<!--                    <a aria-current="page"-->
-<!--                       class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-slate-950 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"-->
-<!--                       href="#">How it works</a>-->
-                    <NuxtLink class="btn-blan"
-                       >Portafolio</NuxtLink>
-                    <NuxtLink class="btn-blan"
-                       >Quien soy?</NuxtLink>
+                <div class="hidden md:flex md:items-center md:justify-center justify-center items-center md:gap-5">
+
+                    <NuxtLink class="btn-blan">Portafolio</NuxtLink>
+                    <NuxtLink class="btn-blan">Quien soy?</NuxtLink>
+                    <NuxtLink class="btn-blan">Blog</NuxtLink>
+                    <NuxtLink class="btn-blan">Zona de juego</NuxtLink>
 
                 </div>
                 <div class="flex items-center justify-end gap-3">

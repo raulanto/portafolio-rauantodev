@@ -42,7 +42,7 @@
                         </svg>
                     </a>
                 </div>
-                <p class="mt-6 text-sm leading-6 text-gray-500 sm:mt-0 md:order-1">© 2025 raunatoDev. Todos los derechos
+                <p class="mt-6 text-sm leading-6 text-gray-500 sm:mt-0 md:order-1">© 2025 rauantoDev. Todos los derechos
                     reservados.</p>
             </div>
         </div>

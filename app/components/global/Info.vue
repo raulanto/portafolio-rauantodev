@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-neutral-950 mt-30">
+    <div class="bg-neutral-950 ">
 
         <section id="features"
                  class="relative block px-6 py-10 md:py-20 md:px-10   dark:bg-neutral-950 bg-white">
