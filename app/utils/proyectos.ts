@@ -1,6 +1,6 @@
 const list = [
     {
-        id: '1',
+        id: 1,
         title: 'Angular',
         description: 'Practicas realizadas en Angular',
         tag: [
@@ -31,6 +31,25 @@ const list = [
         ],
         imageUrl: './grad3.png',
         link: 'https://github.com/raulanto/proyectoFacturaas'
+    },
+    {
+        id: 3,
+        title: 'Sistema de PDF',
+        description: 'Aplicacion extraer PDF',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'flet',
+                color: 'error'
+            },
+        ],
+        imageUrl: './grad2.png',
+        link: 'https://github.com/raulanto/sistemaPDF'
     },
 ]
 
