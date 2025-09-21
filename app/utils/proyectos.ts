@@ -14,7 +14,7 @@ const list = [
         link: 'https://portafolio-angular-y7o3.vercel.app/home'
     },
     {
-        id: '2',
+        id: 2,
         title: 'Sistema de Factura',
         description: 'Practicas realizadas en Angular',
         tag: [
@@ -51,6 +51,64 @@ const list = [
         imageUrl: './grad2.png',
         link: 'https://github.com/raulanto/sistemaPDF'
     },
+    {
+        id: 5,
+        title: 'DjangoGraphQl',
+        description: 'Implementacion de GraphQl con Django',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'GraphQl',
+                color: 'error'
+            },
+        ],
+        imageUrl: './grad.png',
+        link: 'https://github.com/raulanto/djangoGraphQlF'
+    },
+    {
+        id: 6,
+        title: 'RPA',
+        description: 'sistema de Actividades',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'django',
+                color: 'success'
+            },
+        ],
+        imageUrl: './grad.png',
+        link: 'https://github.com/raulanto/rpa'
+    },
+    {
+        id: 6,
+        title: 'api Chamge',
+        description: 'api para guardar habitos y rutinas',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'django',
+                color: 'success'
+            },
+        ],
+        imageUrl: './grad.png',
+        link: 'https://github.com/raulanto/apiChangue'
+    },
+
 ]
 
 

@@ -29,7 +29,7 @@ const tecnop = [
         <div  class="relative z-30 flex flex-col justify-center items-center h-full text-center px-4 mt-50">
             <div class="text-center mb-16 mt-50">
                 <span class="inline-block px-3 py-1 text-sm font-semibold dark:text-neutral-900 bg-primary-100 rounded-full mb-4">Proyectos</span>
-                <h2 class="text-4xl font-bold serif-text sm:text-5xl">Diferentes Proyecctos con diferentes tecnologias</h2>
+                <h2 class="text-4xl font-bold serif-text sm:text-5xl">Diferentes Proyectos con diferentes tecnologías</h2>
 <!--                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 serif">-->
 <!--                    Powerful features to boost your productivity and workflow.-->
 <!--                </p>-->
