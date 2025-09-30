@@ -23,8 +23,8 @@ const route = useRoute();
                 <div class="hidden md:flex md:items-center md:justify-center justify-center items-center md:gap-5">
 
                     <NuxtLink class="btn-blan">Portafolio</NuxtLink>
-                    <NuxtLink class="btn-blan">Quien soy?</NuxtLink>
-                    <NuxtLink class="btn-blan">Blog</NuxtLink>
+                    <NuxtLink to="/perfil/" class="btn-blan">Quien soy?</NuxtLink>
+                    <a class="btn-blan" href="#blog">Blog</a>
                     <NuxtLink class="btn-blan">Zona de juego</NuxtLink>
 
                 </div>

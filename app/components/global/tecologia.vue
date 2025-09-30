@@ -8,7 +8,7 @@ const tecnop = [
 </script>
 
 <template>
-    <div id="proyectos" class="relative overflow-hidden dark:bg-neutral-950 mb-32 min-h-screen">
+    <div  class="relative overflow-hidden dark:bg-neutral-950 mb-32 min-h-screen">
 
         <!-- Imagen de fondo -->
         <img src="../../assets/img/download.webp" width="2880" height="1358" decoding="async" data-nimg="1" class="w-full h-full object-cover m-auto absolute inset-0 pointer-events-none z-0" loading="lazy" style="color:transparent">
@@ -26,18 +26,16 @@ const tecnop = [
         </div>
 
         <!-- Contenido principal -->
-        <div  class="relative z-30 flex flex-col justify-center items-center h-full text-center px-4 mt-50">
+        <div id="proyectos"  class="relative z-30 flex flex-col justify-center items-center h-full text-center px-4 mt-50">
             <div class="text-center mb-16 mt-50">
                 <span class="inline-block px-3 py-1 text-sm font-semibold dark:text-neutral-900 bg-primary-100 rounded-full mb-4">Proyectos</span>
                 <h2 class="text-4xl font-bold serif-text sm:text-5xl">Diferentes Proyectos con diferentes tecnologías</h2>
-<!--                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 serif">-->
-<!--                    Powerful features to boost your productivity and workflow.-->
-<!--                </p>-->
+
             </div>
             <UContainer>
                 <proyectos/>
             </UContainer>
-
+=
         </div>
 
     </div>
