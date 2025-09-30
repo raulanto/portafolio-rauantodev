@@ -8,7 +8,7 @@ const {data: post} = await useAsyncData(`blog-${slug}`, () => {
 </script>
 
 <template>
-
+    <lazy-navar/>
     <div class="relative p-4">
         <div class="max-w-3xl mx-auto">
             <div

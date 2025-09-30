@@ -20,7 +20,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@nuxt/ui": "^3.3.3",
+    "@nuxt/ui": "^4.0.0",
     "gsap": "^3.13.0"
   }
 }

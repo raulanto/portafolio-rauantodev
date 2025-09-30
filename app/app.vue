@@ -31,7 +31,7 @@ useSeoMeta({
     description,
     ogTitle: title,
     ogDescription: description,
-    ogImage: 'https://dashboard-template.nuxt.dev/social-card.png',
+    ogImage: '/porta.png',
     // twitterImage: 'https://dashboard-template.nuxt.dev/social-card.png',
     // twitterCard: 'summary_large_image'
 });
