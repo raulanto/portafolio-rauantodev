@@ -160,7 +160,6 @@ onUnmounted(() => {
                                 <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
                                      alt="Alex Johnson" class="w-full h-full rounded-full object-cover">
                             </div>
-
                         </div>
                     </div>
                 </div>

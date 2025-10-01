@@ -1,76 +1,89 @@
 <script setup lang="ts">
-
+import AllKey from "~/components/ui/allKey.vue";
 </script>
 
 <template>
-    <div class=" w-full h-screen grid-background fondo">
-        <div class="absolute h-full w-full ">
+    <div class="relative w-full min-h-screen overflow-hidden grid-background fondo">
+        <!-- Grid Background -->
+        <div class="absolute h-full w-full">
             <div class="absolute bottom-0 left-0 right-0 top-0
             bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]
             [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
-
             </div>
         </div>
-        <!-- Capa de fondo -->
 
-        <UContainer>
-            <div class="relative z-10 w-full h-full -mt-24">
-                <section class="w-full h-full">
-                    <div
-                        class=" px-4 mx-auto min-h-screen text-center lg:py-16 lg:px-12 flex flex-col flex-grow justify-center items-center">
+        <UContainer class="h-full">
+            <div class="relative z-10 w-full min-h-screen flex items-center py-12 md:py-16 lg:py-20">
+                <section class="w-full">
+                    <div class="px-4 sm:px-6 lg:px-8 mx-auto w-full text-center flex flex-col items-center">
+                        <!-- Badge -->
                         <a href="#proyectos"
-                           class="animated-gradient-border inline-flex justify-between dark:border-white bg-neutral-50  items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full text-white dark:text-neutral-950"
+                           class="animated-gradient-border inline-flex justify-between dark:border-white bg-neutral-50 items-center py-1 px-1 pr-3 sm:pr-4 mb-6 sm:mb-7 text-xs sm:text-sm rounded-full text-white dark:text-neutral-950 max-w-full"
                            role="alert">
-                            <span class="text-xs bg-primary dark:text-neutral-950 rounded-full text-white px-4 py-1.5 mr-3">Nuevo</span>
-                            <span class="text-sm text-neutral-950 font-medium">Creando Proyectos y Soluciones.</span>
-                            <svg class="ml-2 w-5 h-5 fill-neutral-950" fill="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <span class="text-xs bg-primary dark:text-neutral-950 rounded-full text-white px-3 sm:px-4 py-1 sm:py-1.5 mr-2 sm:mr-3 whitespace-nowrap">
+                                Nuevo
+                            </span>
+                            <span class="text-xs sm:text-sm text-neutral-950 font-medium truncate">
+                                Creando Proyectos y Soluciones.
+                            </span>
+                            <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5 fill-neutral-950 flex-shrink-0" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                       d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                       clip-rule="evenodd"></path>
                             </svg>
                         </a>
-                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white serif-text">
-                            Creando el futuro web, una línea de código a la vez</h1>
-                        <p class="mb-8 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 ">Transformo conceptos en
-                            aplicaciones web completas.</p>
-                        <div class=" w-full h-px max-w-6xl mx-auto mb-4"
+
+                        <!-- Heading -->
+                        <h1 class="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight dark:text-white serif-text px-2 sm:px-4">
+                            Creando el futuro web, una línea de código a la vez
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl font-normal max-w-3xl px-4 sm:px-8 md:px-16">
+                            Transformo conceptos en aplicaciones web completas.
+                        </p>
+
+                        <!-- Divider -->
+                        <div class="w-full h-px max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto mb-6 sm:mb-8"
                              style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(5,76,245,0.26) 40.83%, rgba(75,149,255,0.46) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
                         </div>
 
-                        <div
-                            class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                            <a  class="group inline-flex items-center
-                            justify-center rounded-full py-2 px-4 text-sm font-semibold
+                        <!-- Buttons -->
+                        <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
+                            <a class="group inline-flex items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm font-semibold
                             focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                             bg-neutral-900 text-white hover:bg-neutral-700 hover:text-slate-100
                             active:bg-neutral-800 active:text-neutral-300 focus-visible:outline-neutral-900 animate-fade-in-left
-                            dark:bg-primary dark:text-neutral-950 dark:hover:bg-primary-400"
+                            dark:bg-primary dark:text-neutral-950 dark:hover:bg-primary-400 transition-colors"
                                href="#contacto">
-                                <span class="">Contacto</span>
+                                <span>Contacto</span>
                             </a>
-                            <div class="relative flex flex-1 flex-col items-stretch sm:flex-none" data-headlessui-state="">
-                                <button class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-white hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300 animate-fade-in-right" id="headlessui-menu-button-:r4:" aria-haspopup="true" aria-expanded="false" data-headlessui-state="" type="button">
-                                   <span class="">Sobre mi</span>
-                                </button>
-                            </div>
+                            <button class="group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm
+                            focus:outline-none ring-slate-200 text-slate-700 dark:text-white hover:ring-slate-300
+                            active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300
+                            animate-fade-in-right transition-colors dark:ring-slate-700 dark:hover:bg-slate-800"
+                                    type="button">
+                                <span>Sobre mi</span>
+                            </button>
                         </div>
 
+                        <!-- AllKey Component -->
+                        <div class="w-full flex justify-center items-center mt-4 sm:mt-8 lg:mt-12 overflow-hidden">
+                            <all-key class="scale-75 sm:scale-90 md:scale-100" />
+                        </div>
                     </div>
-
                 </section>
-
             </div>
-
         </UContainer>
     </div>
 </template>
 
 <style scoped>
 .fondo {
-
     background: radial-gradient(ellipse 85% 90% at 50% 0%, rgba(62, 146, 250, 0.59), transparent 70%);
 }
-/* Clase para el borde gradiente animado */
+
+/* Animated gradient border */
 .animated-gradient-border {
     position: relative;
     overflow: hidden;
@@ -107,15 +120,37 @@
     }
 }
 
-/* Efecto hover opcional */
-.animated-gradient-border {
-    animation-duration: 1s;
+.animated-gradient-border:hover {
+    transform: translateY(-1px);
 }
 
 .animated-gradient-border {
-    transform: translateY(-1px);
     transition: transform 0.2s ease;
 }
+
+/* Ensure text doesn't break awkwardly */
+h1 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Smooth transitions for responsive changes */
+* {
+    transition-property: padding, margin, font-size;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 640px) {
+    .serif-text {
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .serif-text {
+        line-height: 1.3;
+    }
+}
 </style>
-
-

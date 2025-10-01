@@ -13,7 +13,7 @@ const tecnop = [
 
         <!-- Blur gradient -->
         <div class="absolute m-auto blur-[160px] max-w-s h-[13rem] top-12 inset-x-0 z-10"
-             style="background:linear-gradient(180deg, rgba(62,146,250,0.49) 0%, rgba(62,146,250,0.49) 0.01%, rgba(62,146,250,0.45) 100%)">
+             style="background:linear-gradient(180deg, rgba(62,146,250,0.26) 0%, rgba(62,146,250,0.11) 0.01%, rgba(62,146,250,0.45) 100%)">
         </div>
 
         <!-- Contenido principal -->
@@ -22,7 +22,7 @@ const tecnop = [
             <!-- Contenedor del texto con carruseles de fondo -->
             <div class="relative mb-16">
                 <!-- Carruseles de fondo detrás del texto -->
-                <div class="absolute inset-0 flex flex-col justify-center space-y-8 opacity-10 z-0">
+                <div class="absolute inset-0 flex flex-col justify-center gap-2 opacity-10 z-0">
                     <carrusel :icons="tecnop"/>
                     <carrusel :icons="tecnop" direction="right"/>
                     <carrusel :icons="tecnop"/>
