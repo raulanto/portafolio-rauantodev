@@ -12,7 +12,7 @@ const { data: blogs } = await useAsyncData('blogs', () => {
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="border rounded-lg bg-neutral-50  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 p-2">
                 <div class=" border rounded-md flex fondo-card flex-col justify-center items-center  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 py-8">
-                    <h2  class="text-4xl font-bold sm:text-5xl">Blog</h2>
+                    <h2  class="text-4xl font-bold sm:text-5xl serif-text">Blog</h2>
                     <p class="mt-2 text-lg leading-8">Articulos relacionados con distintas tecnologias.</p>
                 </div>
             </div>
@@ -33,13 +33,7 @@ const { data: blogs } = await useAsyncData('blogs', () => {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;.fondo-card{
-        background-image:
-        repeating-linear-gradient(22.5deg, transparent, transparent 2px, rgba(75, 85, 99, 0.06) 2px, rgba(75, 85, 99, 0.06) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(67.5deg, transparent, transparent 2px, rgba(107, 114, 128, 0.05) 2px, rgba(107, 114, 128, 0.05) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(112.5deg, transparent, transparent 2px, rgba(55, 65, 81, 0.04) 2px, rgba(55, 65, 81, 0.04) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(157.5deg, transparent, transparent 2px, rgba(31, 41, 55, 0.03) 2px, rgba(31, 41, 55, 0.03) 3px, transparent 3px, transparent 8px);
-    }
+
     width: 100%;
     height: 100%;
     z-index: -1;

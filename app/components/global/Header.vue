@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import Particulas from "~/components/ui/animate/particulas.vue";
 </script>
 
 <template>
@@ -13,14 +12,12 @@ import Particulas from "~/components/ui/animate/particulas.vue";
             </div>
         </div>
         <!-- Capa de fondo -->
-        <div class="absolute z-0 fondo">
-            <particulas/>
-        </div>
+
         <UContainer>
-            <div class="relative z-10 w-full h-full ">
+            <div class="relative z-10 w-full h-full -mt-24">
                 <section class="w-full h-full">
                     <div
-                        class="py-8 px-4 mx-auto min-h-screen text-center lg:py-16 lg:px-12 flex flex-col flex-grow justify-center items-center">
+                        class=" px-4 mx-auto min-h-screen text-center lg:py-16 lg:px-12 flex flex-col flex-grow justify-center items-center">
                         <a href="#proyectos"
                            class="animated-gradient-border inline-flex justify-between dark:border-white bg-neutral-50  items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full text-white dark:text-neutral-950"
                            role="alert">
@@ -70,7 +67,8 @@ import Particulas from "~/components/ui/animate/particulas.vue";
 
 <style scoped>
 .fondo {
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(62, 146, 250, 0.59), transparent 70%);
+
+    background: radial-gradient(ellipse 85% 90% at 50% 0%, rgba(62, 146, 250, 0.59), transparent 70%);
 }
 /* Clase para el borde gradiente animado */
 .animated-gradient-border {

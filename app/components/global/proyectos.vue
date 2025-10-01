@@ -9,7 +9,7 @@ import list from '~/utils/proyectos';
         <div
             v-for="proyecto in list"
             :key="proyecto.id"
-            class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl ">
+            class="group relative overflow-hidden rounded-md shadow-lg transition-all duration-300 hover:shadow-xl ">
             <div class="h-64 overflow-hidden">
                 <img :src="proyecto.imageUrl" alt="UI Design Project"
                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"/>

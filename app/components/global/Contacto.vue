@@ -47,7 +47,7 @@ const handleSubmit = (e: Event) => {
                     <lazy-ui-animate-graph/>
                 </div>
 
-                <h2 class="mx-auto relative z-10 max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <h2 class="mx-auto relative z-10 max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl serif-text">
                     Contactame</h2>
 
                 <p class="mx-auto relative z-10 mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">

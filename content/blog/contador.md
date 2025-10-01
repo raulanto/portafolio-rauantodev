@@ -11,7 +11,7 @@ En este artículo vamos a analizar un sistema completo de contador de visitas im
 
 
 
-## 🗄️ El Modelo de Datos: `ContadorVisita`
+## 🗄 El Modelo de Datos: `ContadorVisita`
 
 Primero, veamos la estructura que almacena la información en la base de datos:
 <br/>
@@ -40,7 +40,7 @@ class ContadorVisita(models.Model):
 | **fk_user** | ForeignKey | Relación con el usuario propietario |
 
 
-## 🔧 La Función Principal: `obtenerVisitas()`
+##  La Función Principal: `obtenerVisitas()`
 
 Esta función es el corazón del sistema. Analicemos su funcionamiento paso a paso:
 
@@ -106,7 +106,7 @@ Si `confondo == "SI"`, genera un HTML formateado:
 
 
 
-## 🎨 La Vista en el Template
+##  La Vista en el Template
 
 El fragmento HTML muestra cómo se integra en una plantilla Django:
 
@@ -132,7 +132,7 @@ El fragmento HTML muestra cómo se integra en una plantilla Django:
 - **Padding** superior e inferior de 50px
 
 
-## 💡 Ventajas del Sistema
+##  Ventajas del Sistema
 
 ✅ **Separación por año**: Cada año comienza un nuevo contador  
 ✅ **Uso de F()**: Previene problemas de concurrencia en la base de datos  
@@ -140,7 +140,7 @@ El fragmento HTML muestra cómo se integra en una plantilla Django:
 ✅ **BigInteger**: Soporta millones de visitas sin problemas
 
 
-## 🔍 Uso Ejemplo
+##  Uso Ejemplo
 
 ```python
 # En tu vista Django
@@ -150,7 +150,7 @@ def mi_pagina(request):
 ```
 
 
-## 📝 Mejoras Sugeridas
+##  Mejoras Sugeridas
 
 1. **Validación del parámetro `confondo`**: Usar booleanos en lugar de strings
 2. **Corrección ortográfica**: "a sido" → "ha sido"

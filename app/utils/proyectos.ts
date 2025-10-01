@@ -32,6 +32,145 @@ const list = [
         imageUrl: './grad3.png',
         link: 'https://github.com/raulanto/proyectoFacturaas'
     },
+
+    {
+        id: 6,
+        title: 'api Chamge',
+        description: 'api para guardar habitos y rutinas',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'django',
+                color: 'success'
+            },
+        ],
+        imageUrl: './grad.png',
+        link: 'https://github.com/raulanto/apiChangue'
+    },
+    {
+        id: 7,
+        title: 'Calculadora',
+        description: 'Calculadora de Divisiones',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+        ],
+        imageUrl: './calculadora.png',
+        link: 'https://github.com/raulanto/CalculadoraDiv'
+    },
+    {
+        id: 8,
+        title: 'EsieGraph',
+        description: ' Sistema que brinda atencion al Analisis de Estadística de Educación Superior de las instituciones ',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+            {
+                id: 2,
+                name: 'Graph',
+                color: 'success'
+            },
+        ],
+        imageUrl: './esiegraph.png',
+        link: 'https://poryecto-esie-nuxt.vercel.app/#content'
+    },
+
+    {
+        id: 10,
+        title: 'Esie',
+        description: ' Maquetacion',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+
+        ],
+        imageUrl: './esie.png',
+        link: 'https://sistema-escolar-integral.vercel.app/'
+    },
+
+    {
+        id: 10,
+        title: 'PanelGraphSensor',
+        description: ' Maquetacion de sistema de seguimiento',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+            {
+                id: 3,
+                name: 'tailwind',
+                color: 'success'
+            },
+
+        ],
+        imageUrl: './peces.png',
+        link: 'https://sistema-escolar-integral.vercel.app/'
+    },
+    {
+        id: 11,
+        title: 'Conversor SQL a Modelos Django',
+        description: ' Convierte tus consultas SQL en modelos Django de manera rápida y sencilla ',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+            {
+                id: 3,
+                name: 'tailwind',
+                color: 'success'
+            },
+            {
+                id: 4,
+                name: 'sql',
+                color: 'success'
+            },
+        ],
+        imageUrl: './conversor.png',
+        link: 'https://create-model-django-migrate.vercel.app/'
+    },
     {
         id: 3,
         title: 'Sistema de PDF',
@@ -89,26 +228,6 @@ const list = [
         imageUrl: './grad.png',
         link: 'https://github.com/raulanto/rpa'
     },
-    {
-        id: 6,
-        title: 'api Chamge',
-        description: 'api para guardar habitos y rutinas',
-        tag: [
-            {
-                id: 1,
-                name: 'Python',
-                color: 'primary'
-            },
-            {
-                id: 2,
-                name: 'django',
-                color: 'success'
-            },
-        ],
-        imageUrl: './grad.png',
-        link: 'https://github.com/raulanto/apiChangue'
-    },
-
 ]
 
 
