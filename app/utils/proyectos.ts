@@ -69,7 +69,7 @@ const list = [
             },
         ],
         imageUrl: './calculadora.png',
-        link: 'https://github.com/raulanto/CalculadoraDiv'
+        link: 'https://calculadora-div.vercel.app/'
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ const list = [
             },
         ],
         imageUrl: './esiegraph.png',
-        link: 'https://poryecto-esie-nuxt.vercel.app/#content'
+        link: 'https://poryecto-esie-nuxt.vercel.app/'
     },
 
     {

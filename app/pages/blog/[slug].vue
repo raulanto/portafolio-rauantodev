@@ -35,11 +35,9 @@ const {data: post} = await useAsyncData(`blog-${slug}`, () => {
                             <UBadge
                                 v-for="tag in post.tags"
                                 :key="tag"
-
                                 size="md"
                                 color="neutral"
-                                variant="soft"
-                            >
+                                variant="soft">
                                 {{ tag }}
                             </UBadge>
                         </div>
