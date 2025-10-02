@@ -187,7 +187,7 @@ const list = [
                 color: 'error'
             },
         ],
-        imageUrl: './grad2.png',
+        imageUrl: './pdf.png',
         link: 'https://github.com/raulanto/sistemaPDF'
     },
     {
