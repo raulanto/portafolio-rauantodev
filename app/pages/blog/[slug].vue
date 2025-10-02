@@ -1,14 +1,19 @@
 <script setup>
+
 const slug = useRoute().params.slug
+import l from "lodash";
 const {data: post} = await useAsyncData(`blog-${slug}`, () => {
     return queryCollection('blog').path(`/blog/${slug}`).first()
 })
-
+const { path } = useRoute();
+const { data: links } = await useAsyncData(`linked-${path}`, async () => {
+    const res = await queryCollection("blog").where("path", "NOT LIKE", post.value?.path).all();
+    return l.orderBy(res, (a) => l.intersection(a.tags, post.value?.tags).length, "desc").slice(0, 5);
+});
 
 </script>
 
 <template>
-
     <lazy-navar/>
     <main class="container mx-auto mt-8">
         <div class="flex flex-wrap justify-between">
@@ -60,13 +65,8 @@ const {data: post} = await useAsyncData(`blog-${slug}`, () => {
                 </div>
             </div>
             <div class="w-full md:w-4/12 px-4 mb-8">
-                <div class="bg-gray-100 px-4 py-6 rounded sticky top-0">
-                    <h3 class="text-lg font-bold mb-2">Categories</h3>
-                    <ul class="list-disc list-inside">
-                        <li><a href="#" class="text-gray-700 hover:text-gray-900">Technology</a></li>
-                        <li><a href="#" class="text-gray-700 hover:text-gray-900">Travel</a></li>
-                        <li><a href="#" class="text-gray-700 hover:text-gray-900">Food</a></li>
-                    </ul>
+                <div class=" sticky top-20">
+                    <ArticleMenu v-if="post?.body?.toc" :toc="post?.body.toc" :links="links" />
                 </div>
             </div>
         </div>

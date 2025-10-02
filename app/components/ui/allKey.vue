@@ -13,20 +13,20 @@ const keys = ref({
     },
     two: {
         travel: 26,
-        text: 'Tab',
-        key: 'Tab',
+        text: 'R',
+        key: 'r',
         pressed: false
     },
     three: {
         travel: 18,
-        text: 'C',
-        key: 'c',
+        text: 'A',
+        key: 'a',
         pressed: false
     },
     four: {
         travel: 18,
-        text: 'V',
-        key: 'v',
+        text: 'U',
+        key: 'u',
         pressed: false
     },
     five: {
