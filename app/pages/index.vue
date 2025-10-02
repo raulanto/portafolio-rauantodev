@@ -3,6 +3,7 @@
 
 import ListaBlog from "~/components/global/listaBlog.vue";
 import About from "~/components/auth/about.vue";
+import AllkeyTec from "~/components/ui/allkeyTec.vue";
 
 </script>
 
@@ -15,7 +16,9 @@ import About from "~/components/auth/about.vue";
 
     <lista-blog/>
     <LazyContacto/>
+
     <LazyInfo/>
+
     <LazyFooter/>
 
 </template>
