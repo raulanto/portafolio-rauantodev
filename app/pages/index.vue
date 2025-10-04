@@ -35,7 +35,7 @@ const handleCardClick = (index: number) => {
             :divCount="5"
             curve="bezier"
             :exponential="true"
-            :opacity="1"
+            :opacity="2"
         />
     </main>
 
@@ -43,6 +43,10 @@ const handleCardClick = (index: number) => {
 </template>
 
 <style scoped>
+html {
+    scroll-behavior: smooth;
+
+}
 
 
 </style>

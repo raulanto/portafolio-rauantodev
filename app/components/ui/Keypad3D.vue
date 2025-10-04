@@ -97,7 +97,7 @@ if (process.client) {
             >
                 <!-- Base -->
                 <div class="keypad__base">
-                    <img src="https://assets.codepen.io/605876/keypad-base.png?format=auto&quality=86" alt=""/>
+                    <img src="~/assets/img/allkey/keypad-base.png" alt=""/>
                 </div>
 
                 <!-- Key One (OK - Orange) -->
@@ -117,7 +117,7 @@ if (process.client) {
           <span class="key__mask">
             <span class="key__content">
               <span class="key__text">{{ keys.one.text }}</span>
-              <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+              <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
             </span>
           </span>
                 </button>
@@ -139,7 +139,7 @@ if (process.client) {
           <span class="key__mask">
             <span class="key__content">
               <span class="key__text">{{ keys.two.text }}</span>
-              <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+              <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
             </span>
           </span>
                 </button>
@@ -161,7 +161,7 @@ if (process.client) {
           <span class="key__mask">
             <span class="key__content">
               <span class="key__text">{{ keys.three.text }}</span>
-              <img src="https://assets.codepen.io/605876/keypad-double.png?format=auto&quality=86" alt=""/>
+              <img src="~/assets/img/allkey/keypad-double.png" alt=""/>
             </span>
           </span>
                 </button>

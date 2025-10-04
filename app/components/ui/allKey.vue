@@ -91,7 +91,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
         <div ref="keypadRef" class="keypad">
             <!-- Base -->
             <div class="keypad__base">
-                <img src="https://assets.codepen.io/605876/ai-base.png?format=auto&quality=86" alt=""/>
+                <img src="~/assets/img/allkey/ai-base.png" alt=""/>
             </div>
 
             <!-- Key One (AI Platform) -->
@@ -117,7 +117,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
               </span>
 
             </span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+            <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
           </span>
         </span>
             </button>
@@ -135,7 +135,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
         <span class="key__mask">
           <span class="key__content">
             <span class="key__text">{{ keys.two.text }}</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+            <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
           </span>
         </span>
             </button>
@@ -153,7 +153,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
         <span class="key__mask">
           <span class="key__content">
             <span class="key__text">{{ keys.three.text }}</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+            <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
           </span>
         </span>
             </button>
@@ -171,7 +171,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
         <span class="key__mask">
           <span class="key__content">
             <span class="key__text">{{ keys.four.text }}</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+            <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
           </span>
         </span>
             </button>
@@ -189,7 +189,7 @@ const handleKeyUp = (event: KeyboardEvent) => {
         <span class="key__mask">
           <span class="key__content">
             <span class="key__text">{{ keys.five.text }}</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt=""/>
+            <img src="~/assets/img/allkey/keypad-single.png" alt=""/>
           </span>
         </span>
             </button>

@@ -63,7 +63,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 <!--    </header>-->
     <UHeader>
         <template #title>
-            rauantodev
+            <a >
+                rauantodev
+            </a>
+
         </template>
 
         <UNavigationMenu :items="items" />

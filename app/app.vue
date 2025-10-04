@@ -4,7 +4,16 @@
         <NuxtPage />
 
     </UApp>
-
+    <GradualBlur
+        target="parent"
+        position="bottom"
+        height="6rem"
+        :strength="2"
+        :divCount="5"
+        curve="bezier"
+        :exponential="true"
+        :opacity="2"
+    />
     <Analytics/>
 </template>
 <script setup lang="ts">

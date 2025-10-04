@@ -3,7 +3,7 @@ import AllKey from "~/components/ui/allKey.vue";
 </script>
 
 <template>
-    <div class="relative w-full min-h-screen overflow-hidden grid-background ">
+    <div  class="relative w-full min-h-screen overflow-hidden grid-background ">
 
         <!-- Grid Background -->
         <div class="absolute h-full w-full">
