@@ -1,5 +1,5 @@
 <template>
-    <lazy-ui-cursor/>
+
     <UApp>
         <NuxtPage />
     </UApp>

@@ -119,7 +119,7 @@ onUnmounted(() => {
 
 <template>
     <!-- About Section -->
-    <section id="about" class="py-20 relative overflow-hidden dark:bg-neutral-950 bg-white">
+    <section id="about" class="py-20 relative overflow-hidden dark:bg-neutral-950 bg-white border-t border-b border-b-neutral-200 border-t-neutral-200 dark:border-b-neutral-700 dark:border-t-neutral-700">
         <canvas
             ref="canvasRef"
             class="absolute top-0 left-0 w-full h-full pointer-events-none"

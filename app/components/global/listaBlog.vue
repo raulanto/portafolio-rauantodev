@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Blogs from "~/blog/blogs.vue";
 import Keypad3D from "~/components/ui/Keypad3D.vue";
+import Dither from "~/components/ui/Dither.vue";
 
 // Obtener todos los blogs
 const { data: blogs } = await useAsyncData('blogs', () => {
@@ -13,6 +14,7 @@ const { data: blogs } = await useAsyncData('blogs', () => {
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="border rounded-lg bg-neutral-50  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 p-2">
                 <div class=" border rounded-md flex fondo-card flex-col justify-center items-center  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 py-8">
+
                     <h2  class="text-4xl font-bold sm:text-5xl serif-text">Blog</h2>
                     <p class="mt-2 text-lg leading-8">Articulos relacionados con distintas tecnologias.</p>
 

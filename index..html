@@ -1,597 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Keypad Component</title>
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <title>Plasma Effect</title>
     <style>
-        @layer normalize, base, demo, debug, exploding;
-
-        @layer exploding {
-            [data-exploded='true'] {
-                section {
-                    transition-delay: 0s;
-                }
-                .keypad {
-                    translate: calc(-50% - 1rem) 0;
-                    transition-delay: 0s, 0.26s;
-                    @media (max-width: 768px) {
-                        translate: 0 calc(50% + 1rem);
-                    }
-                }
-                .keypad__base {
-                    --depth: 2.5;
-                }
-                .keypad__single {
-                    --depth: -1;
-                }
-                .keypad__single--left {
-                    --depth: -2;
-                }
-                .keypad__double {
-                    --depth: 0;
-                }
-
-                .keypad__base,
-                .key {
-                    translate: 0 calc(var(--depth) * 10vh);
-                    transition-delay: 0.52s;
-                }
-            }
-
-            .keypad {
-                transition-delay: 0.26s, 0.52s;
-            }
-
-            .key,
-            .keypad__base {
-                transition-property: translate;
-                transition-duration: 0.26s;
-                transition-timing-function: ease-out;
-            }
-
-            [data-exploded='true'] .key::after {
-                opacity: 1;
-                transition-delay: 0.52s;
-            }
-
-            .key::after {
-                z-index: -1;
-                content: '';
-                position: absolute;
-                opacity: 0;
-                inset: 0;
-                transition-property: opacity;
-                transition-duration: 0.26s;
-                transition-timing-function: ease-out;
-                background: repeating-linear-gradient(
-                        -45deg,
-                        #0000 0 5px,
-                        hsl(220 100% 70%) 5px 6px
-                );
-            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        @layer debug {
-            main {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                align-items: center;
-                justify-content: center;
-
-                h1 {
-                    letter-spacing: -0.05rem;
-                    line-height: 1;
-                }
-
-                p {
-                    opacity: 0.7;
-                    font-weight: 300;
-                }
-
-                form {
-                    display: flex;
-                    gap: 0.5rem;
-
-                    input {
-                        flex: 1;
-                        padding: 0.5rem 0.75rem;
-                        background: canvas;
-                        border: 1px solid color-mix(in oklch, canvasText, #0000 75%);
-                        border-radius: 6px;
-                        outline-color: red;
-                    }
-
-                    button {
-                        padding-inline: 1.5rem;
-                        border-radius: 6px;
-                        background: canvas;
-                        border: 1px solid color-mix(in oklch, canvasText, #0000 75%);
-                        cursor: pointer;
-                        color: canvasText;
-                        font-size: 0.875rem;
-                    }
-                }
-
-                section {
-                    transition-property: opacity, filter;
-                    transition-duration: 0.26s;
-                    transition-delay: 0.26s;
-                    transition-timing-function: ease-out;
-                }
-            }
-
-            [data-exploded='true'] section {
-                opacity: 0;
-                filter: blur(4px);
-            }
-
-            @media (max-width: 768px) {
-                .keypad {
-                    order: 1;
-                }
-                section {
-                    order: 2;
-                }
-            }
-
-            section,
-            section > div {
-                width: 50ch;
-                max-width: calc(100vw - 2rem);
-            }
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
         }
-
-        @layer demo {
-            :root {
-                --travel: 20;
-            }
-            .keypad {
-                position: relative;
-                aspect-ratio: 400 / 310;
-                display: flex;
-                place-items: center;
-                width: clamp(280px, 35vw, 400px);
-                -webkit-tap-highlight-color: #0000;
-                transition-property: translate, transform;
-                transition-duration: 0.26s;
-                transition-timing-function: ease-out;
-                transform-style: preserve-3d;
-
-                .key {
-                    transform-style: preserve-3d;
-                    border: 0;
-                    background: #0000;
-                    padding: 0;
-                    cursor: pointer;
-                    outline: none;
-
-                    &[data-pressed='true'],
-                    &:active {
-                        .key__content {
-                            translate: 0 calc(var(--travel) * 1%);
-                        }
-                    }
-                }
-
-                .key__content {
-                    width: 100%;
-                    display: inline-block;
-                    height: 100%;
-                    transition: translate 0.12s ease-out;
-                    container-type: inline-size;
-                }
-
-                .keypad__single .key__text {
-                    width: 52%;
-                    height: 62%;
-                    translate: 45% -16%;
-                }
-
-                .key__text {
-                    height: 46%;
-                    width: 86%;
-                    position: absolute;
-                    font-size: 12cqi;
-                    z-index: 21;
-                    top: 5%;
-                    left: 0;
-                    mix-blend-mode: normal;
-                    color: hsl(0 0% 94%);
-                    translate: 8% 10%;
-                    transform: rotateX(36deg) rotateY(45deg) rotateX(-90deg) rotate(0deg);
-                    text-align: left;
-                    padding: 1ch;
-                }
-
-                .keypad__single {
-                    position: absolute;
-                    width: 40.5%;
-                    left: 54%;
-                    bottom: 36%;
-                    height: 46%;
-                    clip-path: polygon(
-                            0 0,
-                            54% 0,
-                            89% 24%,
-                            100% 70%,
-                            54% 100%,
-                            46% 100%,
-                            0 69%,
-                            12% 23%,
-                            47% 0%
-                    );
-                    mask: url(https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86) 50% 50% / 100% 100%;
-
-                    &.keypad__single--left {
-                        left: 29.3%;
-                        bottom: 54.2%;
-                    }
-
-                    .key__text {
-                        font-size: 18cqi;
-                    }
-
-                    img {
-                        top: 0;
-                        opacity: 1;
-                        width: 96%;
-                        position: absolute;
-                        left: 50%;
-                        translate: -50% 1%;
-                    }
-                }
-
-                .key__mask {
-                    width: 100%;
-                    height: 100%;
-                    display: inline-block;
-                }
-
-                .keypad__double {
-                    position: absolute;
-                    background: hsl(10 100% 50% / 0);
-                    width: 64%;
-                    height: 65%;
-                    left: 6%;
-                    bottom: 17.85%;
-                    clip-path: polygon(
-                            34% 0,
-                            93% 44%,
-                            101% 78%,
-                            71% 100%,
-                            66% 100%,
-                            0 52%,
-                            0 44%,
-                            7% 17%,
-                            30% 0
-                    );
-                    mask: url(https://assets.codepen.io/605876/keypad-double.png?format=auto&quality=86) 50% 50% / 100% 100%;
-                    img {
-                        top: 0;
-                        opacity: 1;
-                        width: 99%;
-                        position: absolute;
-                        left: 50%;
-                        translate: -50% 1%;
-                    }
-                }
-
-                .key img {
-                    filter: hue-rotate(calc(var(--hue, 0) * 1deg))
-                    saturate(var(--saturate, 1)) brightness(var(--brightness, 1));
-                }
-
-                .keypad__base {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                }
-                img {
-                    transition: translate 0.12s ease-out;
-                    width: 100%;
-                }
-            }
-            .reference {
-                pointer-events: none;
-                opacity: 0;
-                z-index: 2;
-            }
+        #container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
         }
-
-        @layer base {
-            :root {
-                --font-size-min: 16;
-                --font-size-max: 20;
-                --font-ratio-min: 1.2;
-                --font-ratio-max: 1.33;
-                --font-width-min: 375;
-                --font-width-max: 1500;
-            }
-
-            html {
-                color-scheme: light dark;
-            }
-
-            [data-theme='light'] {
-                color-scheme: light only;
-            }
-
-            [data-theme='dark'] {
-                color-scheme: dark only;
-            }
-
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-
-            body {
-                background: light-dark(#fff, #000);
-                display: grid;
-                place-items: center;
-                min-height: 100vh;
-                overflow: hidden;
-                font-family: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue',
-                Helvetica, Arial, sans-serif, system-ui;
-            }
-
-            body::before {
-                --size: 45px;
-                --line: color-mix(in hsl, canvasText, transparent 80%);
-                content: '';
-                height: 100vh;
-                width: 100vw;
-                position: fixed;
-                background: linear-gradient(
-                        90deg,
-                        var(--line) 1px,
-                        transparent 1px var(--size)
-                )
-                calc(var(--size) * 0.36) 50% / var(--size) var(--size),
-                linear-gradient(var(--line) 1px, transparent 1px var(--size)) 0%
-                calc(var(--size) * 0.32) / var(--size) var(--size);
-                mask: linear-gradient(-20deg, transparent 50%, white);
-                top: 0;
-                transform-style: flat;
-                pointer-events: none;
-                z-index: -1;
-            }
-
-            .bear-link {
-                color: canvasText;
-                position: fixed;
-                top: 1rem;
-                left: 1rem;
-                width: 48px;
-                aspect-ratio: 1;
-                display: grid;
-                place-items: center;
-                opacity: 0.8;
-            }
-
-            :where(.x-link, .bear-link):is(:hover, :focus-visible) {
-                opacity: 1;
-            }
-
-            .bear-link svg {
-                width: 75%;
-            }
-
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border-width: 0;
-            }
-        }
-
-        .keypad {
-            opacity: 0;
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
-<main>
-    <section>
-        <div>
-            <h1>Jus' make things.<br />Put them on the internet.</h1>
-            <p>
-                Sign up for a newsletter all about building in public, sharing your
-                work, and ignoring the haters.
-            </p>
-            <form action="">
-                <input type="email" required placeholder="creator@hotmail.com" />
-                <button type="submit">sign up</button>
-            </form>
-        </div>
-    </section>
-    <div class="keypad">
-        <div class="keypad__base">
-            <img src="https://assets.codepen.io/605876/keypad-base.png?format=auto&quality=86" alt="" />
-        </div>
-        <button id="one" class="key keypad__single keypad__single--left">
-        <span class="key__mask">
-          <span class="key__content">
-            <span class="key__text">ok</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt="" />
-          </span>
-        </span>
-        </button>
-        <button id="two" class="key keypad__single">
-        <span class="key__mask">
-          <span class="key__content">
-            <span class="key__text">go</span>
-            <img src="https://assets.codepen.io/605876/keypad-single.png?format=auto&quality=86" alt="" />
-          </span>
-        </span>
-        </button>
-        <button id="three" class="key keypad__double">
-        <span class="key__mask">
-          <span class="key__content">
-            <span class="key__text">create.</span>
-            <img src="https://assets.codepen.io/605876/keypad-double.png?format=auto&quality=86" alt="" />
-          </span>
-        </span>
-        </button>
-    </div>
-</main>
 
-<a
-        aria-label="Follow Jhey"
-        class="bear-link"
-        href="https://twitter.com/intent/follow?screen_name=jh3yy"
-        target="_blank"
-        rel="noreferrer noopener"
->
-    <svg
-            class="w-9"
-            viewBox="0 0 969 955"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle
-                cx="161.191"
-                cy="320.191"
-                r="133.191"
-                stroke="currentColor"
-                stroke-width="20"
-        ></circle>
-        <circle
-                cx="806.809"
-                cy="320.191"
-                r="133.191"
-                stroke="currentColor"
-                stroke-width="20"
-        ></circle>
-        <circle
-                cx="695.019"
-                cy="587.733"
-                r="31.4016"
-                fill="currentColor"
-        ></circle>
-        <circle
-                cx="272.981"
-                cy="587.733"
-                r="31.4016"
-                fill="currentColor"
-        ></circle>
-        <path
-                d="M564.388 712.083C564.388 743.994 526.035 779.911 483.372 779.911C440.709 779.911 402.356 743.994 402.356 712.083C402.356 680.173 440.709 664.353 483.372 664.353C526.035 664.353 564.388 680.173 564.388 712.083Z"
-                fill="currentColor"
-        ></path>
-        <rect
-                x="310.42"
-                y="448.31"
-                width="343.468"
-                height="51.4986"
-                fill="#FF1E1E"
-        ></rect>
-        <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M745.643 288.24C815.368 344.185 854.539 432.623 854.539 511.741H614.938V454.652C614.938 433.113 597.477 415.652 575.938 415.652H388.37C366.831 415.652 349.37 433.113 349.37 454.652V511.741L110.949 511.741C110.949 432.623 150.12 344.185 219.845 288.24C289.57 232.295 384.138 200.865 482.744 200.865C581.35 200.865 675.918 232.295 745.643 288.24Z"
-                fill="currentColor"
-        ></path>
-    </svg>
-</a>
+<div id="container"></div>
 
-<script type="module">
-    const config = {
-        theme: 'system',
-        muted: false,
-        exploded: false,
-        one: {
-            travel: 26,
-            text: 'ok',
-            key: 'o',
-            hue: 114,
-            saturation: 1.4,
-            brightness: 1.2,
-            buttonElement: document.querySelector('#one'),
-            textElement: document.querySelector('#one .key__text'),
-        },
-        two: {
-            travel: 26,
-            text: 'go',
-            key: 'g',
-            hue: 0,
-            saturation: 0,
-            brightness: 1.4,
-            buttonElement: document.querySelector('#two'),
-            textElement: document.querySelector('#two .key__text'),
-        },
-        three: {
-            travel: 18,
-            text: 'create.',
-            key: 'Enter',
-            hue: 0,
-            saturation: 0,
-            brightness: 0.4,
-            buttonElement: document.querySelector('#three'),
-            textElement: document.querySelector('#three .key__text'),
-        },
-    }
+<script>
+    const hexToRgb = hex => {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        if (!result) return [1, 0.5, 0.2];
+        return [parseInt(result[1], 16) / 255, parseInt(result[2], 16) / 255, parseInt(result[3], 16) / 255];
+    };
 
-    const clickAudio = new Audio(
-        'https://cdn.freesound.org/previews/378/378085_6260145-lq.mp3'
-    )
-    clickAudio.muted = config.muted
+    const vertexShaderSource = `#version 300 es
+precision highp float;
+in vec2 position;
+in vec2 uv;
+out vec2 vUv;
+void main() {
+  vUv = uv;
+  gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
 
-    const ids = ['one', 'two', 'three']
+    const fragmentShaderSource = `#version 300 es
+precision highp float;
+uniform vec2 iResolution;
+uniform float iTime;
+uniform vec3 uCustomColor;
+uniform float uUseCustomColor;
+uniform float uSpeed;
+uniform float uDirection;
+uniform float uScale;
+uniform float uOpacity;
+uniform vec2 uMouse;
+uniform float uMouseInteractive;
+out vec4 fragColor;
 
-    for (const id of ids) {
-        config[id].buttonElement.style.setProperty('--travel', config[id].travel)
-        config[id].buttonElement.style.setProperty(
-            '--saturate',
-            config[id].saturation
-        )
-        config[id].buttonElement.style.setProperty('--hue', config[id].hue)
-        config[id].buttonElement.style.setProperty(
-            '--brightness',
-            config[id].brightness
-        )
-        config[id].buttonElement.addEventListener('pointerdown', () => {
-            if (!config.muted) {
-                clickAudio.currentTime = 0
-                clickAudio.play()
+void mainImage(out vec4 o, vec2 C) {
+  vec2 center = iResolution.xy * 0.5;
+  C = (C - center) / uScale + center;
+
+  vec2 mouseOffset = (uMouse - center) * 0.0002;
+  C += mouseOffset * length(C - center) * step(0.5, uMouseInteractive);
+
+  float i, d, z, T = iTime * uSpeed * uDirection;
+  vec3 O, p, S;
+
+  for (vec2 r = iResolution.xy, Q; ++i < 60.; O += o.w/d*o.xyz) {
+    p = z*normalize(vec3(C-.5*r,r.y));
+    p.z -= 4.;
+    S = p;
+    d = p.y-T;
+
+    p.x += .4*(1.+p.y)*sin(d + p.x*0.1)*cos(.34*d + p.x*0.05);
+    Q = p.xz *= mat2(cos(p.y+vec4(0,11,33,0)-T));
+    z+= d = abs(sqrt(length(Q*Q)) - .25*(5.+S.y))/3.+8e-4;
+    o = 1.+sin(S.y+p.z*.5+S.z-length(S-p)+vec4(2,1,0,8));
+  }
+
+  o.xyz = tanh(O/1e4);
+}
+
+bool finite1(float x){ return !(isnan(x) || isinf(x)); }
+vec3 sanitize(vec3 c){
+  return vec3(
+    finite1(c.r) ? c.r : 0.0,
+    finite1(c.g) ? c.g : 0.0,
+    finite1(c.b) ? c.b : 0.0
+  );
+}
+
+void main() {
+  vec4 o = vec4(0.0);
+  mainImage(o, gl_FragCoord.xy);
+  vec3 rgb = sanitize(o.rgb);
+
+  float intensity = (rgb.r + rgb.g + rgb.b) / 3.0;
+  vec3 customColor = intensity * uCustomColor;
+  vec3 finalColor = mix(rgb, customColor, step(0.5, uUseCustomColor));
+
+  float alpha = length(rgb) * uOpacity;
+  fragColor = vec4(finalColor, alpha);
+}`;
+
+    class Plasma {
+        constructor(container, options = {}) {
+            this.container = container;
+            this.options = {
+                color: options.color || '#00ffff',
+                speed: options.speed || 1,
+                direction: options.direction || 'forward',
+                scale: options.scale || 1,
+                opacity: options.opacity || 1,
+                mouseInteractive: options.mouseInteractive !== false
+            };
+
+            this.mousePos = { x: 0, y: 0 };
+            this.init();
+        }
+
+        createShader(gl, type, source) {
+            const shader = gl.createShader(type);
+            gl.shaderSource(shader, source);
+            gl.compileShader(shader);
+
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                console.error('Error compilando shader:', gl.getShaderInfoLog(shader));
+                gl.deleteShader(shader);
+                return null;
             }
-        })
-    }
 
-    // Handle key bindings
-    window.addEventListener('keydown', (event) => {
-        for (const id of ids) {
-            if (event.key === config[id].key) {
-                config[id].buttonElement.dataset.pressed = true
-                if (!config.muted) {
-                    clickAudio.currentTime = 0
-                    clickAudio.play()
+            return shader;
+        }
+
+        init() {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl2', { alpha: true, antialias: false });
+
+            if (!gl) {
+                console.error('WebGL2 no disponible');
+                return;
+            }
+
+            this.gl = gl;
+            this.canvas = canvas;
+            canvas.style.display = 'block';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            this.container.appendChild(canvas);
+
+            const vertexShader = this.createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+            const fragmentShader = this.createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+
+            this.program = gl.createProgram();
+            gl.attachShader(this.program, vertexShader);
+            gl.attachShader(this.program, fragmentShader);
+            gl.linkProgram(this.program);
+
+            if (!gl.getProgramParameter(this.program, gl.LINK_STATUS)) {
+                console.error('Error enlazando programa:', gl.getProgramInfoLog(this.program));
+                return;
+            }
+
+            gl.useProgram(this.program);
+
+            // Crear geometría de triángulo que cubre toda la pantalla
+            const positions = new Float32Array([
+                -1, -1,
+                -1, 4,
+                4, -1
+            ]);
+
+            const uvs = new Float32Array([
+                0, 0,
+                0, 2,
+                2, 0
+            ]);
+
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+            const positionLoc = gl.getAttribLocation(this.program, 'position');
+            gl.enableVertexAttribArray(positionLoc);
+            gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
+
+            const uvBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, uvBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, uvs, gl.STATIC_DRAW);
+
+            const uvLoc = gl.getAttribLocation(this.program, 'uv');
+            gl.enableVertexAttribArray(uvLoc);
+            gl.vertexAttribPointer(uvLoc, 2, gl.FLOAT, false, 0, 0);
+
+            // Uniforms
+            const useCustomColor = this.options.color ? 1.0 : 0.0;
+            const customColorRgb = this.options.color ? hexToRgb(this.options.color) : [1, 1, 1];
+            const directionMultiplier = this.options.direction === 'reverse' ? -1.0 : 1.0;
+
+            this.uniforms = {
+                iTime: gl.getUniformLocation(this.program, 'iTime'),
+                iResolution: gl.getUniformLocation(this.program, 'iResolution'),
+                uCustomColor: gl.getUniformLocation(this.program, 'uCustomColor'),
+                uUseCustomColor: gl.getUniformLocation(this.program, 'uUseCustomColor'),
+                uSpeed: gl.getUniformLocation(this.program, 'uSpeed'),
+                uDirection: gl.getUniformLocation(this.program, 'uDirection'),
+                uScale: gl.getUniformLocation(this.program, 'uScale'),
+                uOpacity: gl.getUniformLocation(this.program, 'uOpacity'),
+                uMouse: gl.getUniformLocation(this.program, 'uMouse'),
+                uMouseInteractive: gl.getUniformLocation(this.program, 'uMouseInteractive')
+            };
+
+            gl.uniform3f(this.uniforms.uCustomColor, ...customColorRgb);
+            gl.uniform1f(this.uniforms.uUseCustomColor, useCustomColor);
+            gl.uniform1f(this.uniforms.uSpeed, this.options.speed * 0.4);
+            gl.uniform1f(this.uniforms.uDirection, directionMultiplier);
+            gl.uniform1f(this.uniforms.uScale, this.options.scale);
+            gl.uniform1f(this.uniforms.uOpacity, this.options.opacity);
+            gl.uniform2f(this.uniforms.uMouse, 0, 0);
+            gl.uniform1f(this.uniforms.uMouseInteractive, this.options.mouseInteractive ? 1.0 : 0.0);
+
+            this.directionMultiplier = directionMultiplier;
+
+            if (this.options.mouseInteractive) {
+                this.handleMouseMove = (e) => {
+                    const rect = this.container.getBoundingClientRect();
+                    this.mousePos.x = e.clientX - rect.left;
+                    this.mousePos.y = e.clientY - rect.top;
+                    gl.uniform2f(this.uniforms.uMouse, this.mousePos.x, this.mousePos.y);
+                };
+                this.container.addEventListener('mousemove', this.handleMouseMove);
+            }
+
+            this.setSize();
+
+            this.resizeObserver = new ResizeObserver(() => this.setSize());
+            this.resizeObserver.observe(this.container);
+
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+            this.t0 = performance.now();
+            this.animate();
+        }
+
+        setSize() {
+            const rect = this.container.getBoundingClientRect();
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const width = Math.max(1, Math.floor(rect.width * dpr));
+            const height = Math.max(1, Math.floor(rect.height * dpr));
+
+            this.canvas.width = width;
+            this.canvas.height = height;
+
+            this.gl.viewport(0, 0, width, height);
+            this.gl.uniform2f(this.uniforms.iResolution, width, height);
+        }
+
+        animate() {
+            const t = performance.now();
+            let timeValue = (t - this.t0) * 0.001;
+
+            if (this.options.direction === 'pingpong') {
+                const cycle = Math.sin(timeValue * 0.5) * this.directionMultiplier;
+                this.gl.uniform1f(this.uniforms.uDirection, cycle);
+            }
+
+            this.gl.uniform1f(this.uniforms.iTime, timeValue);
+
+            this.gl.clearColor(0, 0, 0, 0);
+            this.gl.clear(this.gl.COLOR_BUFFER_BIT);
+            this.gl.drawArrays(this.gl.TRIANGLES, 0, 3);
+
+            this.raf = requestAnimationFrame(() => this.animate());
+        }
+
+        dispose() {
+            cancelAnimationFrame(this.raf);
+            this.resizeObserver?.disconnect();
+            if (this.options.mouseInteractive && this.handleMouseMove) {
+                this.container.removeEventListener('mousemove', this.handleMouseMove);
+            }
+            try {
+                if (this.canvas && this.canvas.parentElement === this.container) {
+                    this.container.removeChild(this.canvas);
                 }
+            } catch (e) {
+                console.warn('Canvas ya fue removido');
             }
         }
-    })
+    }
 
-    window.addEventListener('keyup', (event) => {
-        for (const id of ids) {
-            if (event.key === config[id].key)
-                config[id].buttonElement.dataset.pressed = false
-        }
-    })
-
-    // Show keypad
-    document.querySelector('.keypad').style.setProperty('opacity', 1)
-
-    // Prevent form submission
-    document.querySelector('form').addEventListener('submit', event => event.preventDefault())
+    // Inicializar
+    window.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('container');
+        new Plasma(container, {
+            color: '#054cf5',        // Color del plasma
+            speed: 1,                // Velocidad
+            direction: 'forward',    // 'forward', 'reverse', 'pingpong'
+            scale: 1,                // Escala
+            opacity: 1,              // Opacidad
+            mouseInteractive: false  // Interacción con mouse desactivada
+        });
+    });
 </script>
+
 </body>
 </html>

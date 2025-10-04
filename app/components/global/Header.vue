@@ -3,13 +3,24 @@ import AllKey from "~/components/ui/allKey.vue";
 </script>
 
 <template>
-    <div class="relative w-full min-h-screen overflow-hidden grid-background fondo">
+    <div class="relative w-full min-h-screen overflow-hidden grid-background ">
+
         <!-- Grid Background -->
         <div class="absolute h-full w-full">
             <div class="absolute bottom-0 left-0 right-0 top-0
             bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]
             [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
             </div>
+            <LazyUiPlasma
+                color="#60a5fa"
+                :speed="0.9"
+                direction="forward"
+                :scale="2"
+                :opacity="2"
+                :pause-when-hidden="true"
+                :mouseInteractive="false"
+            />
+
         </div>
 
         <UContainer class="h-full">
@@ -43,10 +54,6 @@ import AllKey from "~/components/ui/allKey.vue";
                             Transformo conceptos en aplicaciones web completas.
                         </p>
 
-                        <!-- Divider -->
-                        <div class="w-full h-px max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto mb-6 sm:mb-8"
-                             style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(5,76,245,0.26) 40.83%, rgba(75,149,255,0.46) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
-                        </div>
 
                         <!-- Buttons -->
                         <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
@@ -58,13 +65,13 @@ import AllKey from "~/components/ui/allKey.vue";
                                href="#contacto">
                                 <span>Contacto</span>
                             </a>
-                            <button class="group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm
+                            <a href="#about" class="group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm
                             focus:outline-none ring-slate-200 text-slate-700 dark:text-white hover:ring-slate-300
                             active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300
                             animate-fade-in-right transition-colors dark:ring-slate-700 dark:hover:bg-slate-800"
                                     type="button">
                                 <span>Sobre mi</span>
-                            </button>
+                            </a>
                         </div>
 
                         <!-- AllKey Component -->
