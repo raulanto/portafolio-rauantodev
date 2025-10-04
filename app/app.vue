@@ -1,12 +1,16 @@
 <template>
-
+    <cursor/>
     <UApp>
         <NuxtPage />
+
     </UApp>
+
     <Analytics/>
 </template>
 <script setup lang="ts">
 import { Analytics } from '@vercel/analytics/nuxt'
+import Cursor from "~/components/ui/cursor.vue";
+import GradualBlur from "~/components/ui/GradualBlur.vue";
 
 useHead({
     meta: [

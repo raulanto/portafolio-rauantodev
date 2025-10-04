@@ -57,7 +57,7 @@ import AllKey from "~/components/ui/allKey.vue";
 
                         <!-- Buttons -->
                         <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
-                            <a class="group inline-flex items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm font-semibold
+                            <a class=" group inline-flex items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm font-semibold
                             focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                             bg-neutral-900 text-white hover:bg-neutral-700 hover:text-slate-100
                             active:bg-neutral-800 active:text-neutral-300 focus-visible:outline-neutral-900 animate-fade-in-left
