@@ -7,7 +7,7 @@
         <section class="overflow-y-auto h-screen">
             <div class="container max-w-5xl mx-auto p-4 my-8">
                 <div
-                    class=" rounded-2xl shadow-xl overflow-hidden border-neutral-600  bg-white dark:bg-neutral-900 dark:border-neutral-800">
+                    class=" rounded-xl shadow-xl overflow-hidden border-neutral-600  bg-white dark:bg-neutral-900 dark:border-neutral-800">
 
                     <!-- Header Section -->
                     <header

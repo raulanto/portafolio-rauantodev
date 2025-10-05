@@ -17,6 +17,7 @@ const handleCardClick = (index: number) => {
             <lazy-navar/>
             <LazyHeader/>
             <about/>
+
             <Tecologia/>
 
             <lista-blog/>
