@@ -143,15 +143,15 @@ onUnmounted(() => {
 
                         </p>
                         <div class="flex flex-wrap gap-4">
-                            <a class="group inline-flex items-center
+                            <NuxtLink to="/perfil/cv" class="group inline-flex items-center
                             justify-center rounded-full py-2 px-4 text-sm font-semibold
                             focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                             bg-neutral-900 text-white hover:bg-neutral-700 hover:text-slate-100
                             active:bg-neutral-800 active:text-neutral-300 focus-visible:outline-neutral-900 animate-fade-in-left
                             dark:bg-primary dark:text-neutral-950 dark:hover:bg-primary-400"
-                               href="#">
+                               >
                                 <span class="">Mas Sobre mi</span>
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                     <div class="lg:w-1/3 flex justify-center animate-slide-up">

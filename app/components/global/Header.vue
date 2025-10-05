@@ -13,7 +13,7 @@ import AllKey from "~/components/ui/allKey.vue";
             </div>
             <LazyUiPlasma
                 color="#60a5fa"
-                :speed="0.9"
+                :speed="0.5"
                 direction="forward"
                 :scale="2"
                 :opacity="2"
