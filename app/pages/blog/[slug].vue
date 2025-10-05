@@ -76,7 +76,3 @@ const { data: links } = await useAsyncData(`linked-${path}`, async () => {
     </UMain>
 </template>
 
-
-<style>
-
-</style>

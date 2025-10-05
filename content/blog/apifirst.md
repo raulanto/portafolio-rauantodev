@@ -562,5 +562,3 @@ El enfoque **API-First** transforma la manera en que desarrollamos software mode
 Go es un lenguaje excelente para implementar APIs gracias a su rendimiento, simplicidad y robusta biblioteca estándar. La combinación de Go con una estrategia API-first resulta en sistemas escalables y de alta calidad.
 
 ---
-
-**¿Listo para comenzar tu próximo proyecto con API-First?** Empieza definiendo tu contrato OpenAPI y deja que la implementación siga naturalmente.

@@ -43,17 +43,16 @@ import AllKey from "~/components/ui/allKey.vue";
                             </svg>
                         </a>
 
+<!-- Heading -->
                         <!-- Heading -->
-                        <h1 class="mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight dark:text-white serif-text px-2 sm:px-4">
+                        <h1 class="mb-4 sm:mb-6 mix-blend-multiply  text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-extrabold tracking-tight leading-tight dark:text-white serif-text px-2 sm:px-4 ">
                             Creando el futuro web, una línea de código a la vez
                         </h1>
 
                         <!-- Description -->
-                        <p class="mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl font-normal max-w-3xl px-4 sm:px-8 md:px-16">
+                        <p class="mb-6 sm:mb-8 mix-blend-multiply  text-base sm:text-lg lg:text-xl font-normal max-w-3xl px-4 sm:px-8 md:px-16 ">
                             Transformo conceptos en aplicaciones web completas.
                         </p>
-
-
                         <!-- Buttons -->
                         <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
                             <a class=" group inline-flex items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm font-semibold

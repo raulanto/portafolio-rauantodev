@@ -1,5 +1,5 @@
 <template>
-    <div ref="containerRef" class="plasma-container"></div>
+    <div ref="containerRef" class="plasma-container "></div>
 </template>
 
 <script setup>
