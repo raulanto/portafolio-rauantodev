@@ -23,6 +23,11 @@ const items = computed<NavigationMenuItem[]>(() => [
         active: route.path.startsWith('/docs/components')
     },
     {
+        label: 'Cv',
+        to: '/perfil/cv',
+
+    },
+    {
         label: 'Linkedin',
         to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
         target: '_blank'

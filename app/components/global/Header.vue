@@ -20,7 +20,6 @@ import AllKey from "~/components/ui/allKey.vue";
                 :pause-when-hidden="true"
                 :mouseInteractive="false"
             />
-
         </div>
 
         <UContainer class="h-full">
