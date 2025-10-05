@@ -23,7 +23,6 @@ const handleCardClick = (index: number) => {
             <lista-blog/>
             <LazyContacto/>
 
-            <LazyInfo/>
 
             <LazyFooter/>
         </section>

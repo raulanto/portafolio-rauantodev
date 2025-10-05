@@ -1,9 +1,15 @@
 <script setup lang="ts">
+useSeoMeta({
+
+    ogImage: '/cv.png',
+
+});
+
 </script>
 
 <template>
     <Navar></Navar>
-    <main class="relative h-screen max-w-screen overflow-hidden">
+
         <section class="overflow-y-auto h-screen">
             <div class="container max-w-5xl mx-auto p-4 my-8">
                 <div
@@ -432,8 +438,6 @@
             </div>
         </section>
 
-
-    </main>
 
 </template>
 
