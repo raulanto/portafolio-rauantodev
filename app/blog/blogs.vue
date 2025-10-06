@@ -29,7 +29,7 @@ const formatDate = (date: string) => {
     <article
         v-for="blog in blogs"
         :key="blog.path"
-        class="flex flex-col items-start justify-between "
+        class="flex flex-col items-start justify-between bg-neutral-50 px-2 py-1 rounded-lg border border-neutral-200 dark:bg-neutral-900 dark:border-neutral-800"
     >
         <!-- Tags -->
         <div class="flex gap-2 flex-wrap">

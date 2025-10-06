@@ -1,17 +1,11 @@
 <script setup lang="ts">
-useSeoMeta({
-
-    ogImage: '/cv.png',
-
-});
 
 </script>
 
 <template>
     <Navar></Navar>
-
         <section class="overflow-y-auto h-screen">
-            <div class="container max-w-5xl mx-auto p-4 my-8">
+            <div id="pdf-content" class="container max-w-5xl mx-auto p-4 my-8">
                 <div
                     class=" rounded-xl shadow-xl overflow-hidden border-neutral-600  bg-white dark:bg-neutral-900 dark:border-neutral-800">
 
@@ -442,29 +436,5 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #4F46E5;
-}
 
-.section-title {
-    border-bottom: 2px solid #4F46E5;
-    padding-bottom: 4px;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.skill-bar {
-    height: 6px;
-    background: #E5E7EB;
-    border-radius: 4px;
-}
-
-.skill-fill {
-    height: 100%;
-    background: #4F46E5;
-    border-radius: 4px;
-}
 </style>

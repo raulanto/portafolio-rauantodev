@@ -10,7 +10,7 @@ const { data: blogs } = await useAsyncData('blogs', () => {
 </script>
 
 <template>
-    <div id="blog" class="py-24 sm:py-32 fondo-blog">
+    <div id="blog" class="py-24 sm:py-32 fondo-blog bg">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="border rounded-lg bg-neutral-50  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 p-2">
                 <div class=" border rounded-md flex fondo-card flex-col justify-center items-center  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 py-8">
@@ -23,8 +23,9 @@ const { data: blogs } = await useAsyncData('blogs', () => {
                     </div>
                 </div>
             </div>
-            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:mt-20 lg:max-w-none lg:grid-cols-3">
                 <blogs v-if="blogs" :blogs="blogs" />
+
                 <p v-else>Cargando blogs...</p>
             </div>
         </div>
