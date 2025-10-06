@@ -5,6 +5,7 @@ interface BlogType {
     tags?: string[];
     date: string;
     name: string; // Ruta del blog para el enlace
+    path:string;
 }
 
 const props = defineProps({
@@ -27,7 +28,7 @@ const formatDate = (date: string) => {
 <template>
     <article
         v-for="blog in blogs"
-        :key="blog._path"
+        :key="blog.path"
         class="flex flex-col items-start justify-between "
     >
         <!-- Tags -->
@@ -53,7 +54,7 @@ const formatDate = (date: string) => {
         <div class="group relative mt-3">
             <h3 class="text-lg font-semibold leading-6">
 
-                <ULink :to="`/blog/${blog.name}`">
+                <ULink :to="`${blog.path}`">
                     {{ blog.title }}
                 </ULink>
 
