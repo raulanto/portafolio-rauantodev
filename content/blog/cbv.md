@@ -4,6 +4,11 @@ date: "2025-09-29"
 description: "Explora cómo implementar vistas basadas en clases en Django para manejar solicitudes HTTP de manera eficiente."
 tags: ["Django", "Python", "Web Development"]
 name: "cbv"
+
+author: "raulanto"
+author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
+author_description: "Desarrollador Full Stack "
+thumbnail: /neat.png
 ---
 
 

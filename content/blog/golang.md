@@ -2,8 +2,12 @@
 title: "Golang Avanzado"
 date: "2025-09-29"
 description: "Dominando Concurrencia y Optimización de Memoria "
-tags: ["Golan",]
+tags: ["Golan"]
 name: "golang"
+author: "raulanto"
+author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
+author_description: "Desarrollador Full Stack "
+thumbnail: /go.png
 ---
 
 # Golang Avanzado: Dominando Concurrencia y Optimización de Memoria

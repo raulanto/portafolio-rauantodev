@@ -4,6 +4,11 @@ date: "2025-10-04"
 description: "la API es el contrato principal, no una ocurrencia tardía."
 tags: ["Arquitectura", "Web Development",'Golang','API-First']
 name: "apifirst"
+
+author: "raulanto"
+author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
+author_description: "Desarrollador Full Stack "
+thumbnail: "/neat.png"
 ---
 
 # API-First: El Futuro del Desarrollo de Software

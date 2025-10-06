@@ -4,6 +4,11 @@ date: "2025-09-29"
 description: "Principios, Patrones y Protocolos"
 tags: ["Arquitectura", "Web Development"]
 name: "arquitec"
+
+author: "raulanto"
+author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
+author_description: "Desarrollador Full Stack "
+thumbnail: /neat.png
 ---
 
 

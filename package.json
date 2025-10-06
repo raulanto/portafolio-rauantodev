@@ -12,8 +12,10 @@
   "dependencies": {
     "@firecms/neat": "^0.4.0",
     "@nuxt/content": "^3.7.1",
+    "@nuxtjs/seo": "^3.2.2",
     "@vercel/analytics": "^1.5.0",
     "better-sqlite3": "^12.4.1",
+    "dayjs": "^1.11.18",
     "lodash": "^4.17.21",
     "mathjs": "^14.8.2",
     "motion-v": "^1.7.2",

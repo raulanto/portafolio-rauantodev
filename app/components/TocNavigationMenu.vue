@@ -1,10 +1,10 @@
 <template>
     <nav class="relative select-none max-h-[75svh] w-full overflow-y-auto">
-<!--        <div-->
-<!--            class="absolute w-[1px] bg-primary rounded-md left-0 z-[30000]!"-->
-<!--            :transition="{ duration: 0.1 }"-->
-<!--            :animate="{ top: indicatorStyle.top, height: indicatorStyle.height }"-->
-<!--        ></div>-->
+        <div
+            class="absolute w-[1px] bg-primary rounded-md left-0 z-[30000]!"
+            :transition="{ duration: 0.1 }"
+            :animate="{ top: indicatorStyle.top, height: indicatorStyle.height }"
+        ></div>
         <ul ref="navEl" class="flex flex-col items-stretch w-full text-sm overflow-y-auto scrollbar"
             :class="{ 'pl-4': !hideIndicator }">
             <li :id="`link-${t.id}`" v-for="(t, i) in flattenLinks" :title="t.text" class="w-full flex flex-col py-1">

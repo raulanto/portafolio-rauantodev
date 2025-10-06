@@ -61,7 +61,7 @@
     code {
         word-break: normal;
         overflow-wrap: anywhere;
-        @apply bg-neutral-800 px-[5px] py-[1px] rounded-md text-sm;
+
     }
 
     div:has(> table) {
@@ -69,7 +69,4 @@
         @apply overflow-x-auto overflow-y-auto w-full contain-inline-size;
     }
 
-    pre {
-        @apply px-4 bg-neutral-900 rounded-lg my-4 text-wrap;
-    }
 }
