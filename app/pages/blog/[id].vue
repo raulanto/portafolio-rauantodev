@@ -62,7 +62,10 @@ onMounted(() => {
     const contentEl = document.getElementById("content");
     authorEl.value = contentEl?.querySelector("#author-about");
 });
-
+onBeforeMount(() => {
+    const contentEl = document.getElementById("content");
+    authorEl.value = contentEl?.querySelector("#author-about");
+});
 definePageMeta({
     layout: 'blog',
 })
