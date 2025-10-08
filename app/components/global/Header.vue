@@ -3,7 +3,7 @@ import AllKey from "~/components/ui/allKey.vue";
 </script>
 
 <template>
-    <div  class="relative w-full min-h-screen overflow-hidden grid-background ">
+    <div  class="relative w-full min-h-screen overflow-hidden grid-background fondo">
 
         <!-- Grid Background -->
         <div class="absolute h-full w-full">
@@ -11,15 +11,15 @@ import AllKey from "~/components/ui/allKey.vue";
             bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]
             [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
             </div>
-            <LazyUiPlasma
-                color="#60a5fa"
-                :speed="0.5"
-                direction="forward"
-                :scale="2"
-                :opacity="2"
-                :pause-when-hidden="true"
-                :mouseInteractive="false"
-            />
+<!--            <LazyUiPlasma-->
+<!--                color="#60a5fa"-->
+<!--                :speed="0.5"-->
+<!--                direction="forward"-->
+<!--                :scale="1"-->
+<!--                :opacity="2"-->
+<!--                :pause-when-hidden="false"-->
+<!--                :mouseInteractive="false"-->
+<!--            />-->
         </div>
 
         <UContainer class="h-full">

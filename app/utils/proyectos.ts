@@ -1,24 +1,6 @@
 const list = [
 
-    {
-        id: 7,
-        title: 'Calculadora',
-        description: 'Calculadora de Divisiones',
-        tag: [
-            {
-                id: 1,
-                name: 'typescript',
-                color: 'primary'
-            },
-            {
-                id: 2,
-                name: 'Nuxt',
-                color: 'success'
-            },
-        ],
-        imageUrl: './calculadora.png',
-        link: 'https://calculadora-div.vercel.app/'
-    },
+
     {
         id: 15,
         title: 'Dashboard Interactivo',
@@ -37,6 +19,25 @@ const list = [
         ],
         imageUrl: './DashboardInteractivo.png',
         link: 'https://dashboard-interactivo-five.vercel.app/'
+    },
+    {
+        id: 32,
+        title: 'Visualizador de Archivos CSV/Excel ,Graficas y Estadisticas',
+        description: 'Visualizador de archivos CSV/Excel con gráficos y estadísticas dinámicas',
+        tag: [
+            {
+                id: 1,
+                name: 'Vue',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+        ],
+        imageUrl: './visualizador.png',
+        link: 'https://dynamicfilterboard.vercel.app/'
     },
     {
         id: 8,
@@ -62,7 +63,25 @@ const list = [
         imageUrl: './esiegraph.png',
         link: 'https://poryecto-esie-nuxt.vercel.app/'
     },
-
+    {
+        id: 7,
+        title: 'Calculadora',
+        description: 'Calculadora de Divisiones',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+        ],
+        imageUrl: './calculadora.png',
+        link: 'https://calculadora-div.vercel.app/'
+    },
     {
         id: 10,
         title: 'Esie',

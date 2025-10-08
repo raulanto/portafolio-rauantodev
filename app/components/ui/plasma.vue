@@ -1,5 +1,8 @@
 <template>
-    <div ref="containerRef" class="plasma-container "></div>
+    <client-only>
+        <div ref="containerRef" class="plasma-container "></div>
+    </client-only>
+
 </template>
 
 <script setup>
