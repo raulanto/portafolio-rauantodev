@@ -248,25 +248,7 @@ const list = [
         imageUrl: './grad.png',
         link: 'https://github.com/raulanto/apiChangue'
     },
-    {
-        id: 15,
-        title: 'Dashboard Interactivo',
-        description: 'Dashboard interactivo con gráficos y estadísticas en tiempo real',
-        tag: [
-            {
-                id: 1,
-                name: 'Vue',
-                color: 'primary'
-            },
-            {
-                id: 2,
-                name: 'Nuxt',
-                color: 'success'
-            },
-        ],
-        imageUrl: './DashboardInteractivo.png',
-        link: 'https://github.com/raulanto/apiChangue'
-    },
+
 ]
 
 
