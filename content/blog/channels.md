@@ -96,7 +96,7 @@ que voy a explicar cada línea con detalle.
 
 Primero, en tu archivo de configuración, necesitas registrar Channels y configurar el backend de comunicación:
 
-python
+
 
 ```python
 # config/settings.py
@@ -140,7 +140,7 @@ diferentes.
 
 Ahora configuremos el archivo ASGI, que es el equivalente de wsgi.py pero para el mundo asíncrono:
 
-python
+
 
 ```python
 # config/asgi.py
@@ -186,7 +186,7 @@ exactamente como en las vistas normales.
 Antes de manejar WebSockets, necesitamos modelos para almacenar nuestros datos. Esto es Django normal, pero lo incluyo
 para que veas cómo todo se conecta:
 
-python
+
 
 ```python
 # chat/models.py
@@ -276,7 +276,7 @@ los datos que está serializando.
 
 Ahora necesitamos definir las rutas WebSocket, similar a como defines URLs para HTTP:
 
-python
+
 
 ```python
 # chat/routing.py
@@ -299,7 +299,7 @@ Ahora llegamos a la parte más importante: el consumer. Un consumer es como una 
 persistente en lugar de una petición única. Voy a crear un consumer completo con comentarios extensivos explicando cada
 método:
 
-python
+
 
 ```python
 # chat/consumers.py
@@ -612,7 +612,7 @@ intercomunicación donde anuncias algo y todos los que están escuchando lo reci
 
 Aunque el chat usa WebSockets, aún necesitas vistas HTTP normales para mostrar la página y manejar la creación de salas:
 
-python
+
 
 ```python
 # chat/views.py
@@ -685,7 +685,7 @@ una vez que la página está cargada.
 Ahora necesitamos el JavaScript que conecta con tu consumer. Este código vive en el navegador del usuario y maneja toda
 la interacción WebSocket:
 
-javascript
+
 
 ```javascript
 // chat/static/chat/js/websocket.js
@@ -922,7 +922,7 @@ cada navegador conectado recibe el mensaje en su método onMessage y lo muestra 
 
 Finalmente, necesitamos el HTML que conecta todo:
 
-django
+
 
 ```django
 {# chat/templates/chat/sala.html #}
@@ -975,7 +975,7 @@ vía WebSocket. El servidor solo necesita renderizar la estructura inicial y dej
 Para ejecutar tu aplicación con Channels correctamente, necesitas asegurarte de que Redis esté corriendo y luego iniciar
 el servidor:
 
-bash
+
 
 ```bash
 # En una terminal, inicia Redis
@@ -1002,7 +1002,7 @@ Déjame mostrarte cómo extender este sistema para enviar notificaciones desde o
 Imagina que tienes un sistema donde los administradores pueden enviar anuncios importantes a todos los usuarios
 conectados:
 
-python
+
 
 ```python
 # notificaciones/consumers.py
@@ -1068,7 +1068,7 @@ class NotificacionesGlobalesConsumer(AsyncWebsocketConsumer):
 
 Ahora desde cualquier vista o señal de Django, puedes enviar notificaciones:
 
-python
+
 
 ```python
 # En cualquier vista o función
