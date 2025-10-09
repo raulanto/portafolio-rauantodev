@@ -2,6 +2,7 @@
 import dayjs from "dayjs";
 import appMeta from "~/app.meta";
 import l from "lodash";
+import type {NavigationMenuItem} from "@nuxt/ui";
 
 const {path} = useRoute();
 const {data: post} = await useAsyncData(path, () => queryCollection("blog").path(path).first());
@@ -69,10 +70,24 @@ onBeforeMount(() => {
 definePageMeta({
     layout: 'blog',
 })
+const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
+    {
+        label: 'Cv',
+        to: '/perfil/cv',
+
+    },
+    {
+        label: 'Linkedin',
+        to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
+        target: '_blank'
+    }
+])
+
 </script>
 
 <template>
-    <LazyNavar/>
+    <LazyNavar :items="items"/>
     <article v-if="post"
              class="relative mx-auto flex flex-col items-stretch mt-4 mb-16 gap-6 md:gap-12 max-w-5xl self-center">
         <header clas="flex flex-col">
@@ -120,6 +135,7 @@ definePageMeta({
             <ContentRenderer id="content" :value="post" class="markdown-content flex-1"/>
             <ArticleMenu v-if="post?.body?.toc" :toc="post?.body.toc" :links="links"/>
         </div>
+
     </article>
 
 </template>

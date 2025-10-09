@@ -5,34 +5,12 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
-
-const items = computed<NavigationMenuItem[]>(() => [
-    {
-        label: 'Proyectos',
-        to: '#proyectos',
-        active: route.path.startsWith('/docs/getting-started')
-    },
-    {
-        label: 'Contacto',
-        to: '#contacto',
-        active: route.path.startsWith('/docs/components')
-    },
-    {
-        label: 'Blog',
-        to: '#blog',
-        active: route.path.startsWith('/docs/components')
-    },
-    {
-        label: 'Cv',
-        to: '/perfil/cv',
-
-    },
-    {
-        label: 'Linkedin',
-        to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
-        target: '_blank'
+const props=defineProps({
+    items:{
+        type:Array as () => NavigationMenuItem[],
+        default:()=>[]
     }
-])
+})
 
 </script>
 

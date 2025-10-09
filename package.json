@@ -26,7 +26,8 @@
     "ogl": "^1.0.11",
     "three": "^0.169.0",
     "vue": "^3.5.21",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue-utterances": "^3.0.0"
   },
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.40",

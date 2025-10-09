@@ -1,9 +1,24 @@
 <script setup lang="ts">
+import type {NavigationMenuItem} from "@nuxt/ui";
+
+const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
+    {
+        label: 'Cv',
+        to: '/perfil/cv',
+
+    },
+    {
+        label: 'Linkedin',
+        to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
+        target: '_blank'
+    }
+])
 
 </script>
 
 <template>
-    <Navar></Navar>
+    <Navar :items="items"></Navar>
         <section class="overflow-y-auto h-screen">
             <div id="pdf-content" class="container max-w-5xl mx-auto p-4 my-8">
                 <div

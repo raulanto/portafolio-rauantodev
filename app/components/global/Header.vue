@@ -63,10 +63,10 @@ import AllKey from "~/components/ui/allKey.vue";
                                href="#contacto">
                                 <span>Contacto</span>
                             </a>
-                            <a href="#about" class="group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm
-                            focus:outline-none ring-slate-200 text-slate-700 dark:text-white hover:ring-slate-300
+                            <a href="#about" class="group inline-flex ring-1 items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm bg-white font-semibold
+                            focus:outline-none ring-slate-200 text-slate-700  hover:ring-slate-300
                             active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300
-                            animate-fade-in-right transition-colors dark:ring-slate-700 dark:hover:bg-slate-800"
+                            animate-fade-in-right transition-colors dark:ring-slate-700 dark:hover:bg-slate-800 dark:text-neutral-900"
                                     type="button">
                                 <span>Sobre mi</span>
                             </a>
