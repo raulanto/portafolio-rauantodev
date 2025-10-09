@@ -31,6 +31,7 @@ export default defineNuxtConfig({
           langs: [
             'js',
             'python',
+              'bash',
             'html',
               'go'
           ]
