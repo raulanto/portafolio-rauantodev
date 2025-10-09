@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import Blogs from "~/blog/blogs.vue";
 import Keypad3D from "~/components/ui/Keypad3D.vue";
-import Dither from "~/components/ui/Dither.vue";
 
 // Obtener todos los blogs
-const { data: blogs } = await useAsyncData('blogs', () => {
-    return queryCollection('blog').all()
-})
+const { data: blogs } = await useAsyncData("blog", () => queryCollection("blog").all());
+const authors = ref([
+    {
+        name: 'raulanto',
+        description: 'Desarrollador Full Stack',
+        avatar: {
+            src: 'https://avatars.githubusercontent.com/u/74162376?v=4'
+        },
+        to: 'https://github.com/raulanto',
+        target: '_blank'
+    }
+])
 </script>
 
 <template>
@@ -23,11 +31,33 @@ const { data: blogs } = await useAsyncData('blogs', () => {
                     </div>
                 </div>
             </div>
-            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:mt-20 lg:max-w-none lg:grid-cols-3">
-                <blogs v-if="blogs" :blogs="blogs" />
+<!--            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:mx-0 lg:mt-20 lg:max-w-none lg:grid-cols-3">-->
+<!--                <blogs v-if="blogs" :blogs="blogs" />-->
 
-                <p v-else>Cargando blogs...</p>
-            </div>
+<!--                <p v-else>Cargando blogs...</p>-->
+<!--            </div>-->
+
+            <UBlogPosts class="mt-4">
+                <UBlogPost
+                    v-for="(post, index) in blogs"
+                    :key="index"
+                    :image="post.thumbnail"
+                    v-bind="post"
+                    :to="`${post.path}`"
+                    :authors="authors"
+                >
+
+                    <template #badge>
+                        <UBadge v-for="tag in post.tags" :key="tag" size="sm" color="primary" variant="soft" class="mr-1">
+                            {{ tag }}
+                        </UBadge>
+
+                    </template>
+                    <template #date>
+
+                    </template>
+                </UBlogPost>
+            </UBlogPosts>
         </div>
     </div>
 </template>

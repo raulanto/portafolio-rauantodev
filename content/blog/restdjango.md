@@ -2,7 +2,7 @@
 title: "Django REST Framework"
 date: "2025-09-29"
 description: "Django REST Framework: Modelos, Serializers, Vistas y Casos de Uso Complejos"
-tags: ["Django", "Python", "Web Development",'restApi']
+tags: ["Django", "Python",'restApi']
 name: "restdjango "
 author: "raulanto"
 author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
