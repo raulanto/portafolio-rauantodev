@@ -29,19 +29,18 @@ const tecnop = [
                 </div>
 
                 <!-- Texto del encabezado -->
-                <div class="relative z-10 text-center py-12">
-                    <span
-                        class="inline-block px-3 py-1 text-sm font-semibold dark:text-neutral-900 bg-primary-100 rounded-full mb-4">Proyectos</span>
-                    <h2 class="text-4xl font-bold serif-text sm:text-5xl">Diferentes Proyectos con diferentes
-                        tecnologías</h2>
+                <div class="relative z-10 text-center py-12 ">
+                    <UBadge color="neutral">Proyectos</UBadge>
+                    <h2 class="text-4xl font-bold serif-text sm:text-5xl">Transformando ideas en aplicaciones web
+                        completas</h2>
                     <div class="flex justify-center items-center mt-3 gap-2 transition-all duration-1000 ease-in-out">
 
 
                         <h3 class="font-black text-4xl transform-stroke ">
-                            Creatividad con
+                            Full Stack Developer
                         </h3>
                         <RotatingText
-                            :texts="['Vue', 'Angular', 'Django', 'Flutter', 'Nuxt', 'Flask', 'NodeJS']"
+                            :texts="['Vue', 'Angular', 'Django', 'Laravel', 'Nuxt', 'Flask', 'NodeJS','Go']"
                             mainClassName="px-2 sm:px-2 md:px-3 bg-primary-600 text-4xl text-neutral-50 font-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-md"
                             staggerFrom="last"
                             :initial="{ y: '100%' }"

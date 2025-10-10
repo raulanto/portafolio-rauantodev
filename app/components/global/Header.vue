@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AllKey from "~/components/ui/allKey.vue";
+import Particles from "~/components/ui/Particles.vue";
 </script>
 
 <template>
@@ -20,6 +21,21 @@ import AllKey from "~/components/ui/allKey.vue";
 <!--                :pause-when-hidden="false"-->
 <!--                :mouseInteractive="false"-->
 <!--            />-->
+            <Particles
+
+                :particle-count="200"
+                :particle-spread="10"
+                :speed="0.1"
+                :particle-colors="['#ffffff']"
+                :move-particles-on-hover="false"
+                :particle-hover-factor="1"
+                :alpha-particles="false"
+                :particle-base-size="100"
+                :size-randomness="1"
+                :camera-distance="20"
+                :disable-rotation="false"
+                class="w-full h-full "
+            />
         </div>
 
         <UContainer class="h-full">
@@ -43,7 +59,6 @@ import AllKey from "~/components/ui/allKey.vue";
                             </svg>
                         </a>
 
-<!-- Heading -->
                         <!-- Heading -->
                         <h1 class="mb-4 sm:mb-6 mix-blend-multiply  text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-extrabold tracking-tight leading-tight dark:text-white serif-text px-2 sm:px-4 ">
                             Creando el futuro web, una línea de código a la vez
@@ -55,14 +70,8 @@ import AllKey from "~/components/ui/allKey.vue";
                         </p>
                         <!-- Buttons -->
                         <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
-                            <a class=" group inline-flex items-center justify-center rounded-full py-2.5 sm:py-2 px-6 sm:px-4 text-sm font-semibold
-                            focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
-                            bg-neutral-900 text-white hover:bg-neutral-700 hover:text-slate-100
-                            active:bg-neutral-800 active:text-neutral-300 focus-visible:outline-neutral-900 animate-fade-in-left
-                            dark:bg-primary dark:text-neutral-950 dark:hover:bg-primary-400 transition-colors"
-                               href="#contacto">
-                                <span>Contacto</span>
-                            </a>
+
+                            <UButton to="#contacto" color="primary">Contacto</UButton>
                             <UButton to="#about" color="neutral" variant="outline">Sobre mi</UButton>
                         </div>
 

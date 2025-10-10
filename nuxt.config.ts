@@ -17,8 +17,7 @@ export default defineNuxtConfig({
     defaultLocale: "es",
   },
   colorMode: {
-    preference: 'system',
-    fallback: 'light', // will render in light mode
+    fallback: 'dark', // will render in light mode
   },
   schemaOrg: {
     identity: definePerson(appMeta.author),
