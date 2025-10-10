@@ -19,8 +19,8 @@ thumbnail: /neat.png
 
 ### 1.1 Modelo Base Abstracto (para compartir campos comunes)
 
-```python
-# core/models.py
+```python [core/models.py] 
+
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -56,8 +56,8 @@ class AuditableModel(TimeStampedModel):
 
 ### 1.2 Modelos con Relaciones Complejas
 
-```python
-# apps/ecommerce/models.py
+```python [apps/ecommerce/models.py] 
+
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.text import slugify
@@ -367,8 +367,8 @@ class OrderItem(models.Model):
 
 ### 2.1 Serializers Básicos y Anidados
 
-```python
-# apps/ecommerce/serializers.py
+```python [apps/ecommerce/serializers.py] 
+
 from rest_framework import serializers
 from .models import (
     Category, Product, ProductImage, ProductVariant,
@@ -698,8 +698,8 @@ class OrderCreateSerializer(serializers.ModelSerializer):
 
 ### 3.1 Vistas Basadas en Funciones (FBV)
 
-```python
-# apps/ecommerce/views_fbv.py
+```python [apps/ecommerce/views_fbv.py] 
+
 from rest_framework.decorators import (
     api_view, permission_classes, authentication_classes
 )

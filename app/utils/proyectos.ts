@@ -36,7 +36,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './visualizador.png',
+        imageUrl: './visualizador2.png',
         link: 'https://dynamicfilterboard.vercel.app/'
     },
     {

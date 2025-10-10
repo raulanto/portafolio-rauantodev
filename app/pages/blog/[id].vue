@@ -131,8 +131,11 @@ const items = computed<NavigationMenuItem[]>(() => [
                 </div>
             </UCard>
         </header>
-        <div ref="articleEl" class="relative w-full flex flex-row items-start gap-4">
-            <ContentRenderer id="content" :value="post" class="markdown-content flex-1"/>
+        <div ref="articleEl" class="relative w-full flex flex-row items-start gap-4 ">
+            <div class="">
+                <ContentRenderer id="content" :value="post" class="markdown-content flex-1 "/>
+            </div>
+
             <ArticleMenu v-if="post?.body?.toc" :toc="post?.body.toc" :links="links"/>
         </div>
 
