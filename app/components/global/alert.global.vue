@@ -1,5 +1,5 @@
 <template>
-    <u-alert :title="title" :description="description" variant="subtle" :color="getColorName" :icon="getIconName" class="alert">
+    <u-alert :title="title" :description="description" variant="subtle" :color="getColorName" :icon="getIconName" class="alert my-4">
         <template #title v-if="$slots.title"><slot name="title"></slot></template>
         <template #description v-if="$slots.description"><slot name="description"></slot></template>
     </u-alert>
