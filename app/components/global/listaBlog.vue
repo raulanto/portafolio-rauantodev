@@ -3,7 +3,10 @@ import Blogs from "~/blog/blogs.vue";
 import Keypad3D from "~/components/ui/Keypad3D.vue";
 
 // Obtener todos los blogs
-const { data: blogs } = await useAsyncData("blog", () => queryCollection("blog").all());
+const { data: blogs } = await useAsyncData("blog", async () => {
+    const allBlogs = await queryCollection("blog").all();
+    return allBlogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+});
 const authors = ref([
     {
         name: 'raulanto',
