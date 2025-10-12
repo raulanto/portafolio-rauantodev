@@ -6,8 +6,15 @@
 </template>
 
 <script lang="ts" setup>
-export type AlertType = "warning" | "info" | "error" | "success";
-const props = withDefaults(defineProps<{ type?: AlertType; title?: string; description?: string }>(), { type: "info" });
+export type AlertType = "warning" | "info" | "error" | "success" | "neutral";
+const props = withDefaults(
+    defineProps<{
+        type?: AlertType;
+        title?: string;
+        description?: string
+    }>(),
+    {type: "info"}
+);
 const getIconName = computed(() => {
     switch (props.type) {
         case "error":
@@ -18,6 +25,8 @@ const getIconName = computed(() => {
             return "material-symbols:info-rounded";
         case "success":
             return "material-symbols:check-circle-rounded";
+        case "neutral":
+            return "i-lucide-rocket";
     }
 });
 const getColorName = computed(() => {
@@ -30,6 +39,8 @@ const getColorName = computed(() => {
             return "info";
         case "success":
             return "success";
+        case "neutral":
+            return "neutral";
     }
 });
 </script>
