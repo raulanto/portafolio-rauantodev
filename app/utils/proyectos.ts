@@ -40,6 +40,30 @@ const list = [
         link: 'https://dynamicfilterboard.vercel.app/'
     },
     {
+        id: 48,
+        title: 'Búsqueda de Caminos',
+        description: 'Implementación de algoritmos de búsqueda de caminos en grafos',
+        tag: [
+            {
+                id: 1,
+                name: 'typescript',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Nuxt',
+                color: 'success'
+            },
+            {
+                id: 2,
+                name: 'Graph',
+                color: 'success'
+            },
+        ],
+        imageUrl: './busquedaCamino.png',
+        link: 'https://shortpath-algorithm.vercel.app/'
+    },
+    {
         id: 8,
         title: 'EsieGraph',
         description: ' Sistema que brinda atencion al Analisis de Estadística de Educación Superior de las instituciones ',
