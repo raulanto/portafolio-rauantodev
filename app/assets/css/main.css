@@ -10,7 +10,9 @@
     --ui-radius: 0.50rem;
 }
 
-
+@theme {
+    --font-sans: 'Public Sans', sans-serif;
+}
 
 @layer components {
 

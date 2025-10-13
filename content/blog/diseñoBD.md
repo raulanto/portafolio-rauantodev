@@ -1,6 +1,6 @@
 ---
 title: "Cómo Diseñé un Sistema de Base de Datos de Clase Empresarial Paso a Paso"
-date: "2025-10-09"
+date: "2025-10-11"
 description: "Sistema de seguimiento de contratos con clientes"
 tags: [ "Arquitectura","SQl","Modelado de Datos" ]
 name: "diseno-sistema-base-datos-empresarial"
@@ -19,19 +19,20 @@ Recientemente trabajé en el diseño completo de un **sistema de seguimiento de 
 análisis de requisitos hasta la implementación de un data warehouse. En este artículo, te llevaré paso a paso por todo
 el proceso, explicando mis decisiones de diseño, los retos que enfrenté y las lecciones aprendidas.
 
+::note
 Al final de este artículo, entenderás:
 
 - Cómo pasar de requisitos de negocio a un modelo de datos completo
 - Las diferencias prácticas entre OLTP y OLAP
 - Por qué algunas decisiones de diseño importan más que otras
 - Cómo implementar mejores prácticas de ingeniería de datos
-
+::
 ---
 
 ## Paso 1: Entender el Problema (Análisis de Requisitos)
 
 ### El Desafío Inicial
-
+::tip
 El cliente necesitaba un sistema para:
 
 - **Gestionar contratos** con clientes corporativos y gubernamentales
@@ -39,7 +40,7 @@ El cliente necesitaba un sistema para:
 - **Asignar recursos**: personal y equipos a cada contrato
 - **Procesar muestras** (análisis de laboratorio) y guardar resultados
 - **Generar reportes** ejecutivos y analíticos
-
+::
 ### Mi Proceso de Análisis
 
 **1. Hice las preguntas correctas:**
@@ -64,6 +65,7 @@ El cliente necesitaba un sistema para:
 
 **2. Identifiqué las entidades principales:**
 
+::note
 Escuché palabras clave en la conversación:
 
 - "**Clientes**" → Entidad principal
@@ -73,29 +75,33 @@ Escuché palabras clave en la conversación:
 - "**Equipos**" → Recursos materiales
 - "**Muestras**" → Lo que se procesa
 - "**Análisis**" → Resultados del procesamiento
-
+::
 ![snippets-exemple](/blog/diseñoBD.png)
 
 **3. Identifiqué dos necesidades distintas:**
 
 Aquí fue donde tomé mi primera **decisión arquitectural importante**:
 
-```
+::note
 Necesidad Operacional (OLTP):
-→ Crear/modificar contratos
-→ Asignar recursos
-→ Registrar muestras
-→ Capturar análisis
 
+- Crear/modificar contratos
+- Asignar recursos
+- Registrar muestras
+- Capturar análisis
+::
+
+::note
 Necesidad Analítica (OLAP):
-→ ¿Cuántos contratos firmamos este mes?
-→ ¿Qué clientes generan más ingresos?
-→ ¿Cuál es el tiempo promedio de procesamiento?
-→ ¿Qué personal es más productivo?
-```
 
-::alert{type="warning" title="Lección aprendida" description="No intentes hacer un solo modelo para todo. Las
-necesidades transaccionales y analíticas requieren arquitecturas diferentes."}
+- ¿Cuántos contratos firmamos este mes?
+- ¿Qué clientes generan más ingresos?
+- ¿Cuál es el tiempo promedio de procesamiento?
+- ¿Qué personal es más productivo?
+::
+
+
+::alert{type="warning" title="Lección aprendida" description="No intentes hacer un solo modelo para todo. Las necesidades transaccionales y analíticas requieren arquitecturas diferentes."}
 ::
 
 
@@ -110,43 +116,43 @@ plano arquitectónico de una casa: te ayuda a visualizar la estructura antes de 
 
 ### Mi Proceso
 
-**1. Listar todas las entidades:**
 
-```
-✓ Cliente
-✓ Contrato
-✓ Estado
-✓ Estado_Contrato (relación)
-✓ Personal
-✓ Personal_Asignado (relación)
-✓ Equipo
-✓ Equipo_Asignado (relación)
-✓ Tipo_Muestra
-✓ Muestra
-✓ Análisis
-```
+::note
+Listar todas las entidades:
+- Cliente
+- Contrato
+- Estado
+- Estado_Contrato (relación)
+- Personal
+- Personal_Asignado (relación)
+- Equipo
+- Equipo_Asignado (relación)
+- Tipo_Muestra
+- Muestra
+- Análisis
+::
 
 **2. Definir las relaciones:**
 
 Aquí fue donde realmente entendí el dominio del negocio:
 
-```
-Cliente 1:N Contrato
-→ Un cliente puede tener muchos contratos
-→ Cada contrato pertenece a un solo cliente
+::steps{level="4"}
+#### Cliente 1:N Contrato
+- Un cliente puede tener muchos contratos
+- Cada contrato pertenece a un solo cliente
 
-Contrato 1:N Estado_Contrato
-→ Un contrato pasa por múltiples estados
-→ Cada cambio de estado pertenece a un contrato
+#### Contrato 1:N Estado_Contrato
+- Un contrato pasa por múltiples estados
+- Cada cambio de estado pertenece a un contrato
 
-Contrato N:M Personal (a través de Personal_Asignado)
-→ Un contrato puede tener varios empleados
-→ Un empleado puede trabajar en varios contratos
+#### Contrato N:M Personal (a través de Personal_Asignado)
+- Un contrato puede tener varios empleados
+- Un empleado puede trabajar en varios contratos
 
-Muestra 1:N Análisis
-→ Una muestra puede tener múltiples análisis
-→ Cada análisis pertenece a una muestra
-```
+#### Muestra 1:N Análisis
+- Una muestra puede tener múltiples análisis
+- Cada análisis pertenece a una muestra
+::
 
 **3. Usar una herramienta visual:**
 
@@ -250,7 +256,7 @@ CREATE TABLE cliente
 **2. Aplicar normalización:**
 
 Identifiqué oportunidades de normalización:
-
+::caution
 **Antes (desnormalizado - ❌):**
 
 ```sql
@@ -268,7 +274,10 @@ CREATE TABLE muestra
     tiempo_procesamiento INTEGER
     );
 ```
+::
 
+
+::tip
 **Después (normalizado - ✅):**
 
 ```sql
@@ -293,7 +302,7 @@ CREATE TABLE muestra
     tipo_muestra
 );
 ```
-
+::
 **¿Por qué normalizar?**
 
 - Evita inconsistencias ("Agua Potable" vs "agua potable" vs "AGUA POTABLE")
@@ -429,6 +438,8 @@ CREATE SCHEMA analytics; -- Vistas para reportes
 
 **2. Usar características específicas de PostgreSQL:**
 
+
+::tip
 **SERIAL vs BIGSERIAL:**
 
 ```sql
@@ -444,7 +455,9 @@ CREATE TABLE estado
     id_estado SERIAL PRIMARY KEY -- hasta 2 mil millones
 );
 ```
+::
 
+::tip
 **JSONB para flexibilidad:**
 
 ```sql
@@ -462,7 +475,7 @@ SELECT *
 FROM equipo
 WHERE especificaciones ->>'voltaje' = '220V';
 ```
-
+::
 **Campos generados:**
 
 ```sql
@@ -486,6 +499,7 @@ Mucho más robusto que `email LIKE '%@%'`.
 
 **3. Implementar triggers para automatización:**
 
+::note
 **Trigger 1: Actualizar fecha_actualizacion automáticamente**
 
 ```sql
@@ -506,7 +520,9 @@ CREATE TRIGGER trg_contrato_actualizar
     FOR EACH ROW
     EXECUTE FUNCTION actualizar_fecha_modificacion();
 ```
+::
 
+::note
 **Trigger 2: Mantener solo un estado actual**
 
 ```sql
@@ -526,7 +542,8 @@ END;
 $$
 LANGUAGE plpgsql;
 ```
-
+::
+::note
 **Trigger 3: Actualizar estado de equipo al asignar**
 
 ```sql
@@ -536,15 +553,19 @@ CREATE TRIGGER trg_equipo_asignacion
     FOR EACH ROW
     EXECUTE FUNCTION actualizar_estado_equipo();
 ```
+::
 
+::tip
 **¿Por qué triggers?**
 
 - Garantizan reglas de negocio a nivel de base de datos
 - Funcionan incluso si hay múltiples aplicaciones
 - No dependen del código de la aplicación
+::
 
-::alert{type="warning" title="Lección aprendida" description="Los triggers pueden hacer el debugging más difícil. Úsalos
-solo para lógica crítica."}
+::warning
+Lección aprendida" description="Los triggers pueden hacer el debugging más difícil. Úsalos
+solo para lógica crítica.
 ::
 
 **4. Optimización de índices:**
@@ -593,9 +614,9 @@ VALUES ('Nuevo', 'Contrato recién creado', 1, '#3498db'),
        ('En Revisión', 'En proceso de revisión', 2, '#f39c12'),
        ('Aprobado', 'Aprobado, pendiente firma', 3, '#2ecc71'), ...
 ```
-
+::note
 Esto permite que el sistema funcione inmediatamente después de la instalación.
-
+::
 
 
 
@@ -609,13 +630,13 @@ Dejé comentado el código de particionamiento:
 -- CREATE TABLE contrato_2024 PARTITION OF contrato
 --     FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 ```
-
+::tip
 **¿Por qué?**
 
 - El particionamiento tiene overhead
 - Solo vale la pena con millones de registros
 - Es más fácil agregarlo después que quitarlo
-
+::
 **Decisión 6: Tabla de auditoría separada vs triggers en cada tabla**
 
 Opté por una tabla central de auditoría:
@@ -631,13 +652,13 @@ CREATE TABLE audit.cambios_log
     fecha_cambio     TIMESTAMPTZ
 );
 ```
-
+::tip
 **¿Por qué?**
 
 - Un solo lugar para buscar cambios
 - Fácil de consultar y generar reportes
 - No requiere modificar cada tabla
-
+::
 
 
 
@@ -661,38 +682,52 @@ Aquí es donde todo cambia. Pasamos de "diseño para escribir datos" a "diseño 
 
 ### Diferencias OLTP vs OLAP
 
-```
+::tip
 OLTP (Transaccional):
-✓ Normalizado (3FN)
-✓ Muchas tablas pequeñas
-✓ JOINs complejos
-✓ Escrituras frecuentes
-✓ Queries simples pero muchos
-✗ Análisis complejos lentos
+- Normalizado (3FN)
+- Muchas tablas pequeñas
+- JOINs complejos
+- Escrituras frecuentes
+- Queries simples pero muchos
 
+::caution
+Análisis complejos lentos
+::
+::
+
+::tip
 OLAP (Analítico):
-✓ Desnormalizado (Star Schema)
-✓ Pocas tablas grandes
-✓ JOINs simples
-✓ Escrituras en batch (ETL)
-✓ Queries complejos pero optimizados
-✗ No apto para transacciones
-```
+- Desnormalizado (Star Schema)
+- Pocas tablas grandes
+- JOINs simples
+- Escrituras en batch (ETL)
+- Queries complejos pero optimizados
+
+::caution
+  No apto para transacciones
+::
+::
+
 
 ### Mi Proceso
 
 **1. Identificar dimensiones:**
 
+::tip
 Las dimensiones responden a las preguntas: **¿Quién? ¿Qué? ¿Dónde? ¿Cuándo?**
 
-```
-dim_cliente    → ¿Quién contrató?
-dim_personal   → ¿Quién trabajó?
-dim_estado     → ¿En qué estado?
-dim_tipo_muestra → ¿Qué tipo de análisis?
-dim_ubicacion  → ¿Dónde?
-dim_tiempo     → ¿Cuándo? (¡La más importante!)
-```
+- dim_cliente    → ¿Quién contrató?
+
+- dim_personal   → ¿Quién trabajó?
+
+- dim_estado     → ¿En qué estado?
+
+- dim_tipo_muestra → ¿Qué tipo de análisis?
+
+- dim_ubicacion  → ¿Dónde?
+
+- dim_tiempo     → ¿Cuándo? (¡La más importante!)
+::
 
 **2. Crear la dimensión tiempo:**
 
@@ -1068,10 +1103,10 @@ Agregados: Nocturnos (2 AM)
 **1. Separación OLTP/OLAP**
 
 ```
-✓ OLTP optimizado para escritura
-✓ OLAP optimizado para lectura
-✓ ETL conecta ambos
-✓ Equipos diferentes pueden trabajar independientemente
+- OLTP optimizado para escritura
+- OLAP optimizado para lectura
+- ETL conecta ambos
+- Equipos diferentes pueden trabajar independientemente
 ```
 
 **2. Nomenclatura consistente**
@@ -1084,7 +1119,7 @@ CREATE TABLE cliente
     .
     .
 );
-✓
+-
 CREATE TABLE clientes
 (
     .
@@ -1212,58 +1247,61 @@ WHERE ec.id_estado_contrato IS NULL;
 ## Paso 8: Plan de Implementación
 
 ### Cómo implementarlo en tu organización
+::steps{level="4"}
+#### **Fase 1: MVP (2-3 semanas)**
 
-**Fase 1: MVP (2-3 semanas)**
 
-```
-Semana 1:
-✓ Setup PostgreSQL
-✓ Crear esquemas base
-✓ Implementar tablas core
-✓ CRUD básico en aplicación
+::note
+Semana:
+- Setup PostgreSQL
+- Crear esquemas base
+- Implementar tablas core
+- CRUD básico en aplicación
+::
+::note
+Semana :
+- Agregar catálogos
+- Implementar triggers
+- Crear índices básicos
+- Testing funcional
+::
+::note
+Semana :
+- API REST completa
+- Frontend básico
+- Desplegar a staging
+- Testing de usuarios
+::
 
-Semana 2:
-✓ Agregar catálogos
-✓ Implementar triggers
-✓ Crear índices básicos
-✓ Testing funcional
+#### Fase : Completo (4-6 semanas)**
 
-Semana 3:
-✓ API REST completa
-✓ Frontend básico
-✓ Desplegar a staging
-✓ Testing de usuarios
-```
 
-**Fase 2: Completo (4-6 semanas)**
+- Todas las entidades
+- Auditoría completa
+- Seguridad por roles
+- Migraciones automatizadas
+- Testing automatizado
+- Documentación API
 
-```
-✓ Todas las entidades
-✓ Auditoría completa
-✓ Seguridad por roles
-✓ Migraciones automatizadas
-✓ Testing automatizado
-✓ Documentación API
-```
 
-**Fase 3: Analytics (3-4 semanas)**
+#### **Fase : Analytics (3-4 semanas)**
 
-```
-✓ Data Warehouse
-✓ Pipeline ETL
-✓ Dashboards básicos
-✓ Reportes automatizados
-```
 
-**Fase 4: Optimización (ongoing)**
+- Data Warehouse
+- Pipeline ETL
+- Dashboards básicos
+- Reportes automatizados
 
-```
-✓ Particionamiento
-✓ CDC en tiempo real
-✓ Caché distribuido
-✓ Machine Learning
-```
 
+#### **Fase : Optimización (ongoing)**
+
+
+- Particionamiento
+- CDC en tiempo real
+- Caché distribuido
+- Machine Learning
+
+::
 ---
 
 ## Lecciones Aprendidas y Consejos
@@ -1307,33 +1345,33 @@ CREATE FUNCTION test_integridad_contrato() ...
 
 **2. Los índices no son gratis**
 
-```
+::tip
 Cada índice:
 - Hace las escrituras más lentas
 - Consume espacio
 - Necesita mantenimiento
-```
+::
 
 ::alert{type="success" title="Solo crea índices basados en queries reales."}
 ::
 
 **3. KISS (Keep It Simple, Stupid)**
 
-```
-✓ Empieza simple
-✓ Mide performance
-✓ Optimiza lo que realmente es lento
-```
+
+- Empieza simple
+- Mide performance
+- Optimiza lo que realmente es lento
+
 
 **4. La documentación es código**
 
-```markdown
-# Si no está en Git, no existe
+::tip
+Si no está en Git, no existe
 
 - Diagramas en Mermaid
 - Migraciones versionadas
 - Comentarios en SQL
-```
+::
 
 ---
 
@@ -1348,6 +1386,7 @@ Cada índice:
 responsabilidades**: OLTP para operaciones, OLAP para análisis ✅ **Aplicar mejores prácticas** desde el inicio ✅ *
 *Documentar todo** porque tu yo del futuro te lo agradecerá ✅ **Iterar y mejorar** basado en uso real
 
+::tip
 El sistema que diseñé está listo para:
 
 - Manejar miles de contratos simultáneos
@@ -1355,7 +1394,7 @@ El sistema que diseñé está listo para:
 - Generar reportes complejos en segundos
 - Escalar horizontal y verticalmente
 - Evolucionar con el negocio
-
+::
 ### Lo más importante
 
 
@@ -1388,8 +1427,12 @@ SQL para estructura conocida y transacciones. NoSQL para flexibilidad y escala h
 ::
 ::
 
-
-
-
 ---
 
+::callout{icon="i-lucide-square-play" color="neutral" to="/blog/avanzandokpis"}
+SQL Avanzado para KPIs Financieros y Análisis de Negocio
+::
+
+::callout{icon="i-lucide-square-play" color="neutral" to="/blog/reportessql"}
+Reportes SQL Reales: De Operaciones Diarias a Inteligencia de Negocios
+::
