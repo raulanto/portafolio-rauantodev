@@ -3,12 +3,11 @@
 
 import ListaBlog from "~/components/global/listaBlog.vue";
 import About from "~/components/auth/about.vue";
-import AllkeyTec from "~/components/ui/allkeyTec.vue";
+
 import GradualBlur from "~/components/ui/GradualBlur.vue";
 import type {NavigationMenuItem} from "@nuxt/ui";
-const handleCardClick = (index: number) => {
-    console.log(`Card ${index} clicked`);
-};
+import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
+
 const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [
     {
@@ -41,9 +40,12 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
+
     <main class="relative h-screen max-w-screen overflow-hidden">
+
         <section class="overflow-y-auto h-screen">
             <UBanner icon="i-lucide-info" title="Esta Pagina aun sigue en construccion." />
+
             <lazy-navar :items="items"/>
             <LazyHeader/>
             <about/>

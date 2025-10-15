@@ -2,7 +2,7 @@ const list = [
 
 
     {
-        id: 15,
+        id: 1,
         title: 'Dashboard Interactivo',
         description: 'Dashboard interactivo con gráficos y estadísticas en tiempo real',
         tag: [
@@ -21,7 +21,7 @@ const list = [
         link: 'https://dashboard-interactivo-five.vercel.app/'
     },
     {
-        id: 32,
+        id: 2,
         title: 'Visualizador de Archivos CSV/Excel ,Graficas y Estadisticas',
         description: 'Visualizador de archivos CSV/Excel con gráficos y estadísticas dinámicas',
         tag: [
@@ -40,7 +40,7 @@ const list = [
         link: 'https://dynamicfilterboard.vercel.app/'
     },
     {
-        id: 48,
+        id: 3,
         title: 'Búsqueda de Caminos',
         description: 'Implementación de algoritmos de búsqueda de caminos en grafos',
         tag: [
@@ -64,7 +64,7 @@ const list = [
         link: 'https://shortpath-algorithm.vercel.app/'
     },
     {
-        id: 8,
+        id: 4,
         title: 'EsieGraph',
         description: ' Sistema que brinda atencion al Analisis de Estadística de Educación Superior de las instituciones ',
         tag: [
@@ -88,7 +88,7 @@ const list = [
         link: 'https://poryecto-esie-nuxt.vercel.app/'
     },
     {
-        id: 7,
+        id: 5,
         title: 'Calculadora',
         description: 'Calculadora de Divisiones',
         tag: [
@@ -107,7 +107,7 @@ const list = [
         link: 'https://calculadora-div.vercel.app/'
     },
     {
-        id: 10,
+        id: 6,
         title: 'Esie',
         description: ' Maquetacion',
         tag: [
@@ -128,7 +128,7 @@ const list = [
     },
 
     {
-        id: 10,
+        id: 7,
         title: 'PanelGraphSensor',
         description: ' Maquetacion de sistema de seguimiento',
         tag: [
@@ -153,7 +153,7 @@ const list = [
         link: 'https://sistema-escolar-integral.vercel.app/'
     },
     {
-        id: 11,
+        id: 8,
         title: 'Conversor SQL a Modelos Django',
         description: ' Convierte tus consultas SQL en modelos Django de manera rápida y sencilla ',
         tag: [
@@ -182,7 +182,7 @@ const list = [
         link: 'https://create-model-django-migrate.vercel.app/'
     },
     {
-        id: 3,
+        id: 9,
         title: 'Sistema de PDF',
         description: 'Aplicacion extraer PDF',
         tag: [
@@ -201,7 +201,7 @@ const list = [
         link: 'https://github.com/raulanto/sistemaPDF'
     },
     {
-        id: 5,
+        id: 10,
         title: 'DjangoGraphQl',
         description: 'Implementacion de GraphQl con Django',
         tag: [
@@ -220,7 +220,7 @@ const list = [
         link: 'https://github.com/raulanto/djangoGraphQlF'
     },
     {
-        id: 6,
+        id: 11,
         title: 'RPA',
         description: 'sistema de Actividades',
         tag: [
@@ -239,7 +239,7 @@ const list = [
         link: 'https://github.com/raulanto/rpa'
     },
     {
-        id: 1,
+        id: 12,
         title: 'Angular',
         description: 'Practicas realizadas en Angular',
         tag: [
@@ -253,7 +253,7 @@ const list = [
         link: 'https://portafolio-angular-y7o3.vercel.app/home'
     },
     {
-        id: 2,
+        id: 13,
         title: 'Sistema de Factura',
         description: 'Practicas realizadas en Angular',
         tag: [
@@ -273,7 +273,7 @@ const list = [
     },
 
     {
-        id: 6,
+        id: 14,
         title: 'api Chamge',
         description: 'api para guardar habitos y rutinas',
         tag: [

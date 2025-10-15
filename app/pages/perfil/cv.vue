@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type {NavigationMenuItem} from "@nuxt/ui";
+import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 
 const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [
@@ -19,6 +20,9 @@ const items = computed<NavigationMenuItem[]>(() => [
 
 <template>
     <Navar :items="items"></Navar>
+    <carrusel-card-st
+        class="hidden md:block sm:block"
+    />
         <section class="overflow-y-auto h-screen">
             <div id="pdf-content" class="container max-w-5xl mx-auto p-4 my-8">
                 <div

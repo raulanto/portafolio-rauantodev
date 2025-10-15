@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import AllKey from "~/components/ui/allKey.vue";
 import Particles from "~/components/ui/Particles.vue";
+import ShinyText from "~/components/ui/ShinyText.vue";
+import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 </script>
 
 <template>
+<carrusel-card-st
+    class="hidden md:block sm:block"
+    />
     <div  class="relative w-full min-h-screen overflow-hidden grid-background fondo">
 
         <!-- Grid Background -->
@@ -65,14 +70,20 @@ import Particles from "~/components/ui/Particles.vue";
                         </h1>
 
                         <!-- Description -->
-                        <p class="mb-6 sm:mb-8 mix-blend-multiply  text-base sm:text-lg lg:text-xl font-normal max-w-3xl px-4 sm:px-8 md:px-16 ">
-                            Transformo conceptos en aplicaciones web completas.
+                        <p class="">
+                            <ShinyText
+                                text="Transformo conceptos en aplicaciones web completas."
+                                :disabled="false"
+                                :speed="3"
+                                class-name="mb-6 sm:mb-8 mix-blend-multiply  text-base sm:text-lg lg:text-xl font-normal max-w-3xl px-4 sm:px-8 md:px-16 "
+                            />
+
                         </p>
                         <!-- Buttons -->
-                        <div class="flex flex-col w-full max-w-md sm:max-w-none mb-8 sm:mb-12 lg:mb-16 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4 px-4">
+                        <div class="flex gap-2">
 
-                            <UButton to="#contacto" color="primary">Contacto</UButton>
-                            <UButton to="#about" color="neutral" variant="outline">Sobre mi</UButton>
+                            <UButton class="w-fit block" to="#contacto" color="primary">Contacto</UButton>
+                            <UButton to="#about" class="w-fit block" color="neutral" variant="outline">Sobre mi</UButton>
                         </div>
 
                         <!-- AllKey Component -->
