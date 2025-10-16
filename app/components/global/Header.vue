@@ -80,7 +80,7 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 
                         </p>
                         <!-- Buttons -->
-                        <div class="flex gap-2">
+                        <div class="flex w-full justify-center items-center gap-2">
 
                             <UButton class="w-fit block" to="#contacto" color="primary">Contacto</UButton>
                             <UButton to="#about" class="w-fit block" color="neutral" variant="outline">Sobre mi</UButton>
