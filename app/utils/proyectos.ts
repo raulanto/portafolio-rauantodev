@@ -18,7 +18,7 @@ const list = [
             },
         ],
         imageUrl: './DashboardInteractivo.png',
-        link: 'https://dashboard-interactivo-five.vercel.app/'
+        link: 'https://dashboard-interactivo-three.vercel.app/'
     },
     {
         id: 2,
