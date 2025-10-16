@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     colorMode: {
         fallback: 'dark',
     },
+    app: {
+        pageTransition: { name: 'page', mode: 'out-in' },
+    },
     schemaOrg: {
         identity: definePerson(appMeta.author),
     },
