@@ -6,7 +6,6 @@ import About from "~/components/auth/about.vue";
 
 import GradualBlur from "~/components/ui/GradualBlur.vue";
 import type {NavigationMenuItem} from "@nuxt/ui";
-import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 
 const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [

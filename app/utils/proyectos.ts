@@ -63,30 +63,30 @@ const list = [
         imageUrl: './busquedaCamino.png',
         link: 'https://shortpath-algorithm.vercel.app/'
     },
-    {
-        id: 4,
-        title: 'EsieGraph',
-        description: ' Sistema que brinda atencion al Analisis de Estadística de Educación Superior de las instituciones ',
-        tag: [
-            {
-                id: 1,
-                name: 'typescript',
-                color: 'primary'
-            },
-            {
-                id: 2,
-                name: 'Nuxt',
-                color: 'success'
-            },
-            {
-                id: 2,
-                name: 'Graph',
-                color: 'success'
-            },
-        ],
-        imageUrl: './esiegraph.png',
-        link: 'https://poryecto-esie-nuxt.vercel.app/'
-    },
+    // {
+    //     id: 4,
+    //     title: 'EsieGraph',
+    //     description: ' Sistema que brinda atencion al Analisis de Estadística de Educación Superior de las instituciones ',
+    //     tag: [
+    //         {
+    //             id: 1,
+    //             name: 'typescript',
+    //             color: 'primary'
+    //         },
+    //         {
+    //             id: 2,
+    //             name: 'Nuxt',
+    //             color: 'success'
+    //         },
+    //         {
+    //             id: 2,
+    //             name: 'Graph',
+    //             color: 'success'
+    //         },
+    //     ],
+    //     imageUrl: './esiegraph.png',
+    //     link: 'https://poryecto-esie-nuxt.vercel.app/'
+    // },
     {
         id: 5,
         title: 'Calculadora',
@@ -106,26 +106,26 @@ const list = [
         imageUrl: './calculadora.png',
         link: 'https://calculadora-div.vercel.app/'
     },
-    {
-        id: 6,
-        title: 'Esie',
-        description: ' Maquetacion',
-        tag: [
-            {
-                id: 1,
-                name: 'typescript',
-                color: 'primary'
-            },
-            {
-                id: 2,
-                name: 'Nuxt',
-                color: 'success'
-            },
-
-        ],
-        imageUrl: './esie.png',
-        link: 'https://sistema-escolar-integral.vercel.app/'
-    },
+    // {
+    //     id: 6,
+    //     title: 'Esie',
+    //     description: ' Maquetacion',
+    //     tag: [
+    //         {
+    //             id: 1,
+    //             name: 'typescript',
+    //             color: 'primary'
+    //         },
+    //         {
+    //             id: 2,
+    //             name: 'Nuxt',
+    //             color: 'success'
+    //         },
+    //
+    //     ],
+    //     imageUrl: './esie.png',
+    //     link: 'https://sistema-escolar-integral.vercel.app/'
+    // },
 
     {
         id: 7,
