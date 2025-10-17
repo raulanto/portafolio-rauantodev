@@ -33,6 +33,7 @@
     "vue-utterances": "^3.0.0"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.69",
     "@iconify-json/material-symbols": "^1.2.40",
     "@nuxt/ui": "^4.0.0",
     "@types/three": "^0.180.0",

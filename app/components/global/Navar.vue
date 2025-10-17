@@ -2,7 +2,7 @@
 // import {useRoute} from 'vue-router';
 //
 // const route = useRoute();
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type {NavigationMenuItem} from '@nuxt/ui'
 
 const route = useRoute()
 const props=defineProps({
@@ -46,9 +46,8 @@ const props=defineProps({
 <!--    </header>-->
     <UHeader>
         <template #title>
-            <a >
-                rauantodev
-            </a>
+
+        rauantodev
 
         </template>
 
