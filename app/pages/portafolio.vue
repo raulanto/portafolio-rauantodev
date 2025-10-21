@@ -43,7 +43,6 @@ const items = computed<NavigationMenuItem[]>(() => [
     <main class="relative h-screen max-w-screen overflow-hidden">
 
         <section class="overflow-y-auto h-screen">
-            <UBanner icon="i-lucide-info" title="Esta Pagina aun sigue en construccion." />
 
             <lazy-navar :items="items"/>
             <LazyHeader/>
@@ -55,19 +54,10 @@ const items = computed<NavigationMenuItem[]>(() => [
             <LazyContacto/>
 
 
-            <LazyFooter/>
+            <LazyFooterPorta/>
         </section>
 
-        <GradualBlur
-            target="parent"
-            position="bottom"
-            height="6rem"
-            :strength="2"
-            :divCount="5"
-            curve="bezier"
-            :exponential="true"
-            :opacity="2"
-        />
+
     </main>
 
 

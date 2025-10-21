@@ -1,7 +1,7 @@
 <template>
     <div
         ref="containerRef"
-        class="fixed bottom-8 right-8 z-50"
+        class="absolute bottom-8 right-8 "
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
     >
@@ -179,9 +179,9 @@ const SPRING_OPTIONS = { type: 'spring' as const, stiffness: 300, damping: 30 };
 
 const props = withDefaults(defineProps<CarouselProps>(), {
     baseWidth: 380,
-    carouselHeight: 280,
+    carouselHeight: 230,
     cardWidth: 360,
-    cardHeight: 260,
+    cardHeight: 200,
     autoplay: true,
     autoplayDelay: 4000,
     pauseOnHover: true,
