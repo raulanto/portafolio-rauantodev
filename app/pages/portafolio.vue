@@ -30,6 +30,11 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     },
     {
+        label: 'Servicios Free lance',
+        to: '/servicios',
+
+    },
+    {
         label: 'Linkedin',
         to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
         target: '_blank'

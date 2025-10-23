@@ -21,7 +21,6 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
                 <div class="hidden md:block md:col-span-1 lg:hidden"></div>
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 col-span-1 md:col-span-7 lg:col-span-6 gap-y-12 sm:gap-x-8 md:gap-x-8 lg:gap-x-10">
-
                     <div class="sm:col-span-2 md:col-span-1 lg:col-span-1">
                         <h3 class="text-sm font-normal uppercase tracking-wide text-neutral-400 mb-5">Mis redes sociales</h3>
                         <ul class="space-y-3">

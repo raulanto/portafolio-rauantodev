@@ -89,7 +89,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
     <LazyNavar :items="items"/>
     <article v-if="post"
-             class="relative mx-auto flex flex-col items-stretch mt-4 mb-16 gap-6 md:gap-12 max-w-5xl self-center">
+             class="relative mx-auto flex flex-col items-stretch mt-4 mb-16 gap-6 md:gap-12 max-w-5xl self-center  ">
         <header clas="flex flex-col">
             <UCard class="relative shadow-xl overflow-hidden min-h-[20rem] flex flex-col" variant="subtle"
                    :ui="{ body: 'flex flex-col flex-1' }">
@@ -140,6 +140,9 @@ const items = computed<NavigationMenuItem[]>(() => [
         </div>
 
     </article>
-
+<FooterPorta/>
 </template>
 
+<style>
+
+</style>
