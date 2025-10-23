@@ -95,8 +95,8 @@ const items = computed<NavigationMenuItem[]>(() => [
                     </div>
                 </div>
             </div>
-            
 
+            <div class="h-40"></div>
             <p class="font-serif text-4xl">
                 <span class="text-neutral-400">Consigue una presencia web impecable, sin lo complicado.</span>
 
