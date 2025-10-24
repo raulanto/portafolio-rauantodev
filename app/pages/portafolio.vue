@@ -30,7 +30,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     },
     {
-        label: 'Servicios Free lance',
+        label: 'Servicios Free lancer',
         to: '/servicios',
 
     },
