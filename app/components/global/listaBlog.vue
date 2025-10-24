@@ -21,7 +21,7 @@ const authors = ref([
 </script>
 
 <template>
-    <div id="blog" class="py-24 sm:py-32 fondo-blog bg z-50">
+    <div id="blog" class="py-24 sm:py-32 fondo-blog bg ">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="border rounded-lg bg-neutral-50  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 p-2">
                 <div class=" border rounded-md flex fondo-card flex-col justify-center items-center  dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 py-8">

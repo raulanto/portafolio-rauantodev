@@ -2,6 +2,7 @@
 
 import PixelBlast from "~/components/ui/PixelBlast.vue";
 import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
+
 </script>
 
 <template>
@@ -83,5 +84,4 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 </template>
 
 <style scoped>
-
 </style>

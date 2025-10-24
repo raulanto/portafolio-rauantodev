@@ -44,6 +44,7 @@ import Particles from "~/components/ui/Particles.vue";
                         Web.<br/>
 
                     </h1>
+                    <h2 class="text-5xl font-bold  ">Raul antonio de la cruz hernandez</h2>
                     <p> python | django | vue | nuxt | flask | fastapi | nodejs | go | angular | laravel | sql</p>
 <!--                    <UButton to="/portafolio" class="mt-3">-->
 <!--                        Entrar-->
