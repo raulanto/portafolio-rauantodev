@@ -33,7 +33,7 @@ const floatingIcons = ref([
 
 
             <!-- Contenedor del texto con carruseles de fondo -->
-            <div class="relative mb-16 h-auto md:h-[45rem] overflow-hidden">
+            <div class="relative mb-16 h-auto md:h-screen overflow-hidden">
                 <div
                     class="absolute inset-0 z-0 midnight-mist-bg"
                 />
