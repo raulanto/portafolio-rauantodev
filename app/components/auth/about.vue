@@ -65,7 +65,7 @@ const updateParticle = (particle: Particle): void => {
 const drawParticle = (ctx: CanvasRenderingContext2D, particle: Particle): void => {
     ctx.save()
     ctx.globalAlpha = particle.opacity
-    ctx.fillStyle = '#3B82F6'
+    ctx.fillStyle = 'rgba(95,153,245,0.91)'
     ctx.beginPath()
     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
     ctx.fill()

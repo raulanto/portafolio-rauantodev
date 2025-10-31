@@ -84,7 +84,7 @@ function handleMouseLeave(proyectoId: string) {
 </script>
 
 <template>
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center-safe p-4">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center-safe p-4 md:-mt-56">
         <figure
             v-for="proyecto in list"
             :key="proyecto.id"
