@@ -8,6 +8,7 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 <template>
 
     <div  class="relative w-full min-h-screen overflow-hidden grid-background fondo">
+
         <carrusel-card-st
             class="hidden md:block sm:block lg:block xl:block"
         />

@@ -46,7 +46,7 @@ const props=defineProps({
 <!--    </header>-->
     <UHeader>
         <template #title>
-
+            <img src="~/assets/icon.svg" class="h-6 w-auto"/>
         rauantodev
 
         </template>
