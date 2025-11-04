@@ -16,9 +16,27 @@ const list = [
             },
         ],
         imageUrl: './apiKamba.png',
-        link: 'https://api-kamba.vercel.app/'
+        link: 'https://github.com/raulanto/ApiCoorden'
     },
-
+    {
+        id: 16,
+        title: 'api de Coordenadas',
+        description: 'api de Coordenadas',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Django Rest Framework',
+                color: 'success'
+            },
+        ],
+        imageUrl: './img_3.png',
+        link: 'https://api-coorden.vercel.app/'
+    },
     {
         id: 1,
         title: 'Dashboard Interactivo',
