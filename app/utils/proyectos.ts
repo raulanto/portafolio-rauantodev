@@ -187,7 +187,7 @@ const list = [
 
         ],
         imageUrl: './peces.png',
-        link: 'https://sistema-escolar-integral.vercel.app/'
+        link: 'https://proyecto-front-sensores.vercel.app/'
     },
     {
         id: 8,
