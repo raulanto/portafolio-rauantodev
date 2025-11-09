@@ -2,8 +2,6 @@
 
 import AllKey from "~/components/ui/allKey.vue";
 import PixelBlast from "~/components/ui/PixelBlast.vue";
-import Particles from "~/components/ui/Particles.vue";
-
 </script>
 
 <template>
@@ -40,17 +38,112 @@ import Particles from "~/components/ui/Particles.vue";
             <div class="flex flex-col md:flex-row items-center max-w-6xl px-6 py-8 mx-auto">
                 <div class="w-full md:w-1/2 py-8">
                     <h1 class=" text-5xl font-semibold leading-none tracking-tighter serif-text">
-                        Bienvenido a <br><span class="text-blue-400">Mi Portafolio, <br></span> Soy Desarrollador
-                        Web.<br/>
+                        Bienvenido a <br><span class="text-blue-400">Mi Portafolio, <br></span> Soy Desarrollador de
+                        Software.<br/>
 
                     </h1>
                     <h2 class="text-5xl font-bold  ">Raul antonio de la cruz hernandez</h2>
                     <h2 class="text-xl serif-text font-bold  ">Ing. En sistemas Computacionales</h2>
-                    <p> python | django | vue | nuxt | flask | fastapi | nodejs | go | angular | laravel | sql</p>
-<!--                    <UButton to="/portafolio" class="mt-3">-->
-<!--                        Entrar-->
-<!--                    </UButton>-->
 
+                    <div class="  mt-1 mb-1 space-x-3">
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#93c5fd_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        Python
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        django
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        vue
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        nuxt
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        flask
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        flask
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        fastapi
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        nodejs
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        go
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        angular
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        laravel
+                      </div>
+                    </span>
+                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+                      <span
+                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
+                      <div
+                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
+                        sql
+                      </div>
+                    </span>
+                    </div>
+<!--                    <p> python | django | vue | nuxt | flask | fastapi | nodejs | go | angular | laravel | sql</p>-->
 
                     <UButton
                         to="/portafolio"
