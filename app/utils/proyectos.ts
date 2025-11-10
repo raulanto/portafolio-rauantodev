@@ -19,6 +19,25 @@ const list = [
         link: 'https://github.com/raulanto/ApiCoorden'
     },
     {
+        id: 17,
+        title: 'Sistema de Gestión de Obras Civiles',
+        description: 'SGOC',
+        tag: [
+            {
+                id: 1,
+                name: 'Python',
+                color: 'primary'
+            },
+            {
+                id: 2,
+                name: 'Django',
+                color: 'success'
+            },
+        ],
+        imageUrl: './gestionObras.png',
+        link: 'https://sistema-gestioncv.vercel.app/login/?next=/'
+    },
+    {
         id: 15,
         title: 'api Kamba',
         description: 'api Kamba',

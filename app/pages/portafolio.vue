@@ -35,6 +35,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     },
     {
+        label: '+52 993 671 9807',
+
+    },
+    {
         label: 'Linkedin',
         to: 'https://www.linkedin.com/in/raul-antonio-de-la-cruz-hernandez-514464185/',
         target: '_blank'

@@ -132,9 +132,21 @@ onUnmounted(() => {
                         <h1 class="text-5xl lg:text-6xl font-bold   mb-4 serif-text">
                             raulanto
                         </h1>
-                        <h2 class="text-2xl lg:text-3xl text-primary-500 font-semibold mb-6">
+
+
+                        <h2 class="text-2xl lg:text-3xl text-primary-500 font-semibold mb-1">
                             Full Stack Developer
                         </h2>
+                        <div class="flex gap-2 mb-2 ">
+                                                <span
+                                                    class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
+                              +52 993 671 9807
+                    </span>
+                            <span
+                                class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
+                              raulantodev@gmail.com
+                    </span>
+                        </div>
                         <p class="text-lg   mb-8 leading-relaxed max-w-2xl">
                             Apasionado desarrollador full-stack con más de 2 años de experiencia en la creación de
                             aplicaciones web escalables. Especializado en Nuxt,vue, Django . Me

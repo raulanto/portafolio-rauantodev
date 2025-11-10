@@ -145,6 +145,14 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
                     </div>
 <!--                    <p> python | django | vue | nuxt | flask | fastapi | nodejs | go | angular | laravel | sql</p>-->
 
+                    <span
+                        class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
+                              +52 993 671 9807
+                    </span>
+                    <span
+                        class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
+                              raulantodev@gmail.com
+                    </span>
                     <UButton
                         to="/portafolio"
                         class="cursor-pointer p-3 group w-fit relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-white/30 dark:border-white/20 px-3 py-1  shadow-2xl backdrop-blur-xl bg-white/20 dark:bg-black/20 before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primary-400 dark:before:bg-primary-400 before:transition-all before:duration-700 text-neutral-800 dark:text-neutral-100 hover:text-white dark:hover:text-white hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:before:duration-700 lg:font-semibold transition-all duration-300 hover:bg-white/10 dark:hover:bg-black/10"
