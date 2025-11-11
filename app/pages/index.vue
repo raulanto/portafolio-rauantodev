@@ -45,104 +45,104 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
                     <h2 class="text-5xl font-bold  ">Raul antonio de la cruz hernandez</h2>
                     <h2 class="text-xl serif-text font-bold  ">Ing. En sistemas Computacionales</h2>
 
-                    <div class="  mt-1 mb-1 space-x-3">
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#93c5fd_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        Python
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        django
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        vue
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        nuxt
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        flask
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        flask
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        fastapi
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        nodejs
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        go
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        angular
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        laravel
-                      </div>
-                    </span>
-                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
-                      <span
-                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>
-                      <div
-                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>
-                        sql
-                      </div>
-                    </span>
-                    </div>
+<!--                    <div class="  mt-1 mb-1 space-x-3">-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#93c5fd_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        Python-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        django-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        vue-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        nuxt-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        flask-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        flask-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        fastapi-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        nodejs-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        go-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        angular-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        laravel-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                                            <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>-->
+<!--                      <span-->
+<!--                          class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93c5fd_0%,#393BB2_50%,#93c5fd_100%)]'/>-->
+<!--                      <div-->
+<!--                          class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-xs font-medium text-neutral-50 backdrop-blur-3xl'>-->
+<!--                        sql-->
+<!--                      </div>-->
+<!--                    </span>-->
+<!--                    </div>-->
 <!--                    <p> python | django | vue | nuxt | flask | fastapi | nodejs | go | angular | laravel | sql</p>-->
 
                     <span
@@ -155,7 +155,7 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
                     </span>
                     <UButton
                         to="/portafolio"
-                        class="cursor-pointer p-3 group w-fit relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-white/30 dark:border-white/20 px-3 py-1  shadow-2xl backdrop-blur-xl bg-white/20 dark:bg-black/20 before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primary-400 dark:before:bg-primary-400 before:transition-all before:duration-700 text-neutral-800 dark:text-neutral-100 hover:text-white dark:hover:text-white hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:before:duration-700 lg:font-semibold transition-all duration-300 hover:bg-white/10 dark:hover:bg-black/10"
+                        class="cursor-pointer mt-3 p-3 group w-fit relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-white/30 dark:border-white/20 px-3 py-1  shadow-2xl backdrop-blur-xl bg-white/20 dark:bg-black/20 before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-primary-400 dark:before:bg-primary-400 before:transition-all before:duration-700 text-neutral-800 dark:text-neutral-100 hover:text-white dark:hover:text-white hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:before:duration-700 lg:font-semibold transition-all duration-300 hover:bg-white/10 dark:hover:bg-black/10"
                     >
                         <svg
                             stroke="currentColor"

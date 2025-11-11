@@ -26,7 +26,7 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
                         <h3 class="text-sm font-normal uppercase tracking-wide text-neutral-400 mb-5">Mis redes sociales</h3>
                         <ul class="space-y-3">
                             <li><a href="https://www.instagram.com/_rr_.aa/" class="text-sm hover:text-neutral-300 transition-colors">Instagram</a></li>
-                            <li><a href="www.linkedin.com/in/raulanto" class="text-sm hover:text-neutral-300 transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/in/raulanto" class="text-sm hover:text-neutral-300 transition-colors">LinkedIn</a></li>
                             <li><a href="https://x.com/raulantodev" class="text-sm hover:text-neutral-300 transition-colors">Twitter</a></li>
                             <li><a href="https://github.com/raulanto" class="text-sm hover:text-neutral-300 transition-colors">Github</a></li>
                         </ul>
