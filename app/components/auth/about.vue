@@ -65,7 +65,7 @@ const updateParticle = (particle: Particle): void => {
 const drawParticle = (ctx: CanvasRenderingContext2D, particle: Particle): void => {
     ctx.save()
     ctx.globalAlpha = particle.opacity
-    ctx.fillStyle = 'rgba(95,153,245,0.91)'
+    ctx.fillStyle = 'rgba(119,29,216,0.73)'
     ctx.beginPath()
     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
     ctx.fill()
@@ -168,7 +168,7 @@ onUnmounted(() => {
                     </div>
                     <div class="lg:w-1/3 flex justify-center animate-slide-up">
                         <div class="relative">
-                            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-blue-600 to-blue-600 p-1">
+                            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-purple-600 to-purple-600 p-1">
                                 <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
                                      alt="Alex Johnson" class="w-full h-full rounded-full object-cover">
                             </div>

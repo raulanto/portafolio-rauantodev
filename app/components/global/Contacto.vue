@@ -35,7 +35,7 @@ const handleSubmit = (e: Event) => {
     <section id="contacto" class="relative overflow-hidden py-30">
         <div class="absolute inset-0 w-full h-full">
             <div
-                class="absolute h-full w-full bg-[radial-gradient(#9ca3af_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+                class="absolute h-full w-full bg-[radial-gradient(#771DD8A5_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div class="mx-auto mt-10 max-w-7xl px-6 lg:px-8 relative z-10">
@@ -50,7 +50,7 @@ const handleSubmit = (e: Event) => {
                 <h2 class="mx-auto relative z-10 max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl serif-text">
                     Contactame</h2>
 
-                <p class="mx-auto relative z-10 mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
+                <p class="mx-auto relative z-10 mt-2 max-w-xl text-center text-lg leading-8 text-neutral-300">
                     ¿Tienes un proyecto en mente? Hagámoslo realidad
                 </p>
 
@@ -70,7 +70,7 @@ const handleSubmit = (e: Event) => {
                     <button
                         type="submit"
                         :disabled="isLoading || !message.trim()"
-                        class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-50 disabled:cursor-not-allowed">
+                        class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-50 disabled:cursor-not-allowed">
                         {{ isLoading ? 'Enviando...' : 'Enviar' }}
                     </button>
                 </form>
@@ -78,15 +78,15 @@ const handleSubmit = (e: Event) => {
                 <svg viewBox="0 0 1024 1024"
                      class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
                      aria-hidden="true">
-                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                    <circle cx="512" cy="512" r="512" fill="url(#771DD8A5-0410-454c-8f7c-9a820de03641)"
                             fill-opacity="0.7">
                     </circle>
                     <defs>
-                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641" cx="0" cy="0" r="1"
+                        <radialGradient id="771DD8A5-0410-454c-8f7c-9a820de03641" cx="0" cy="0" r="1"
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(512 512) rotate(90) scale(512)">
-                            <stop stop-color="#3b82f6"></stop>
-                            <stop offset="1" stop-color="#1d4ed8" stop-opacity="0"></stop>
+                            <stop stop-color="#771DD8A5"></stop>
+                            <stop offset="1" stop-color="#771DD8A5" stop-opacity="0"></stop>
                         </radialGradient>
                     </defs>
                 </svg>

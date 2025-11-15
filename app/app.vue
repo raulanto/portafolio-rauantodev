@@ -12,7 +12,7 @@ import Cursor from "~/components/ui/cursor.vue";
 
 
 useSeoMeta({
-    ogImage: '/img_1.png',
+    ogImage: '/img_4.png',
 });
 
 

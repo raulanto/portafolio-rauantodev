@@ -14,7 +14,7 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
             <PixelBlast
                 variant="circle"
                 :pixel-size="6"
-                color="#60a5fa"
+                color="#770CAC"
                 :pattern-scale="3"
                 :pattern-density="1.2"
                 :pixel-size-jitter="0.5"
@@ -38,7 +38,7 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
             <div class="flex flex-col md:flex-row items-center max-w-6xl px-6 py-8 mx-auto">
                 <div class="w-full md:w-1/2 py-8">
                     <h1 class=" text-5xl font-semibold leading-none tracking-tighter serif-text">
-                        Bienvenido a <br><span class="text-blue-400">Mi Portafolio, <br></span> Soy Desarrollador de
+                        Bienvenido a <br><span class="text-purple-400">Mi Portafolio, <br></span> Soy Desarrollador de
                         Software.<br/>
 
                     </h1>

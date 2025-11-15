@@ -92,7 +92,7 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
 
 <style scoped>
 .fondo {
-    background: radial-gradient(ellipse 85% 90% at 50% 0%, rgba(62, 146, 250, 0.59), transparent 70%);
+    background: radial-gradient(ellipse 85% 90% at 50% 0%, rgba(129, 25, 255, 0.57), transparent 70%);
 }
 
 /* Animated gradient border */
@@ -107,11 +107,11 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
     inset: 0;
     padding: 2px;
     background: linear-gradient(90deg,
-    #1e3a8a 0%,
-    #3b82f6 25%,
-    #60a5fa 50%,
-    #93c5fd 75%,
-    #1e3a8a 100%
+    #771dd8 0%,
+    #8635de 25%,
+    #5709a9 50%,
+    #c08df3 75%,
+    #9240ea 100%
     );
     background-size: 200% 100%;
     border-radius: inherit;

@@ -131,9 +131,9 @@ const post = {
 
 <style scoped>
 .midnight-mist-bg {
-    background-image: radial-gradient(circle at 50% 100%, rgba(84, 101, 131, 0.5) 0%, transparent 60%),
-    radial-gradient(circle at 50% 100%, rgb(96, 165, 250) 0%, transparent 70%),
-    radial-gradient(circle at 50% 100%, rgba(181, 184, 208, 0.3) 0%, transparent 80%);
+    background-image: radial-gradient(circle at 50% 100%, rgb(137, 102, 180) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgb(106, 11, 215) 0%, transparent 70%),
+    radial-gradient(circle at 50% 100%, rgba(206, 165, 252, 0.6) 0%, transparent 80%);
 }
 
 .smooth-move {

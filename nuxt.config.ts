@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         },
     },
     site: {
-        image: '/porta.png',
+        image: '/img_4.png',
         name: appMeta.name,
         url: appMeta.url,
         defaultLocale: "es",
