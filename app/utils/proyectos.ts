@@ -20,7 +20,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './coordenadasFrontend.png',
+        imageUrl: ['./../../../coordenadasFrontend.png'],
         link: 'https://fro-corden.vercel.app/'
     },
     {
@@ -39,7 +39,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './img_3.png',
+        imageUrl: ['./../img_3.png'],
         link: 'https://github.com/raulanto/ApiCoorden'
     },
     {
@@ -58,7 +58,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './gestionObras.png',
+        imageUrl: ['./../gestionObras.png'],
         link: 'https://sistema-gestioncv.vercel.app/login/?next=/'
     },
     {
@@ -77,7 +77,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './apiKamba.png',
+        imageUrl:[ './../apiKamba.png'],
         link: 'https://api-kamba.vercel.app/docs'
     },
 
@@ -97,7 +97,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './DashboardInteractivo.png',
+        imageUrl: ['./../DashboardInteractivo.png'],
         link: 'https://dashboard-interactivo-three.vercel.app/'
     },
     {
@@ -116,7 +116,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './visualizador2.png',
+        imageUrl:[ './../visualizador2.png'],
         link: 'https://dynamicfilterboard.vercel.app/'
     },
     {
@@ -140,7 +140,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './busquedaCamino.png',
+        imageUrl: ['./../busquedaCamino.png'],
         link: 'https://shortpath-algorithm.vercel.app/'
     },
     // {
@@ -164,7 +164,7 @@ const list = [
     //             color: 'success'
     //         },
     //     ],
-    //     imageUrl: './esiegraph.png',
+    //     imageUrl: './../esiegraph.png',
     //     link: 'https://poryecto-esie-nuxt.vercel.app/'
     // },
     {
@@ -183,7 +183,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './calculadora.png',
+        imageUrl: ['./../calculadora.png'],
         link: 'https://calculadora-div.vercel.app/'
     },
     // {
@@ -203,7 +203,7 @@ const list = [
     //         },
     //
     //     ],
-    //     imageUrl: './esie.png',
+    //     imageUrl: './../esie.png',
     //     link: 'https://sistema-escolar-integral.vercel.app/'
     // },
 
@@ -229,7 +229,7 @@ const list = [
             },
 
         ],
-        imageUrl: './peces.png',
+        imageUrl:[ './../peces.png'],
         link: 'https://proyecto-front-sensores.vercel.app/'
     },
     {
@@ -258,7 +258,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './conversor.png',
+        imageUrl: ['./../conversor.png'],
         link: 'https://create-model-django-migrate.vercel.app/'
     },
     {
@@ -277,7 +277,7 @@ const list = [
                 color: 'error'
             },
         ],
-        imageUrl: './pdf.png',
+        imageUrl: ['./../pdf.png'],
         link: 'https://github.com/raulanto/sistemaPDF'
     },
     {
@@ -296,7 +296,7 @@ const list = [
                 color: 'error'
             },
         ],
-        imageUrl: './grad.png',
+        imageUrl: ['./../grad.png'],
         link: 'https://github.com/raulanto/djangoGraphQlF'
     },
     {
@@ -315,7 +315,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './grad.png',
+        imageUrl:[ './../grad.png','./../grad.png','./../grad.png','./../grad.png'],
         link: 'https://github.com/raulanto/rpa'
     },
     {
@@ -329,7 +329,7 @@ const list = [
                 color: 'error'
             },
         ],
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYrjkPeRkL_Q3RThOD5F8Kow8fEKHJMcnwuA&s',
+        imageUrl: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYrjkPeRkL_Q3RThOD5F8Kow8fEKHJMcnwuA&s'],
         link: 'https://portafolio-angular-y7o3.vercel.app/home'
     },
     {
@@ -348,7 +348,7 @@ const list = [
                 color: 'error'
             },
         ],
-        imageUrl: './grad3.png',
+        imageUrl:[ './../grad3.png'],
         link: 'https://github.com/raulanto/proyectoFacturaas'
     },
 
@@ -368,7 +368,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: './grad.png',
+        imageUrl:[ './../grad.png'],
         link: 'https://github.com/raulanto/apiChangue'
     },
 
