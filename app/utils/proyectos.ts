@@ -58,7 +58,7 @@ const list = [
                 color: 'success'
             },
         ],
-        imageUrl: ['./../gestionObras.png'],
+        imageUrl: ['./../gestionObras.png',`./../img_6.png`,'./../img_7.png','./../img_8.png'],
         link: 'https://sistema-gestioncv.vercel.app/login/?next=/'
     },
     {

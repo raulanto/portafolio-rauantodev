@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type {NavigationMenuItem} from "@nuxt/ui";
 import GradientBlinds from "~/components/ui/GradientBlinds.vue";
+import list from "~/utils/proyectos";
+import PostCard from "~/components/global/card/postCard.vue";
 
 
 const items = computed<NavigationMenuItem[]>(() => [
@@ -20,26 +22,71 @@ const items = computed<NavigationMenuItem[]>(() => [
         target: '_blank'
     }
 ])
+
+
 useSeoMeta({
     title: 'Desarrollador Freelance | Sitios Web Ultra-rápidos y Sistemas a Medida',
     description: 'Desarrollo aplicaciones web estáticas ultrarrápidas, ERP a medida, CRM personalizados y sistemas de gestión de proyectos. Tecnología moderna, rendimiento extremo y soluciones escalables para tu empresa.',
 
     // Open Graph (Facebook, LinkedIn, WhatsApp, etc.)
     ogTitle: 'Desarrollador Freelance – Sitios Web Modernos y Sistemas ERP/CRM a Medida',
-    ogDescription: 'Sitios web con carga instantánea + sistemas empresariales hechos a tu medida. Next.js, Nuxt, Vue, Node.js, Tailwind y más.',
-    ogImage: '/img_2.png',        // ← pon aquí tu imagen OG (1200x630 recomendado)
-    ogUrl: 'https://tu-dominio.com',
+    ogDescription: 'Sitios web con carga instantánea + sistemas empresariales hechos a tu medida.  Nuxt, Vue, Node.js, Tailwind y más.',
+    ogImage: '/img_5.png',        // ← pon aquí tu imagen OG (1200x630 recomendado)
+
     ogType: 'website',
     ogLocale: 'es_ES',
 
     // Twitter Card
     twitterCard: 'summary_large_image',
-    twitterSite: '@tu-usuario-twitter',                    // opcional, si tienes
-    twitterCreator: '@tu-usuario-twitter',                 // opcional
+
     twitterTitle: 'Desarrollador Freelance | Web Ultra-rápida + ERP y CRM a Medida',
     twitterDescription: 'Sitios web que cargan en <1s y sistemas empresariales 100% personalizados. Portfolio y servicios.',
-    twitterImage: '/img_2.png',   // misma imagen que OG suele funcionar perfecto
+    twitterImage: '/img_5.png',   // misma imagen que OG suele funcionar perfecto
 })
+
+const toast = useToast()
+
+
+
+onMounted(async () => {
+    const cookie = useCookie("cookie-consent");
+    if (cookie.value === "accepted") {
+        return;
+    }
+
+    toast.add({
+        id: 'contact-info',
+        title: '¡Hola! 👋 Soy [Tu Nombre]',
+        description: 'Desarrollador Full-Stack especializado en Nuxt, Vue y sistemas a medida.',
+        icon: 'i-heroicons-hand-wave',
+        color: 'primary',
+        closeButton: {
+            icon: 'i-heroicons-x-mark-20-solid',
+            color: 'white',
+            variant: 'link',
+            padded: false
+        },
+        actions: [
+            {
+                label: 'WhatsApp',
+                icon: 'i-simple-icons-whatsapp',
+                color: 'success',
+                onClick: (e) => window.open('https://wa.me/9933', '_blank')
+            },
+            {
+                label: 'Email',
+                icon: 'i-heroicons-envelope',
+                onClick: (e) => window.location.href = 'mailto:raulantodev@gmail.com'
+            },
+            {
+                label: 'LinkedIn',
+                icon: 'i-simple-icons-linkedin',
+                onClick: (e) => window.open('https://linkedin.com/in/tu-perfil', '_blank')
+            }
+        ]
+    })
+});
+
 </script>
 
 <template>
@@ -127,10 +174,10 @@ useSeoMeta({
             <section class="grid lg:grid-cols-3 gap-12 items-center mb-32">
                 <div class="lg:col-span-2 space-y-8 order-2 lg:order-1">
                     <div>
-          <span
-              class="inline-block text-2xl font-medium bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
-            Software a Medida
-          </span>
+                          <span
+                              class="inline-block text-2xl font-medium bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                            Software a Medida
+                          </span>
                         <h2 class="text-4xl lg:text-5xl font-bold mt-2">Sistemas ERP a Medida</h2>
                     </div>
                     <p class="text-xl text-neutral-300">
@@ -164,6 +211,12 @@ useSeoMeta({
                          class="rounded-2xl shadow-2xl border border-neutral-800"/>
                 </div>
             </section>
+
+            <PostCard
+                class="mb-10"
+                :post="list[2]"
+            />
+
 
             <!-- CRM a Medida -->
             <section class="grid lg:grid-cols-2 gap-16 items-center mb-32">
@@ -199,10 +252,10 @@ useSeoMeta({
             <section class="grid lg:grid-cols-3 gap-12 items-center">
                 <div class="lg:col-span-2 space-y-8">
                     <div>
-          <span
-              class="inline-block text-2xl font-medium bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-            Gestión de Proyectos
-          </span>
+                          <span
+                              class="inline-block text-2xl font-medium bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                            Gestión de Proyectos
+                          </span>
                         <h2 class="text-4xl lg:text-5xl font-bold mt-2">
                             Del caos al control total
                         </h2>
