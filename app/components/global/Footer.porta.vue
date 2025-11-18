@@ -45,7 +45,7 @@ import CarruselCardSt from "~/components/ui/carruselCardSt.vue";
                 <PixelBlast
                     variant="circle"
                     :pixel-size="6"
-                    color="#60a5fa"
+                    color="#770CAC"
                     :pattern-scale="3"
                     :pattern-density="1.2"
                     :pixel-size-jitter="0.5"

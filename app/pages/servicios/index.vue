@@ -56,8 +56,8 @@ onMounted(async () => {
 
     toast.add({
         id: 'contact-info',
-        title: '¡Hola! 👋 Soy [Tu Nombre]',
-        description: 'Desarrollador Full-Stack especializado en Nuxt, Vue y sistemas a medida.',
+        title: '¡Hola! 👋 Soy rauantodev',
+        description: 'Desarrollador Full-Stack especializado en Nuxt, Vue, Django y sistemas a medida.',
         icon: 'i-heroicons-hand-wave',
         color: 'primary',
         closeButton: {
@@ -71,7 +71,7 @@ onMounted(async () => {
                 label: 'WhatsApp',
                 icon: 'i-simple-icons-whatsapp',
                 color: 'success',
-                onClick: (e) => window.open('https://wa.me/9933', '_blank')
+                onClick: (e) => window.open('https://wa.me/9336719807', '_blank')
             },
             {
                 label: 'Email',
@@ -81,7 +81,7 @@ onMounted(async () => {
             {
                 label: 'LinkedIn',
                 icon: 'i-simple-icons-linkedin',
-                onClick: (e) => window.open('https://linkedin.com/in/tu-perfil', '_blank')
+                onClick: (e) => window.open('www.linkedin.com/in/raulanto', '_blank')
             }
         ]
     })
