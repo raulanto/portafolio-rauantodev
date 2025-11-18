@@ -1,6 +1,5 @@
 <template>
     <UApp>
-        <Cursor/>
         <NuxtPage />
     </UApp>
     <Analytics/>
