@@ -48,7 +48,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                                 class="text-xs bg-primary text-white dark:text-neutral-950 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 mr-2 sm:mr-3 whitespace-nowrap font-semibold">
                                 Nuevo
                             </span>
-                            <span class="text-xs sm:text-sm text-neutral-800 dark:text-purple-300 font-medium truncate">
+                            <span class="text-xs sm:text-sm text-neutral-800 dark:text-white font-medium truncate">
                                 Creando Proyectos y Soluciones.
                             </span>
                             <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5 fill-neutral-800 dark:fill-neutral-200 flex-shrink-0" viewBox="0 0 20 20"
@@ -59,14 +59,14 @@ const items = computed<NavigationMenuItem[]>(() => [
                             </svg>
                         </a>
 
-                        <h1 class="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-snug dark:text-white text-gray-900 serif-text">
+                        <h1 class="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-snug dark:text-white text-neutral-950 serif-text">
                             Creando el <span class="text-primary">futuro web</span>, una línea de código a la vez
                         </h1>
 
 
                         <div class="flex w-full justify-center items-center gap-3">
-                            <UButton size="xl" to="#contacto" color="primary">Contacto</UButton>
-                            <UButton size="xl" to="#about" color="neutral" variant="solft" icon="i-heroicons-information-circle">Sobre mí</UButton>
+                            <UButton  to="#contacto" color="primary">Contacto</UButton>
+                            <UButton  to="#about" color="neutral" variant="soft" icon="i-heroicons-information-circle">Sobre mí</UButton>
                         </div>
                     </div>
                 </section>
