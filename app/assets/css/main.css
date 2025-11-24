@@ -25,7 +25,13 @@
 }
 
 @layer components {
-
+    .animated-shine-badge {
+        /* Clases simplificadas y mejoradas para el brillo */
+        @apply inline-flex h-8 animate-background-shine cursor-pointer items-center justify-center rounded-full border border-neutral-700
+        bg-[linear-gradient(110deg,#171717,45%,#3a3a3a,55%,#171717)] bg-[length:250%_100%]
+        px-4 py-1 text-sm font-medium text-neutral-300 shadow-lg;
+        transition: transform 0.2s ease;
+    }
 
     .fondo-dark {
         @apply bg-[#030712] bg-[linear-gradient(#1f2937_1px,_transparent_1px),_linear-gradient(to_right,_#1f2937_1px,_#030712_1px)] bg-[size:20px_20px] transition-colors duration-200
@@ -40,6 +46,11 @@
     }
     .dark-transition{
         @apply transition-colors duration-200
+    }
+    .skill-tag {
+        @apply inline-flex items-center px-4 py-2 rounded-full
+        bg-neutral-800 text-neutral-300 border border-neutral-700
+        shadow-sm backdrop-blur-sm;
     }
 
 

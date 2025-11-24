@@ -1,16 +1,12 @@
 <script setup lang="ts">
-
 import AllKey from "~/components/ui/allKey.vue";
 import PixelBlast from "~/components/ui/PixelBlast.vue";
 </script>
 
 <template>
+    <main class="h-screen w-full relative flex flex-col justify-center items-center overflow-hidden">
 
-    <main class="h-screen w-full relative flex flex-col justify-center items-center gap-2 ">
-        <div class="absolute h-full w-full">
-            <div class="absolute ">
-            </div>
-
+        <div class="absolute inset-0">
             <PixelBlast
                 variant="circle"
                 :pixel-size="6"
@@ -29,74 +25,76 @@ import PixelBlast from "~/components/ui/PixelBlast.vue";
                 :speed="0.6"
                 :edge-fade="0.25"
                 :transparent="true"
+                class="absolute inset-0"
             />
+
         </div>
-        <section class="py-8 z-10 ">
-            <div class="flex flex-col md:flex-row items-center max-w-6xl px-6 py-8 mx-auto">
-                <div class="w-full md:w-1/2 py-8">
-                    <h1 class=" text-5xl font-semibold leading-none tracking-tighter serif-text">
-                        Bienvenido a <br><span class="text-purple-400">Mi Portafolio, <br></span> Soy Desarrollador de
-                        Software.<br/>
 
-                    </h1>
-                    <h2 class="text-5xl font-bold  ">Raul antonio de la cruz hernandez</h2>
-                    <h2 class="text-xl serif-text font-bold  ">Ing. En sistemas Computacionales</h2>
+        <section class="py-16 md:py-24 lg:py-32 z-10 w-full flex-grow flex items-center">
+            <UContainer class="h-full">
+                <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16">
 
-                    <div class="mt-2 flex">
+                    <div class="w-full md:w-7/12 lg:w-3/5 py-8 text-center md:text-left">
 
-                        <span
-                            class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-neutral-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-neutral-300'>
-                                  +52 993 671 9807
-                        </span>
-                        <span
-                            class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-neutral-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-neutral-300'>
-                                  raulantodev@gmail.com
-                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-4 serif-text ">
+                            Bienvenido a <br class="hidden sm:block"/>
+                            <span class="text-primary-400 dark:text-purple-400">
+                                Mi Portafolio
+                            </span>
+                        </h1>
 
-                    </div>
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-200 mb-2 ">
+                            Soy Desarrollador de Software
+                        </h2>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-400 mb-6">
+                            Raúl Antonio de la Cruz Hernández, Ing. En Sistemas Computacionales.
+                        </h3>
 
-                    <div class="mt-2 flex justify-center items-center gap-2">
-                        <UButton to="/portafolio"
-                            class='relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50'>
-                            <span
-                                class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]'/>
-                            <span
-                                class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl'>
+                        <div class="mt-4 mb-8 flex flex-wrap justify-center md:justify-start gap-3">
+                            <span class="animated-shine-badge">
+                                +52 993 671 9807
+                            </span>
+                            <span class="animated-shine-badge">
+                                raulantodev@gmail.com
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-4">
+
+                            <UButton to="/portafolio"  color="primary" variant="solid" icon="i-heroicons-home-solid">
                                 Inicio
-                            </span>
-                        </UButton>
-                        <UButton to="/proyectos" class='relative inline-flex h-12 w-fit items-center justify-center rounded-md bg-white px-3 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50'>
-                            <div class='absolute -inset-0.5 -z-10 rounded-lg bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur' />
-                            Proyectos
-                        </UButton>
-                        <UButton to="/servicios"
-                                 class='relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50'>
-                            <span
-                                class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]'/>
-                            <span
-                                class='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl'>
+                            </UButton>
+
+                            <UButton to="/proyectos"  color="neutral" variant="solid" class="relative group overflow-hidden">
+                                <div class='absolute inset-0.5 -z-10 rounded-lg bg-gradient-to-b from-primary-400 to-primary-600 opacity-20 blur-sm group-hover:opacity-40 transition-opacity' />
+                                Proyectos
+                            </UButton>
+
+                            <UButton to="/servicios"  color="primary" variant="soft">
                                 Servicios Free lancer
-                            </span>
-                        </UButton>
+                            </UButton>
 
-
+                        </div>
 
                     </div>
 
+                    <div class="w-full md:w-5/12 lg:w-2/5 py-8 flex justify-center md:justify-end">
+                        <all-key class="w-full max-w-sm" />
+                    </div>
 
                 </div>
-                <div class="w-full md:w-1/2 py-8">
-                    <all-key class="0"/>
-                </div>
-            </div>
-
+            </UContainer>
         </section>
     </main>
-
-
 </template>
 
-<style scoped>
+<style  scoped>
+/* Se centraliza el estilo del badge de contacto en una sola clase
+    para mantener el template limpio.
+*/
 
 
+.animated-shine-badge:hover {
+    transform: translateY(-2px);
+}
 </style>
