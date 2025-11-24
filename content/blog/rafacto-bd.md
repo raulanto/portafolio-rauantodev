@@ -8,7 +8,7 @@ name: "refac"
 author: "raulanto"
 author_avatar: 'https://avatars.githubusercontent.com/u/74162376?v=4'
 author_description: "Desarrollador Full Stack "
-thumbnail: "/neat.png"
+thumbnail: "/refacto.jpg"
 ---
 
 # Refactorización Completa de una Base de Datos Legacy: De la Deuda Técnica a la Arquitectura Moderna
@@ -17,7 +17,7 @@ thumbnail: "/neat.png"
 
 ## Resumen Ejecutivo
 
-Este artículo documenta el proceso completo de refactorización de una base de datos empresarial de 87 tablas con más de 15 años de evolución orgánica. El proyecto abordó problemas críticos de escalabilidad, mantenimiento y consistencia de datos, resultando en una arquitectura moderna que redujo la complejidad en 40% y mejoró el rendimiento en 800%.
+Este artículo documenta el proceso completo de refactorización de una base de datos empresarial de 87 tablas con más de 15 años de evolución orgánica. El proyecto abordó problemas críticos de escalabilidad, mantenimiento y consistencia de datos, resultando en una arquitectura moderna.
 
 Analizaremos el diagnóstico inicial, la metodología aplicada, los principios de diseño implementados y las métricas de mejora obtenidas.
 
@@ -70,21 +70,18 @@ Se identificaron 87 tablas agrupadas en 9 módulos funcionales.
 
 #### Distribución de Tablas por Módulo
 
-```
-Módulo                      Cantidad    Porcentaje
-────────────────────────────────────────────────────
-Almacén e Inventarios           22         25.3%
-Bitácora de Obra               16         18.4%
-Actividades y Partidas         13         14.9%
-Compras y Requisiciones         9         10.3%
-Catálogos Maestros              9         10.3%
-Avances y Control               7          8.0%
-Proyectos y Contratos           4          4.6%
-Logística y Embarques           4          4.6%
-Sistema y Configuración         3          3.4%
-────────────────────────────────────────────────────
-Total                          87        100.0%
-```
+| Módulo                     | Cantidad | Porcentaje |
+| -------------------------- | -------- | ---------- |
+| **Almacén e Inventarios**  | 22       | 25.3%      |
+| **Bitácora de Obra**       | 16       | 18.4%      |
+| **Actividades y Partidas** | 13       | 14.9%      |
+| Compras y Requisiciones    | 9        | 10.3%      |
+| Catálogos Maestros         | 9        | 10.3%      |
+| Avances y Control          | 7        | 8.0%       |
+| Proyectos y Contratos      | 4        | 4.6%       |
+| Logística y Embarques      | 4        | 4.6%       |
+| Sistema y Configuración    | 3        | 3.4%       |
+| **Total**                  | **87**   | **100.0%** |
 
 ### 2.2 Problemas de Diseño Identificados
 
@@ -2176,8 +2173,6 @@ WHERE created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
 GROUP BY DATE(created_at), table_name
 ORDER BY avg_time DESC;
 ```
-
-
 
 ### 10.5 Reflexión Final
 
