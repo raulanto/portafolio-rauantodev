@@ -48,7 +48,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                                 class="text-xs bg-primary text-white dark:text-neutral-950 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 mr-2 sm:mr-3 whitespace-nowrap font-semibold">
                                 Nuevo
                             </span>
-                            <span class="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium truncate">
+                            <span class="text-xs sm:text-sm text-neutral-800 dark:text-purple-300 font-medium truncate">
                                 Creando Proyectos y Soluciones.
                             </span>
                             <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5 fill-neutral-800 dark:fill-neutral-200 flex-shrink-0" viewBox="0 0 20 20"
