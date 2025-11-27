@@ -20,9 +20,9 @@ const createParticle = (): Particle => {
     return {
         x: Math.random() * (canvasRef.value?.width || 0),
         y: Math.random() * (canvasRef.value?.height || 0),
-        size: Math.random() * 1 + 0.3, // Puntos muy pequeños (0.5 - 1.5px)
+        size: Math.random() * 1.5 + 0.5, // Ligeramente más grandes para el efecto "polvo"
         opacity: 0,
-        fadeSpeed: Math.random() * 0.02 + 0.01,
+        fadeSpeed: Math.random() * 0.01 + 0.005, // Más lentas y suaves
         fadeIn: true,
         life: Math.random() * 200 + 100,
         age: 0
@@ -32,9 +32,9 @@ const createParticle = (): Particle => {
 const resetParticle = (particle: Particle): void => {
     particle.x = Math.random() * (canvasRef.value?.width || 0)
     particle.y = Math.random() * (canvasRef.value?.height || 0)
-    particle.size = Math.random() * 1 + 0.3
+    particle.size = Math.random() * 1.5 + 0.5
     particle.opacity = 0
-    particle.fadeSpeed = Math.random() * 0.02 + 0.01
+    particle.fadeSpeed = Math.random() * 0.01 + 0.005
     particle.fadeIn = true
     particle.life = Math.random() * 200 + 100
     particle.age = 0
@@ -45,8 +45,8 @@ const updateParticle = (particle: Particle): void => {
 
     if (particle.fadeIn) {
         particle.opacity += particle.fadeSpeed
-        if (particle.opacity >= 1) {
-            particle.opacity = 1
+        if (particle.opacity >= 0.6) { // Opacidad máxima reducida
+            particle.opacity = 0.6
             particle.fadeIn = false
         }
     } else {
@@ -65,7 +65,8 @@ const updateParticle = (particle: Particle): void => {
 const drawParticle = (ctx: CanvasRenderingContext2D, particle: Particle): void => {
     ctx.save()
     ctx.globalAlpha = particle.opacity
-    ctx.fillStyle = 'rgba(119,29,216,0.73)'
+    // Color blanco/púrpura muy sutil para fondo oscuro
+    ctx.fillStyle = 'rgba(216, 180, 254, 0.6)'
     ctx.beginPath()
     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
     ctx.fill()
@@ -100,8 +101,8 @@ onMounted(() => {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Crear 120 partículas pequeñas
-    const particleCount = 60
+    // Crear partículas
+    const particleCount = 50 // Menos partículas para más minimalismo
     for (let i = 0; i < particleCount; i++) {
         particles.push(createParticle())
     }
@@ -118,68 +119,91 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <!-- About Section -->
-    <section id="about" class="py-20 relative overflow-hidden dark:bg-neutral-950 bg-white border-t border-b border-b-neutral-200 border-t-neutral-200 dark:border-b-neutral-700 dark:border-t-neutral-700">
+    <section id="about" class="relative py-24 sm:py-32 overflow-hidden bg-[#050505] text-white selection:bg-purple-500 selection:text-white border-t border-white/5">
+
+        <!-- CANVAS PARTÍCULAS -->
         <canvas
             ref="canvasRef"
-            class="absolute top-0 left-0 w-full h-full pointer-events-none"
+            class="absolute top-0 left-0 w-full h-full pointer-events-none z-10"
         ></canvas>
 
-        <section id="home" class="pt-20 pb-16 ">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex flex-col lg:flex-row items-center justify-between">
-                    <div class="lg:w-2/3 mb-8 lg:mb-0 animate-fade-in">
-                        <h1 class="text-5xl lg:text-6xl font-bold   mb-4 serif-text">
-                            raulanto
-                        </h1>
+        <!-- CAPAS DE FONDO (Noise + Glow) -->
+        <div class="absolute inset-0 pointer-events-none z-0">
 
+            <!-- Glow ambiental derecho -->
+            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-purple-900/10 blur-[120px] rounded-full"></div>
+        </div>
 
-                        <h2 class="text-2xl lg:text-3xl text-primary-500 font-semibold mb-1">
-                            Full Stack Developer
-                        </h2>
-                        <div class="flex gap-2 mb-2 ">
-                                                <span
-                                                    class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
-                              +52 993 671 9807
-                    </span>
-                            <span
-                                class='inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xs font-medium text-gray-300'>
-                              raulantodev@gmail.com
-                    </span>
+        <div class="relative z-20 max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
+
+                <!-- COLUMNA TEXTO -->
+                <div class="lg:w-3/5 text-left">
+
+                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-2">
+                        raulanto
+                    </h1>
+
+                    <h2 class="text-2xl lg:text-3xl font-medium mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
+                        Full Stack Developer
+                    </h2>
+
+                    <!-- Badges de Contacto Minimalistas -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                            +52 993 671 9807
                         </div>
-                        <p class="text-lg   mb-8 leading-relaxed max-w-2xl">
-                            Apasionado desarrollador full-stack con más de 2 años de experiencia en la creación de
-                            aplicaciones web escalables. Especializado en Nuxt,vue, Django . Me
-                            apasiona convertir problemas complejos en soluciones sencillas y elegantes.
-
-
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <NuxtLink to="/perfil/cv" class="group inline-flex items-center
-                            justify-center rounded-full py-2 px-4 text-sm font-semibold
-                            focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
-                            bg-neutral-900 text-white hover:bg-neutral-700 hover:text-slate-100
-                            active:bg-neutral-800 active:text-neutral-300 focus-visible:outline-neutral-900 animate-fade-in-left
-                            dark:bg-primary dark:text-neutral-950 dark:hover:bg-primary-400"
-                               >
-                                <span class="">Mas Sobre mi</span>
-                            </NuxtLink>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 hover:text-white hover:border-white/20 transition-colors cursor-copy">
+                            <span class="i-heroicons-envelope w-3 h-3"></span>
+                            raulantodev@gmail.com
                         </div>
                     </div>
-                    <div class="lg:w-1/3 flex justify-center animate-slide-up">
-                        <div class="relative">
-                            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-purple-600 to-purple-600 p-1">
-                                <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
-                                     alt="Alex Johnson" class="w-full h-full rounded-full object-cover">
-                            </div>
+
+                    <p class="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl font-light">
+                        Apasionado desarrollador full-stack con más de <span class="text-white font-medium">2 años de experiencia</span> en la creación de aplicaciones web escalables. Especializado en
+                        <span class="text-purple-300">Nuxt, Vue y Django</span>.
+                        Me apasiona convertir problemas complejos en soluciones sencillas, elegantes y de alto rendimiento.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <NuxtLink to="/perfil/cv" class="group relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 focus:ring-offset-[#050505]">
+                            <span>Más Sobre Mí</span>
+                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </NuxtLink>
+                    </div>
+                </div>
+
+                <!-- COLUMNA IMAGEN (Modernizada) -->
+                <div class="lg:w-2/5 flex justify-center lg:justify-end">
+                    <div class="relative group w-64 h-64 lg:w-80 lg:h-80">
+                        <!-- Glow trasero -->
+                        <div class="absolute -inset-1 bg-gradient-to-tr from-purple-600 to-blue-600 rounded-[2rem] blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+
+                        <!-- Contenedor Imagen -->
+                        <div class="relative w-full h-full rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/10 ring-1 ring-white/5 shadow-2xl">
+                            <!-- Overlay al hacer hover (opcional) -->
+                            <div class="absolute inset-0 bg-purple-500/10 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+
+                            <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
+                                 alt="Raul Anto"
+                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                        </div>
+
+                        <!-- Elemento decorativo flotante -->
+                        <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-[#050505] rounded-xl border border-white/10 flex items-center justify-center shadow-lg z-20 group-hover:translate-y-[-5px] transition-transform duration-300">
+                            <span class="text-2xl">💻</span>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </section>
+        </div>
     </section>
 </template>
 
 <style scoped>
-
+/* Optimizaciones para asegurar contraste y legibilidad */
 </style>
