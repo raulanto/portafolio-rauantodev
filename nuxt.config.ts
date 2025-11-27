@@ -5,7 +5,7 @@ import appMeta from "./app/app.meta";
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: {enabled: true},
-    modules: ['@nuxt/ui', '@nuxt/content', '@nuxtjs/seo'],
+    modules: ['@nuxt/ui', '@nuxt/content', '@nuxtjs/seo', '@nuxt/image'],
     fonts: {
         defaults: {
             weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
@@ -52,5 +52,10 @@ export default defineNuxtConfig({
             }
 
         }
-    }
+    },
+    nitro: {
+        preset: 'vercel', // or 'netlify', 'static'
+    },
+    ssr: true,
+    target: 'static',
 })

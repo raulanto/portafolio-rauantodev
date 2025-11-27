@@ -93,7 +93,9 @@ const items = computed<NavigationMenuItem[]>(() => [
         <header clas="flex flex-col">
             <UCard class="relative shadow-xl overflow-hidden min-h-[20rem] flex flex-col" variant="subtle"
                    :ui="{ body: 'flex flex-col flex-1' }">
-                <img class="z-[0] absolute inset-0 object-cover opacity-25 w-full h-full" :src="post?.thumbnail"
+                <NuxtImg format="webp"
+                         loading="lazy" class="z-[0] absolute inset-0 object-cover opacity-25 w-full h-full"
+                         :src="post?.thumbnail"
                      :alt="post?.title"/>
                 <div class="z-[1] flex-1 flex flex-col gap-2">
                     <h1 class="typ-subtitle">{{ post?.title }}</h1>

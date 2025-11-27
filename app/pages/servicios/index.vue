@@ -163,7 +163,9 @@ onMounted(async () => {
                 <div class="relative">
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-transparent rounded-3xl blur-3xl"></div>
-                    <img
+                    <NuxtImg
+                        format="webp"
+                        loading="lazy"
                         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&crop=center"
                         alt="Desarrollo web moderno"
                         class="relative rounded-2xl shadow-2xl border border-neutral-800 hover:scale-105 transition-transform duration-500"/>
@@ -206,8 +208,10 @@ onMounted(async () => {
                 </div>
 
                 <div class="relative order-1 lg:order-2">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                    <NuxtImg src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
                          alt="ERP a medida"
+                             format="webp"
+                             loading="lazy"
                          class="rounded-2xl shadow-2xl border border-neutral-800"/>
                 </div>
             </section>
@@ -242,8 +246,10 @@ onMounted(async () => {
                 </div>
 
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=800&h=600&fit=crop"
+                    <NuxtImg src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=800&h=600&fit=crop"
                          alt="CRM dashboard"
+                             format="webp"
+                             loading="lazy"
                          class="rounded-2xl shadow-2xl border border-neutral-800"/>
                 </div>
             </section>
@@ -282,8 +288,11 @@ onMounted(async () => {
                 </div>
 
                 <div>
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
+                    <NuxtImg
+                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
                          alt="Gestión de proyectos"
+                        format="webp"
+                        loading="lazy"
                          class="rounded-2xl shadow-2xl border border-neutral-800 w-full"/>
                 </div>
             </section>
