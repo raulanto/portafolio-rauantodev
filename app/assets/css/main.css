@@ -5,13 +5,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root {
     --ui-radius: 0.50rem;
 }
 
 @theme {
-    --font-sans: 'Public Sans', sans-serif;
+    --font-sans:"Open Sans", sans-serif;
     --animate-background-shine: background-shine 2s linear infinite;
 
     @keyframes background-shine {
