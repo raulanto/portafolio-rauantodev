@@ -7,7 +7,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     { label: 'Contacto', to: '#contacto' },
     { label: 'Blog', to: '#blog' },
     { label: 'Cv', to: '/perfil/cv' },
-    { label: 'Servicios Free lancer', to: '/servicios' },
+    { label: 'Servicios Freelancer', to: '/servicios' },
     { label: '+52 993 671 9807' },
     {
         label: 'Linkedin',
@@ -15,15 +15,16 @@ const items = computed<NavigationMenuItem[]>(() => [
         target: '_blank'
     }
 ])
-
-
 </script>
 
 <template>
-    <LazyNavar :items="items" />
-    <div class="relative w-full min-h-screen overflow-hidden fondo">
+    <div class="relative w-full min-h-screen overflow-hidden fondo font-sans text-white selection:bg-purple-500 selection:text-white">
 
-        <div class="absolute inset-0">
+        <!-- NAVBAR -->
+        <LazyNavar :items="items" class="relative z-50" />
+
+        <!-- FONDO ORIGINAL (Restaurado) -->
+        <div class="absolute inset-0 pointer-events-none">
             <img src="../../assets/img/G6cOUTsaAAATWlY.jpeg"
                  alt="Fondo Abstracto"
                  class="absolute inset-0 h-full w-full object-cover opacity-50 transition-opacity duration-500"
@@ -37,37 +38,67 @@ const items = computed<NavigationMenuItem[]>(() => [
             <div class="absolute inset-0 bg-black/30"></div>
         </div>
 
-        <UContainer class="relative z-10 h-full">
-            <div class="w-full min-h-screen flex items-center justify-center py-12 md:py-24 lg:py-32">
-                <section class="w-full max-w-4xl text-center">
-                    <div class="mx-auto flex flex-col items-center">
-                        <a href="#proyectos"
-                           class="animated-gradient-border inline-flex items-center py-1 px-1 pr-3 sm:pr-4 mb-6 sm:mb-7 text-xs sm:text-sm rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 transition-all hover:ring-2 hover:ring-primary/50"
-                           role="alert">
-                            <span
-                                class="text-xs bg-primary text-white dark:text-neutral-950 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 mr-2 sm:mr-3 whitespace-nowrap font-semibold">
-                                Nuevo
-                            </span>
-                            <span class="text-xs sm:text-sm text-neutral-800 dark:text-white font-medium truncate">
-                                Creando Proyectos y Soluciones.
-                            </span>
-                            <svg class="ml-2 w-4 h-4 sm:w-5 sm:h-5 fill-neutral-800 dark:fill-neutral-200 flex-shrink-0" viewBox="0 0 20 20"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                      clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
+        <!-- CONTENIDO PRINCIPAL (Estilo Moderno Minimalista) -->
+        <UContainer class="relative z-20 h-full flex flex-col justify-center min-h-screen">
+            <div class="w-full flex flex-col items-center justify-center py-12 md:py-24 lg:py-32">
 
-                        <h1 class="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-snug dark:text-white text-neutral-950 serif-text">
-                            Creando el <span class="text-primary">futuro web</span>, una línea de código a la vez
-                        </h1>
+                <section class="w-full max-w-5xl text-center flex flex-col items-center">
 
+                    <!-- BADGE: Pill Glassmorphism -->
+                    <a href="#proyectos"
+                       class="group relative inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-purple-500/50 transition-all duration-300 backdrop-blur-md cursor-pointer overflow-hidden shadow-lg"
+                       role="alert">
 
-                        <div class="flex w-full justify-center items-center gap-3">
-                            <UButton  to="#contacto" color="primary">Contacto</UButton>
-                            <UButton  to="#about" color="neutral" variant="soft" icon="i-heroicons-information-circle">Sobre mí</UButton>
-                        </div>
+                        <!-- Efecto de brillo al pasar el mouse -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                        </span>
+
+                        <span class="text-gray-100 font-medium tracking-wide shadow-black drop-shadow-sm">
+                            <span class="font-semibold text-white mr-1">Nuevo:</span> Creando Proyectos y Soluciones
+                        </span>
+
+                        <svg class="w-4 h-4 text-gray-300 group-hover:text-white group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+
+                    <!-- HEADING: Moderno, Grande y Limpio -->
+                    <h1 class=" serif-text mb-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white drop-shadow-lg">
+                        Creando el
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-violet-400 to-purple-800 animate-gradient">
+                            futuro web
+                        </span>
+                        <br class="hidden md:block" />
+                        <span class="text-gray-300 font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 block">
+                            una línea a la vez.
+                        </span>
+                    </h1>
+
+                    <!-- DESCRIPCIÓN -->
+                    <p class="max-w-2xl text-lg text-gray-200 mb-10 leading-relaxed font-light drop-shadow-md">
+                        Desarrollo experiencias digitales inmersivas, escalables y centradas en el usuario utilizando las tecnologías más modernas del ecosistema.
+                    </p>
+
+                    <!-- BOTONES: Minimalistas -->
+                    <div class="flex flex-col sm:flex-row w-full justify-center items-center gap-4 sm:gap-6">
+                        <UButton
+                            to="#contacto"
+
+                            class="rounded-full px-8 py-4 font-semibold bg-white text-black hover:bg-gray-200 transition-all w-full sm:w-auto justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] border-none"
+                        >
+                            Contáctame
+                        </UButton>
+
+                        <UButton
+                            to="#about"
+                            variant="ghost"
+                            class="rounded-full px-8 py-4 font-semibold text-white hover:text-white hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all w-full sm:w-auto justify-center backdrop-blur-sm"
+                            icon="i-heroicons-arrow-down-circle"
+                        >
+                            Sobre mí
+                        </UButton>
                     </div>
                 </section>
             </div>
@@ -76,70 +107,29 @@ const items = computed<NavigationMenuItem[]>(() => [
 </template>
 
 <style scoped>
-/* Estilo del fondo (el gradiente de color morado/azul) */
+/* ESTILO DEL FONDO ORIGINAL */
 .fondo {
     background: radial-gradient(ellipse 85% 90% at 50% 0%, rgba(129, 25, 255, 0.57), transparent 70%);
 }
 
-/* --- Estilos de Borde Animado (sin cambios mayores, son efectivos) --- */
-.animated-gradient-border {
-    position: relative;
-    overflow: hidden;
-    /* Estilo fresco: Sombra sutil para el badge en modo claro */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Pseudo-elemento para el borde animado */
-.animated-gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    padding: 2px;
-    background: linear-gradient(90deg,
-    #771dd8 0%,
-    #8635de 25%,
-    #5709a9 50%,
-    #c08df3 75%,
-    #9240ea 100%
-    );
-    background-size: 200% 100%;
-    border-radius: inherit;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    animation: gradient-border-move 2s linear infinite;
-    z-index: -1;
-}
-
-@keyframes gradient-border-move {
-    0% {
-        background-position: 100% 0;
+/* Animación suave para el gradiente del texto */
+@keyframes gradient-x {
+    0%, 100% {
+        background-size: 200% 200%;
+        background-position: left center;
     }
-    100% {
-        background-position: -100% 0;
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
     }
 }
 
-.animated-gradient-border:hover {
-    transform: translateY(-2px); /* Aumento el efecto hover */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+.animate-gradient {
+    animation: gradient-x 3s ease infinite;
 }
 
-/* Las transiciones globales no son recomendadas; es mejor aplicarlas por elemento.
-   He dejado la transición solo en el 'animated-gradient-border'.
-   Mantuve 'serif-text' para el control de línea en móviles.
-*/
-@media (max-width: 640px) {
-    .serif-text {
-        line-height: 1.2;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-    .serif-text {
-        line-height: 1.3;
-    }
+/* Ajustes finos de tipografía para móviles */
+h1 {
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
 }
 </style>
