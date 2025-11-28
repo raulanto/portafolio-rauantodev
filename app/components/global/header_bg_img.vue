@@ -39,7 +39,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         </div>
 
         <!-- CONTENIDO PRINCIPAL (Estilo Moderno Minimalista) -->
-        <UContainer class="relative z-20 h-full flex flex-col justify-center min-h-screen">
+        <UContainer id="headerimg" class="relative z-20 h-full flex flex-col justify-center min-h-screen">
             <div class="w-full flex flex-col items-center justify-center py-12 md:py-24 lg:py-32">
 
                 <section class="w-full max-w-5xl text-center flex flex-col items-center">
@@ -67,7 +67,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                     <!-- HEADING: Moderno, Grande y Limpio -->
                     <h1 class=" serif-text mb-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white drop-shadow-lg">
                         Creando el
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-violet-400 to-purple-800 animate-gradient">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-900 to-purple-800 animate-gradient">
                             futuro web
                         </span>
                         <br class="hidden md:block" />
@@ -86,7 +86,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                         <UButton
                             to="#contacto"
 
-                            class="rounded-full px-8 py-4 font-semibold bg-white text-black hover:bg-gray-200 transition-all w-full sm:w-auto justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] border-none"
+                            class="rounded-full  font-semibold bg-white text-black hover:bg-gray-200 transition-all w-full sm:w-auto justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)] border-none"
                         >
                             Contáctame
                         </UButton>
@@ -94,7 +94,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                         <UButton
                             to="#about"
                             variant="ghost"
-                            class="rounded-full px-8 py-4 font-semibold text-white hover:text-white hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all w-full sm:w-auto justify-center backdrop-blur-sm"
+                            class="rounded-full  font-semibold text-white hover:text-white hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all w-full sm:w-auto justify-center backdrop-blur-sm"
                             icon="i-heroicons-arrow-down-circle"
                         >
                             Sobre mí
