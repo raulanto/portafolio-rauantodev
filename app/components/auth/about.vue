@@ -20,9 +20,9 @@ const createParticle = (): Particle => {
     return {
         x: Math.random() * (canvasRef.value?.width || 0),
         y: Math.random() * (canvasRef.value?.height || 0),
-        size: Math.random() * 1.5 + 0.5, // Ligeramente más grandes para el efecto "polvo"
+        size: Math.random() * 1.5 + 0.5,
         opacity: 0,
-        fadeSpeed: Math.random() * 0.01 + 0.005, // Más lentas y suaves
+        fadeSpeed: Math.random() * 0.01 + 0.005,
         fadeIn: true,
         life: Math.random() * 200 + 100,
         age: 0
@@ -45,7 +45,7 @@ const updateParticle = (particle: Particle): void => {
 
     if (particle.fadeIn) {
         particle.opacity += particle.fadeSpeed
-        if (particle.opacity >= 0.6) { // Opacidad máxima reducida
+        if (particle.opacity >= 0.6) {
             particle.opacity = 0.6
             particle.fadeIn = false
         }
@@ -65,7 +65,6 @@ const updateParticle = (particle: Particle): void => {
 const drawParticle = (ctx: CanvasRenderingContext2D, particle: Particle): void => {
     ctx.save()
     ctx.globalAlpha = particle.opacity
-    // Color blanco/púrpura muy sutil para fondo oscuro
     ctx.fillStyle = 'rgba(216, 180, 254, 0.6)'
     ctx.beginPath()
     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
@@ -101,8 +100,7 @@ onMounted(() => {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Crear partículas
-    const particleCount = 50 // Menos partículas para más minimalismo
+    const particleCount = 50
     for (let i = 0; i < particleCount; i++) {
         particles.push(createParticle())
     }
@@ -119,82 +117,79 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section id="about" class="relative py-24 sm:py-32 overflow-hidden bg-[#050505] text-white selection:bg-purple-500 selection:text-white border-t border-white/5">
-
+    <section id="about" class="w-full bg-[#0a0a0a] text-white border-t border-white/5 relative z-10 selection:bg-purple-500 selection:text-white overflow-hidden">
+        
         <!-- CANVAS PARTÍCULAS -->
         <canvas
             ref="canvasRef"
-            class="absolute top-0 left-0 w-full h-full pointer-events-none z-10"
+            class="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-70"
         ></canvas>
 
-        <!-- CAPAS DE FONDO (Noise + Glow) -->
-        <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="relative z-10 max-w-screen-2xl mx-auto p-8 lg:p-12 xl:p-16 py-24 sm:py-32">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <!-- TEXT COLUMN -->
+                <div class="flex flex-col gap-8 order-2 lg:order-1">
+                    
+                    <div class="flex flex-col gap-4">
+                        <span class="text-sm font-medium text-gray-500 tracking-widest uppercase">Sobre mí</span>
+                        <h1 class="serif-text text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.9] tracking-tight">
+                            Raúl Antonio.
+                        </h1>
+                        <h2 class="text-xl lg:text-2xl font-medium text-gray-400 mt-2">
+                            Full Stack Developer
+                        </h2>
+                    </div>
 
-            <!-- Glow ambiental derecho -->
-            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-purple-900/10 blur-[120px] rounded-full"></div>
-        </div>
-
-        <div class="relative z-20 max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
-
-                <!-- COLUMNA TEXTO -->
-                <div class="lg:w-3/5 text-left">
-
-                    <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-2">
-                        raulanto
-                    </h1>
-
-                    <h2 class="text-2xl lg:text-3xl font-medium mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
-                        Full Stack Developer
-                    </h2>
-
-                    <!-- Badges de Contacto Minimalistas -->
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300">
-                            <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                            +52 993 671 9807
+                    <!-- Contact Details / Quick Info -->
+                    <div class="flex flex-wrap gap-6 my-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            Disponible
                         </div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 hover:text-white hover:border-white/20 transition-colors cursor-copy">
-                            <span class="i-heroicons-envelope w-3 h-3"></span>
+                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                            <UIcon name="i-heroicons-map-pin" class="w-4 h-4" />
+                            México
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                            <UIcon name="i-heroicons-envelope" class="w-4 h-4" />
                             raulantodev@gmail.com
                         </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                            <UIcon name="i-heroicons-phone" class="w-4 h-4" />
+                            +52 993 671 9807
+                        </div>
                     </div>
 
-                    <p class="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl font-light">
-                        Apasionado desarrollador full-stack con más de <span class="text-white font-medium">2 años de experiencia</span> en la creación de aplicaciones web escalables. Especializado en
-                        <span class="text-purple-300">Nuxt, Vue y Django</span>.
-                        Me apasiona convertir problemas complejos en soluciones sencillas, elegantes y de alto rendimiento.
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed font-light max-w-xl">
+                        Apasionado desarrollador web con más de <span class="text-white font-medium">2 años de experiencia</span> creando soluciones digitales escalables. Especializado en el ecosistema <span class="text-white font-medium">Nuxt, Vue y Django</span>. Me enfoco en escribir código limpio y construir interfaces que conviertan problemas complejos en experiencias fluidas y eficientes.
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <NuxtLink to="/perfil/cv" class="group relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 focus:ring-offset-[#050505]">
-                            <span>Más Sobre Mí</span>
-                            <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </NuxtLink>
+                    <div class="pt-4">
+                        <UButton 
+                            to="/perfil/cv"
+                            class="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm sm:text-base font-bold hover:bg-gray-200 transition-all w-fit"
+                            variant="solid"
+                            color="white"
+                            size="xl"
+                        >
+                            Ver mi currículum
+                            <UIcon name="i-heroicons-arrow-right" class="w-5 h-5" />
+                        </UButton>
                     </div>
+
                 </div>
 
-                <!-- COLUMNA IMAGEN (Modernizada) -->
-                <div class="lg:w-2/5 flex justify-center lg:justify-end">
-                    <div class="relative group w-64 h-64 lg:w-80 lg:h-80">
-                        <!-- Glow trasero -->
-                        <div class="absolute -inset-1 bg-gradient-to-tr from-purple-600 to-blue-600 rounded-[2rem] blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-
-                        <!-- Contenedor Imagen -->
-                        <div class="relative w-full h-full rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/10 ring-1 ring-white/5 shadow-2xl">
-                            <!-- Overlay al hacer hover (opcional) -->
-                            <div class="absolute inset-0 bg-purple-500/10 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
-
+                <!-- IMAGE COLUMN -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-[440px] aspect-square rounded-[2.5rem] overflow-hidden bg-[#111111] border border-white/5 p-4 sm:p-6 transition-all hover:border-white/10">
+                        <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-[#1a1a1a]">
                             <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
-                                 alt="Raul Anto"
-                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                        </div>
-
-                        <!-- Elemento decorativo flotante -->
-                        <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-[#050505] rounded-xl border border-white/10 flex items-center justify-center shadow-lg z-20 group-hover:translate-y-[-5px] transition-transform duration-300">
-                            <span class="text-2xl">💻</span>
+                                 alt="Raul Antonio"
+                                 class="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out">
+                            <!-- Overlay de contraste -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
                         </div>
                     </div>
                 </div>
@@ -205,5 +200,5 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Optimizaciones para asegurar contraste y legibilidad */
+/* Mantenemos el archivo limpio, las utilidades de Tailwind manejan la estructura y el estilo */
 </style>
