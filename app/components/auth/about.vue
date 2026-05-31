@@ -117,12 +117,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section id="about" class="w-full bg-[#0a0a0a] text-white border-t border-white/5 relative z-10 selection:bg-purple-500 selection:text-white overflow-hidden">
+    <section id="about" class="w-full bg-white dark:bg-[#0a0a0a] text-neutral-900 dark:text-white border-t border-neutral-200 dark:border-white/5 relative z-10 selection:bg-purple-500 selection:text-white overflow-hidden transition-colors duration-300">
         
         <!-- CANVAS PARTÍCULAS -->
         <canvas
             ref="canvasRef"
-            class="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-70"
+            class="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40 dark:opacity-70 transition-opacity duration-300"
         ></canvas>
 
         <div class="relative z-10 max-w-screen-2xl mx-auto p-8 lg:p-12 xl:p-16 py-24 sm:py-32">
@@ -133,43 +133,43 @@ onUnmounted(() => {
                 <div class="flex flex-col gap-8 order-2 lg:order-1">
                     
                     <div class="flex flex-col gap-4">
-                        <span class="text-sm font-medium text-gray-500 tracking-widest uppercase">Sobre mí</span>
+                        <span class="text-sm font-medium text-neutral-500 dark:text-gray-500 tracking-widest uppercase transition-colors duration-300">Sobre mí</span>
                         <h1 class="serif-text text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.9] tracking-tight">
                             Raúl Antonio.
                         </h1>
-                        <h2 class="text-xl lg:text-2xl font-medium text-gray-400 mt-2">
+                        <h2 class="text-xl lg:text-2xl font-medium text-neutral-600 dark:text-gray-400 mt-2 transition-colors duration-300">
                             Full Stack Developer
                         </h2>
                     </div>
 
                     <!-- Contact Details / Quick Info -->
                     <div class="flex flex-wrap gap-6 my-2">
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-gray-400 transition-colors duration-300">
                             <span class="w-2 h-2 rounded-full bg-green-500"></span>
                             Disponible
                         </div>
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-gray-400 transition-colors duration-300">
                             <UIcon name="i-heroicons-map-pin" class="w-4 h-4" />
                             México
                         </div>
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-gray-400 transition-colors duration-300">
                             <UIcon name="i-heroicons-envelope" class="w-4 h-4" />
                             raulantodev@gmail.com
                         </div>
-                        <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-gray-400 transition-colors duration-300">
                             <UIcon name="i-heroicons-phone" class="w-4 h-4" />
                             +52 993 671 9807
                         </div>
                     </div>
 
-                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed font-light max-w-xl">
-                        Apasionado desarrollador web con más de <span class="text-white font-medium">2 años de experiencia</span> creando soluciones digitales escalables. Especializado en el ecosistema <span class="text-white font-medium">Nuxt, Vue y Django</span>. Me enfoco en escribir código limpio y construir interfaces que conviertan problemas complejos en experiencias fluidas y eficientes.
+                    <p class="text-base sm:text-lg text-neutral-700 dark:text-gray-300 leading-relaxed font-light max-w-xl transition-colors duration-300">
+                        Apasionado desarrollador web con más de <span class="text-neutral-900 dark:text-white font-medium transition-colors duration-300">2 años de experiencia</span> creando soluciones digitales escalables. Especializado en el ecosistema <span class="text-neutral-900 dark:text-white font-medium transition-colors duration-300">Nuxt, Vue y Django</span>. Me enfoco en escribir código limpio y construir interfaces que conviertan problemas complejos en experiencias fluidas y eficientes.
                     </p>
 
                     <div class="pt-4">
                         <UButton 
                             to="/perfil/cv"
-                            class="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-sm sm:text-base font-bold hover:bg-gray-200 transition-all w-fit"
+                            class="flex items-center justify-center gap-2 bg-neutral-900 text-white dark:bg-white dark:text-black px-6 py-3 rounded-full text-sm sm:text-base font-bold hover:bg-neutral-800 dark:hover:bg-gray-200 transition-all w-fit"
                             variant="solid"
                             color="white"
                             size="xl"
@@ -183,13 +183,13 @@ onUnmounted(() => {
 
                 <!-- IMAGE COLUMN -->
                 <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
-                    <div class="relative w-full max-w-[440px] aspect-square rounded-[2.5rem] overflow-hidden bg-[#111111] border border-white/5 p-4 sm:p-6 transition-all hover:border-white/10">
-                        <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-[#1a1a1a]">
+                    <div class="relative w-full max-w-[440px] aspect-square rounded-[2.5rem] overflow-hidden bg-neutral-50 dark:bg-[#111111] border border-neutral-200 dark:border-white/5 p-4 sm:p-6 transition-all hover:border-neutral-300 dark:hover:border-white/10 duration-300">
+                        <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative bg-neutral-200 dark:bg-[#1a1a1a] transition-colors duration-300">
                             <img src="https://avatars.githubusercontent.com/u/74162376?v=4"
                                  alt="Raul Antonio"
                                  class="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out">
                             <!-- Overlay de contraste -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-white/40 dark:from-black/40 via-transparent to-transparent pointer-events-none transition-colors duration-300"></div>
                         </div>
                     </div>
                 </div>

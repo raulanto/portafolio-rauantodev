@@ -1,7 +1,7 @@
 <template>
     <div
         ref="containerRef"
-        class="absolute bottom-8 right-8 "
+        :class="positionClass"
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
     >
@@ -170,6 +170,7 @@ interface CarouselProps {
     autoplayDelay?: number;
     pauseOnHover?: boolean;
     loop?: boolean;
+    positionClass?: string;
 }
 
 const DRAG_BUFFER = 0;
@@ -185,7 +186,8 @@ const props = withDefaults(defineProps<CarouselProps>(), {
     autoplay: true,
     autoplayDelay: 4000,
     pauseOnHover: true,
-    loop: true
+    loop: true,
+    positionClass: 'absolute bottom-8 right-8 '
 });
 
 const containerPadding = 0;
